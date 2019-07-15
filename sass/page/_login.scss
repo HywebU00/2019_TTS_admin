@@ -1,0 +1,179 @@
+.admin_wrapper {
+    overflow: hidden;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    margin: 0px auto;
+    background: url(../images/admin_bg.jpg) no-repeat center center;
+    background-size:cover;
+    
+    @include box-sizing;
+    @include screen('mobile') {
+        position: relative;
+    }
+    .login {
+        .mask {
+            width: 96%;
+            height: 380px;
+            margin: 0px auto;
+            overflow: hidden;
+            position: relative;
+            @include screen('xs_mobile') {
+                height: 450px;
+                width: 100%;
+            }
+            .login_block {
+                position: absolute;
+                width: 100%;
+                // outline: 1px solid red;
+            }
+            .forget_block {
+                position: absolute;
+                left: 100%;
+                width: 100%;
+            }
+        }
+        &:before {
+            position: absolute;
+            width: 80px;
+            height: 80px;
+            top: -60px;
+            left: 50%;
+            margin-left: -40px;
+            content: "";
+            background: url(../images/user.png) no-repeat center center #FFF;
+            background-size: 80px;
+            @include border-radius(50%);
+            border: 5px solid #FFF;
+            @include box-shadow(2px 2px 15px rgba(0, 0, 0, .4));
+            display: none;
+        }
+        &:after {
+            position: absolute;
+            width: 100%;
+            height: 20px;
+            background: #dedede;
+            bottom: 0;
+            left: 0;
+            content: "";
+            @include border-radius(0px 0px 5px 5px);
+        }
+        animation-fill-mode: both;
+        animation-duration: 1s;
+        animation-name: bounceInDown;
+        position: fixed;
+        width: 420px;
+        min-height: 440px;
+        background: #FFF;
+        @include border-radius(.5em);
+        top:8%;
+        left: 50%;
+        margin-left: -210px;
+        padding:2em 1.5em;
+        @include box-sizing;
+        @include box-shadow(0px 15px 35px RGBA(0, 0, 0, .65));
+        @include screen('xs_mobile') {
+            top: 20px;
+            width: 90%;
+            left: 5%;
+            min-height: 520px;
+            margin-left: 0;
+            padding: 1em;
+        }
+        label {
+            display: none;
+        }
+        .form_grp {
+            border-bottom: none;
+            margin-bottom: .1em !important;
+        }
+        .btn_grp {
+            margin-bottom: 1.6em;
+            input[type="submit"],
+            input[type="reset"] {
+                padding-left: 2em;
+                padding-right: 2em;
+            }
+            @include screen('mobile') {
+                margin-bottom: .2em;
+            }
+        }
+        .form_content {
+            .captcha {
+                float: left;
+                margin: 0px .5em .5em 0;
+                &~input[type="text"] {
+                    display: inline-block;
+                    width: auto;
+                    text-align: center;
+                    width: 8em;
+                }
+                &~a {
+                    display: block;
+                    position: absolute;
+                    top: .5em;
+                    right: .2em;
+                    width: 26px;
+                    height: 26px;
+                    @include border-radius(50%);
+                    background: #DEDEDE;
+                    text-align: center;
+                    img {
+                        margin-top: .3em;
+                        opacity: .4;
+                    }
+                }
+            }
+            width: 100%;
+            @include gutter(.4em);
+            input[type="text"],
+            input[type="password"] {
+                font-weight: bold;
+                @include border-radius(.2em);
+            }
+            input {
+                transition: .3s ease-out;
+                &.id {
+                    background: url(../images/icon_id.svg) no-repeat .5em .75em #F5F5F5;
+                    padding-left: 2em;
+                    background-size:1em;
+                    &:focus{
+                        background: url(../images/icon_id.svg) no-repeat .5em .75em #FEFEFE;
+                        background-size:1em;
+                    }
+                }
+                &.pw {
+                    background: url(../images/icon_pw.svg) no-repeat .5em .75em #F5F5F5;
+                    padding-left: 2em;
+                     background-size:1em;
+                     &:focus{
+                        background: url(../images/icon_pw.svg) no-repeat .5em .75em #FEFEFE;
+                        background-size:1em;
+                    }
+                }
+            }
+        }
+    }
+    h1 {
+        line-height: 1.2em;
+        text-align: center;
+        margin: .2em 0 .5em;
+        img{
+            width: 40px;
+            display:inline-block;
+            margin: 0 .2em .2em 0;
+            vertical-align: middle;
+        }
+        small{
+            display:block;
+            color:#666;
+        }
+        @include screen('mobile') {
+            font-size: 1.8em;
+            margin-bottom: 1em;
+        }
+    }
+    h2 {
+        text-align: left;
+    }
+}
