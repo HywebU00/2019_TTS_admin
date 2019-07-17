@@ -166,14 +166,15 @@
             <div class="hy_block">
                 <div class="col-3-3-3-3">
                     <div class="col">
-                        <h3>請選擇視覺風格</h3>
-                        <div class="btn_grp">
-                            <img src="images/style_fashion.jpg" alt="">
-                            <button class="btn btn-sm" id="openModal"> 01經典設計</button>
-                        </div>
-                    </div>
-                    <div class="col">
                         <div class="form_grp">
+                            <div class="form_grp">
+                                <h3>請選擇分眾</h3>
+                                <select name="" id="selectSample">
+                                    <option value="">參觀者</option>
+                                    <option value="">廠商</option>
+                                    <option value="">媒體</option>
+                                </select>
+                            </div>
                             <h3>請選擇語系</h3>
                             <select name="" id="selectSample">
                                 <option value="">繁體中文</option>
@@ -182,20 +183,24 @@
                                 <option value="">簡體中文</option>
                                 <option value="">...</option>
                             </select>
-                        </div>
-                        <div class="check_grp">
-                            <label><input type="checkbox" value="">是否同繁體中文語系</label>
-                        </div>
-                        <div class="form_grp">
-                            <h3>請選擇分眾</h3>
-                            <select name="" id="selectSample">
-                                <option value="">參觀者</option>
-                                <option value="">廠商</option>
-                                <option value="">媒體</option>
+                            <h3>版型快速設定</h3>
+                            <div class="radio_grp form_inline">
+                                <label><input name="radioSample" type="radio" value="" checked="">自訂</label>
+                                <label><input name="radioSample" type="radio" value="">複製</label>
+                                <label><input name="radioSample" type="radio" value="">選擇既有版型</label>
+                            </div>
+                            <select name="" id="selectSample2">
+                                <option value="">下拉選單</option>
+                                <option value="">同繁體中文</option>
+                                <option value="">...</option>
                             </select>
                         </div>
-                        <div class="check_grp">
-                            <label><input type="checkbox" value="">是否同參觀者？</label>
+                    </div>
+                    <div class="col">
+                        <h3>請選擇視覺風格</h3>
+                        <div class="btn_grp">
+                            <img src="images/style_fashion.jpg" alt="">
+                            <button class="btn btn-sm" id="openModal"> 01經典設計</button>
                         </div>
                     </div>
                     <div class="col">
@@ -210,7 +215,8 @@
                     <div class="col">
                         <h3>網站狀態</h3>
                         <div class="btn_grp status_block">
-                            <button class="btn btn-sm">存成草稿</button>
+                            <button class="btn btn-sm">儲存</button>
+                            <p>說明文字</p>
                             <hr />
                             <button class="btn btn-sm btn-orange">預覽</button>
                             <button class="btn btn-sm btn-green">發布</button>
@@ -670,7 +676,7 @@
                 <div class="col">
                     <label class="hy_block"><input name="radioSample" type="radio" value="">03.極簡風格<img src="images/style_simple.jpg" alt=""></label>
                 </div>
-                 <div class="col">
+                <div class="col">
                     <label class="hy_block"><input name="radioSample" type="radio" value="">04.視覺潮流<img src="images/style_fashion.jpg" alt=""></label>
                 </div>
                 <div class="col">
