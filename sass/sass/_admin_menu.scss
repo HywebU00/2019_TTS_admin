@@ -4,7 +4,7 @@ aside {
     height: 100%;
     width: 210px;
     background: #363b3f;
-    overflow-x: hidden !important;
+    overflow-x: auto !important;
     overflow-y: auto !important;
     -webkit-overflow-scrolling: touch;
     -webkit-transform: translate3d(0, 0, 0);
@@ -12,14 +12,15 @@ aside {
     padding-top: 2.5em;
     z-index: 98;
     @include screen('tablet') {
-    	display:none;
+        display: none;
     }
     menu {
         margin: 0;
         padding: 0;
         @include box-sizing;
         >ul {
-            @include li-reset;
+            margin: 0;
+            padding: 0;
             &>li {
                 a {
                     vertical-align: middle;
@@ -80,36 +81,52 @@ aside {
             ul {
                 padding: .5em 0;
                 display: none;
+                position: relative;
                 li {
                     border: none;
+                    position: relative;
+                    &:before {
+                        content: "";
+                        width: 4px;
+                        height: 4px;
+                        border: 2px solid $color_menu;
+                        transform: rotate(45deg);
+                        border-left: none;
+                        border-bottom: none;
+                        position: absolute;
+                        top: 1em;
+                        left: .5em;
+                        transition: .3s ease-out;
+                        opacity: 0;
+                    }
+                    &:hover, &:focus {
+                        color: $color_menu;
+                        background: #1D2226;
+                        &:before {
+                            left: 1em;
+                            opacity: 1;
+                        }
+                    }
                     a {
                         padding-left: 2.5em;
                         color: #F1F1F1;
                         font-size: .938em;
                         padding: .4em 1em .4em 2.5em;
-                        &:before {
-                            content: "";
-                            width: 4px;
-                            height: 4px;
-                            border: 2px solid $color_menu;
-                            transform: rotate(45deg);
-                            border-left: none;
-                            border-bottom: none;
-                            position: absolute;
-                            top: 1em;
-                            left: .5em;
-                            transition: .3s ease-out;
-                            opacity: 0;
-                        }
-                        &:hover, &:focus {
-                            color: $color_menu;
-                            background: RGBA(0, 0, 0, .2);
-                            &:before {
-                                left: 1em;
-                                opacity: 1;
-                            }
+                        &:hover,&:focus{
+                            background:transparent;
                         }
                     }
+                }
+                ul {
+                    position: absolute;
+                    top: 0;
+                    width: 220px;
+                    left: 210px;
+                    background: #1D2226;
+                    z-index: 99;
+                    padding: 0;
+                    @include li-reset;
+                    li {}
                 }
             }
         }

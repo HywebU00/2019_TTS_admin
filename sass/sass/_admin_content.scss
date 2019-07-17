@@ -10,6 +10,20 @@
          text-align: center;
      }
  }
+ .radio_grp{
+    img{
+        display:inline-block;
+        vertical-align: middle;
+        margin-left: .5em;
+        margin-top: -.2em;
+        position:relative;
+    }
+ }
+ .btn_grp{
+    img{
+        max-width: 200px;
+    }
+ }
  .hy_block {
      background: #FFF;
      margin-bottom: 1em;
@@ -17,6 +31,9 @@
      border-bottom: 3px solid #CCC;
      padding: 1em;
      overflow: hidden;
+ }
+ .status_block{
+    text-align: left;
  }
  .main_zone {
      position: relative;
@@ -184,15 +201,9 @@
  }
  .layout {
      float: left;
-     width: 75%;
+     width: calc(100% - 270px);
      padding-bottom: 5em;
      margin-right: 1em;
-     @media screen and (max-width: 1050px) {
-         width: 74%;
-     }
-     @include screen('tablet') {
-         width: 60%;
-     }
      .drag_area {
          border: 1px solid #CCC;
          padding: .5em;
@@ -250,16 +261,52 @@
                  padding: .5em;
                  min-height: 4em;
                  .module {
-                     min-height: 6em;
+                     min-height: 7em;
                      border: 2px dashed $color-blue;
                      background: lighten($color-blue, 30);
                      position: relative;
-                     padding: 1em;
+                     padding: .5em 1em 1em;
                      .module_info {
                          color: darken($color-blue, 20);
                          p {
                              font-size: .813em;
                              margin: .2em 0;
+                         }
+                         input[type="text"] {
+                             width: calc(100% - 40px);
+                             min-width: 100px;
+                             background: none;
+                             border: none;
+                             box-shadow: none;
+                             color: darken($color-blue, 20);
+                             margin-left: -.5em;
+                             padding: .3em;
+                             font-size:1.25em;
+                             font-weight:bold;
+                             &::-webkit-input-placeholder {
+                                 /* Chrome/Opera/Safari */
+                                 color: darken($color-blue, 20);
+                             }
+                             &::-moz-placeholder {
+                                 /* Firefox 19+ */
+                                 color: darken($color-blue, 20);
+                             }
+                             &:-ms-input-placeholder {
+                                 /* IE 10+ */
+                                 color: darken($color-blue, 20);
+                             }
+                             &:-moz-placeholder {
+                                 /* Firefox 18- */
+                                 color: darken($color-blue, 20);
+                             }
+                             &:hover, &:focus {
+                                 outline: none !important;
+                                 border: none !important;
+                                 box-shadow: none !important;
+                             }
+                             &:focus {
+                                 background: rgba(255,255,255,.5)
+                             }
                          }
                      }
                  }
@@ -308,18 +355,12 @@
  .library {
      position: relative;
      float: right;
-     width: 23%;
+     width: 250px;
      &.fixed {
          position: fixed;
          top: 3em;
          width: 23%;
          right: 0em;
-     }
-     @include screen('tablet') {
-         width: 35%;
-         &.fixed {
-             width: 35%;
-         }
      }
      .hy_block {
          &>ul {
@@ -350,9 +391,19 @@
      }
      ul {
          li {
+            overflow-y:hidden;
+             ul {
+                 height: 360px;
+                 overflow-y: auto;
+                 margin-bottom: .5em;
+                 background: #F1F1F1;
+                 padding: .5em 1.2em .5em .5em;
+                 border: 1px solid #AAA;
+                 box-shadow: 2px 2px 4px RGBA(0, 0, 0, .25) inset;
+             }
              &:nth-child(2) {
                  ul {
-                     li {
+                     div {
                          a {
                              &:focus {
                                  border: 2px dashed $color-blue;
@@ -379,28 +430,32 @@
                  text-align: center;
                  margin-bottom: .2em;
              }
-             li {
+             div {
                  a {
                      border: 2px solid $color-gray;
+                     border-right: 2px solid #999;
+                     border-bottom: 2px solid #777;
                      text-align: center;
                      background: none;
                      padding: .5em 0 .3em;
                      color: #666;
+                     background: #FFF;
                      span {
                          color: $color-word;
                          display: block;
                      }
                      img {
                          object-fit: contain;
-                         width: 50%;
+                         width: 65%;
                          margin: 0px auto;
+                         opacity: .8;
                      }
                      &:focus {
-                         border: 2px dashed $color-red;
+                         border: 2px dashed $color-blue;
                          img {
-                             opacity: .4;
+                             opacity: .6;
                          }
-                         background:lighten($color-blue,30);
+                         background:lighten($color-blue, 30);
                      }
                  }
              }

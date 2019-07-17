@@ -20,6 +20,12 @@ header {
             max-height: 1em;
             margin-right: .5em;
         }
+        a{
+            color:#DEDEDE;
+            &:hover,&:focus{
+                color:#FFF;
+            }
+        }
     }
     .account {
         position: absolute;

@@ -1,5 +1,12 @@
 // 自行加入的JS請寫在這裡
 $(function() {
+    // $("aside menu").niceScroll({
+    //     cursorwidth: "8px",
+    //     cursoropacitymax:0.6,
+    //     touchbehavior:true,
+    //     smoothscroll: true
+    // });
+    // login forget
     $('.forget').click(function(event) {
         $('.login_block').animate({ 'left': '-100%' }, 400, 'easeOutQuint');
         $('.forget_block').animate({ 'left': '0' }, 400, 'easeOutQuint');
@@ -11,6 +18,7 @@ $(function() {
     // menu
     var _menu = $('aside menu'),
         _menuItem = $('aside menu>ul>li').has('ul');
+    _menuItem_2 = $('aside menu>ul>li>ul>li').has('ul');
     _menuItem.each(function(index, el) {
         $(this).children('ul').hide();
         $(this).children('a').append('<a href="javascript:;" class="toggle_btn"></a>');
@@ -20,6 +28,13 @@ $(function() {
             $(this).parent('li').siblings().find('ul').slideUp(600, 'easeOutQuint');
             $(this).next('ul').slideToggle(600, 'easeOutQuint');
             e.preventDefault();
+        });
+    });
+    _menuItem_2.each(function(index, el) {
+        $(this).hover(function() {
+            $(this).children('ul').show();
+        }, function() {
+            $(this).children('ul').hide();
         });
     });
     // dropdown
@@ -38,23 +53,29 @@ $(function() {
     });
     // library
     $('.library ul ul').hide();
+   
     $('.library ul li:first ul').show();
+    //  $('.library ul ul').niceScroll({
+    //     cursorwidth: "8px",
+    //     cursoropacitymax:0.6,
+    //     touchbehavior:true,
+    //     smoothscroll: true
+    // });
     $('.library>.hy_block>ul>li>a').addClass('open');
     $('.library>.hy_block>ul>li:nth-child(2)>a').removeClass('open');
     $('.library').find('.hy_block>ul>li').each(function(index, el) {
-    	$(this).find('a').click(function(e) {
-    		$(this).parent().siblings('li').children('a').removeClass('open');
-    		$(this).toggleClass('open');
-
-    		$(this).parents('li').siblings().find('ul').stop(true, true).slideUp();
-    		$(this).siblings('ul').stop(true, true).slideToggle(400, 'easeOutQuint');
-    		e.preventDefault();
-    	});
+        $(this).find('a').click(function(e) {
+            $(this).parent().siblings('div').children('a').removeClass('open');
+            $(this).toggleClass('open');
+            $(this).parent().siblings().find('ul').stop(true, true).slideUp();
+            $(this).siblings('ul').stop(true, true).slideToggle(400, 'easeOutQuint');
+            e.preventDefault();
+        });
     });
     //控制模組定位
     var libraryTop = $('.library').offset().top,
         libraryW = $('.library').width();
-    $(window).scroll(function() {
+    $(window).bind("load resize scroll", function(event) {
         var currentScroll = $(window).scrollTop();
         if (currentScroll >= libraryTop - 50) {
             $('.library').css({
