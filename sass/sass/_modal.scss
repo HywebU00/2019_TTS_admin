@@ -1,48 +1,60 @@
 .modal {
     position: fixed;
     display: none;
-    width: 400px;
-    height: 300px;
+    width: 800px;
+    height: 500px;
     background: #FFF;
-    z-index: 99999999;
+    z-index: 999999;
     top: 50%;
     left: 50%;
-    margin-top: -150px;
-    margin-left: -200px;
-    padding:1em 1em 1em;
+    margin-top: -250px;
+    margin-left: -400px;
+    padding: 1em 1em 1em;
     @include box-sizing;
     @include border-radius(8px);
     @include box-shadow(1px 1px 35px RGBA(0, 0, 0, .75));
-    animation: scaleUp .4s ease-out;
-    h2{
-    	border-bottom: 1px solid $primaryColor;
-    	padding-bottom: .5em;
+    animation: scaleUp .3s ease-out;
+    h2 {
+        border-bottom: 1px solid $primaryColor;
+        padding-bottom: .5em;
     }
-    .close{
-    	position:absolute;
-    	top:5px;
-    	right:5px;
-    	width:30px !important;
-    	min-width:auto;
-    	height:30px;
-    	font-size:0em;
-    	border:none;
-    	display:block;
-    	padding: 0;
-    	background:url(../images/basic/icon_close.svg) no-repeat center center;
-    	&:hover,&:focus{
-    		cursor:pointer;
-    	}
+    .close {
+        position: absolute;
+        top: 5px;
+        right: 5px;
+        width: 30px !important;
+        min-width: auto;
+        height: 30px;
+        font-size: 0em;
+        border: none;
+        display: block;
+        padding: 0;
+        background: url(../images/basic/icon_close.svg) no-repeat center center;
+        &:hover, &:focus {
+            cursor: pointer;
+        }
+    }
+    .modal_content {
+        background: #FDFDFD;
+        padding: 1em .5em;
+        height: 380px;
+        border: 1px solid #DDD;
+        border-top: 1px solid #BBB;
+        box-shadow: 5px 5px 8px RGBA(0, 0, 0, .15) inset;
+        overflow-x: hidden !important;
+        overflow-y: auto !important;
+        -webkit-overflow-scrolling: touch;
+        -webkit-transform: translate3d(0, 0, 0);
+        img {
+            width: 100%;
+            border: 1px solid #DDD;
+            margin: .5em 0;
+        }
     }
 }
-
 @keyframes scaleUp {
     0% {
-        transform: scale(1) translateY(-100px);
-        opacity: 0;
-    }
-    10% {
-        transform: scale(1) translateY(-100px);
+        transform: scale(1) translateY(-50px);
         opacity: 0;
     }
     100% {
@@ -50,7 +62,6 @@
         opacity: 1;
     }
 }
-
 .modal_overlay {
     position: fixed;
     display: block;
@@ -59,5 +70,5 @@
     width: 100%;
     height: 100%;
     background: RGBA(0, 0, 0, .5);
-    z-index: 99999998;
+    z-index: 999998;
 }

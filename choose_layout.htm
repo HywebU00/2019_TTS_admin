@@ -169,7 +169,7 @@
                         <h3>請選擇視覺風格</h3>
                         <div class="btn_grp">
                             <img src="images/style_fashion.jpg" alt="">
-                            <button class="btn"> 01經典設計</button>
+                            <button class="btn btn-sm" id="openModal"> 01經典設計</button>
                         </div>
                     </div>
                     <div class="col">
@@ -205,14 +205,13 @@
                             <label><input name="radioSample" type="radio" value="">綠色<img src="images/color-scheme-green.jpg" alt=""></label>
                             <label><input name="radioSample" type="radio" value="">紅色<img src="images/color-scheme-red.jpg" alt=""></label>
                             <label><input name="radioSample" type="radio" value="">紫色<img src="images/color-scheme-purple.jpg" alt=""></label>
-                           
                         </div>
                     </div>
                     <div class="col">
                         <h3>網站狀態</h3>
                         <div class="btn_grp status_block">
                             <button class="btn btn-sm">存成草稿</button>
-                            <hr/>
+                            <hr />
                             <button class="btn btn-sm btn-orange">預覽</button>
                             <button class="btn btn-sm btn-green">發布</button>
                         </div>
@@ -660,11 +659,67 @@
             </div>
         </div>
     </div>
+    <!-- //視窗 -->
+    <div id="modal1" class="modal">
+        <h2>請選擇視覺風格</h2>
+        <div class="modal_content">
+            <div class="col-4-4-4">
+                <div class="col">
+                    <label><input name="radioSample" type="radio" value="">01.視覺潮流<img src="images/style_fashion.jpg" alt=""></label>
+                </div>
+                <div class="col">
+                    <label><input name="radioSample" type="radio" value="">02.經典設計<img src="images/style_classic.jpg" alt=""></label>
+                </div>
+                <div class="col">
+                    <label><input name="radioSample" type="radio" value="">03.極簡風格<img src="images/style_simple.jpg" alt=""></label>
+                </div>
+                 <div class="col">
+                    <label><input name="radioSample" type="radio" value="">04.視覺潮流<img src="images/style_fashion.jpg" alt=""></label>
+                </div>
+                <div class="col">
+                    <label><input name="radioSample" type="radio" value="">05.經典設計<img src="images/style_classic.jpg" alt=""></label>
+                </div>
+                <div class="col">
+                    <label><input name="radioSample" type="radio" value="">06.極簡風格<img src="images/style_simple.jpg" alt=""></label>
+                </div>
+            </div>
+            <div class="btn_grp">
+                <button class="btn">確認</button>
+            </div>
+        </div>
+    </div>
 </body>
 <!-- JS都需要放在最下面 -->
 <script src="js/jquery-3.3.1.min.js"></script>
 <script src="vendor/jquery.easing.min.js"></script>
 <script src="js/customize.js"></script>
 <script src="vendor/nicescroll/jquery.nicescroll.min.js"></script>
+<script>
+/*-----------------------------------*/
+/////////////modal設定/////////////
+/*-----------------------------------*/
+$(function() {
+    $('#modal1').hide(); //先隱藏視窗
+    $('.modal').after('<div class="modal_overlay"></div>'); //新增透明底
+    $('.modal').prepend('<button type="button" class="close">關閉</button>'); //新增關閉按鈕
+    $('.modal_overlay').hide(); //隱藏透明底
+    //按鈕動作
+    $('#openModal').click(function(e) {
+        $('#modal1').show();
+        $('.modal_overlay').fadeIn(100);
+        $('body').addClass('noscroll');
+        e.preventDefault();
+    });
+    //關閉function
+    function closeModal() {
+        $('#modal1').hide();
+        $('.modal_overlay').hide();
+        $('body').removeClass('noscroll');
+    }
+    //點選關閉按鈕及透明底都可關閉
+    $('.modal_overlay').click(closeModal);
+    $('.modal .close').click(closeModal);
+});
+</script>
 
 </html>
