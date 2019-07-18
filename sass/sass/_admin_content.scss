@@ -1,3 +1,6 @@
+ h3, h4 {
+     margin: 0 0 .5em;
+ }
  .text-right {
      text-align: right;
      @include screen('mobile') {
@@ -10,22 +13,22 @@
          text-align: center;
      }
  }
- .radio_grp{
-    img{
-        display:inline-block;
-        vertical-align: middle;
-        margin-left: .5em;
-        margin-top: -.2em;
-        position:relative;
-    }
+ .radio_grp {
+     img {
+         display: inline-block;
+         vertical-align: middle;
+         margin-left: .5em;
+         margin-top: -.2em;
+         position: relative;
+     }
  }
- .btn_grp{
-    img{
-        max-width: 200px;
-        margin: 0 auto .4em;
-        display:block;
-        border:1px solid #DDD;
-    }
+ .btn_grp {
+     img {
+         max-width: 200px;
+         margin: 0 auto .4em;
+         display: block;
+         border: 1px solid #DDD;
+     }
  }
  .hy_block {
      background: #FFF;
@@ -35,8 +38,8 @@
      padding: 1em;
      overflow: hidden;
  }
- .status_block{
-    text-align: left;
+ .status_block {
+     text-align: left;
  }
  .main_zone {
      position: relative;
@@ -67,9 +70,6 @@
              left: 0;
              @include gradient($primaryColor, lighten($secondaryColor, 20), vertical);
          }
-     }
-     h3 {
-         margin: 0 0 .5em;
      }
  }
  // 卡片式
@@ -284,8 +284,8 @@
                              color: darken($color-blue, 20);
                              margin-left: -.5em;
                              padding: .3em;
-                             font-size:1.25em;
-                             font-weight:bold;
+                             font-size: 1.25em;
+                             font-weight: bold;
                              &::-webkit-input-placeholder {
                                  /* Chrome/Opera/Safari */
                                  color: darken($color-blue, 20);
@@ -308,7 +308,7 @@
                                  box-shadow: none !important;
                              }
                              &:focus {
-                                 background: rgba(255,255,255,.5)
+                                 background: rgba(255, 255, 255, .5)
                              }
                          }
                      }
@@ -394,29 +394,34 @@
      }
      ul {
          li {
-            overflow-y:hidden;
+             overflow-y: hidden;
              ul {
                  height: 360px;
                  overflow-y: auto;
                  margin-bottom: .5em;
                  background: #F1F1F1;
-                 padding: .5em 1.2em .5em .5em;
+                 padding: .5em;
                  border: 1px solid #AAA;
                  box-shadow: 2px 2px 4px RGBA(0, 0, 0, .25) inset;
              }
              &:nth-child(2) {
                  ul {
                      div {
-                         a {
-                             &:focus {
-                                 border: 2px dashed $color-blue;
-                             }
-                             color:#666;
-                             text-align: left;
-                             i {
-                                 float: left;
-                                 margin: 0px .5em;
-                             }
+                         border: 2px solid $color-gray;
+                         border-right: 2px solid #999;
+                         border-bottom: 2px solid #777;
+                         text-align: center;
+                         background: none;
+                         padding: .5em;
+                         color: #666;
+                         background: #FFF;
+                         text-align: left;
+                         i {
+                             float: left;
+                             margin: 0px .5em;
+                         }
+                         &:focus {
+                             border: 2px dashed $color-blue;
                          }
                      }
                  }

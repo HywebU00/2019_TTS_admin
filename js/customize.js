@@ -73,7 +73,8 @@ $(function() {
         });
     });
     //控制模組定位
-    var libraryTop = $('.library').offset().top,
+    if($('.library').length>0){
+       var libraryTop = $('.library').offset().top,
         libraryW = $('.library').width();
     $(window).bind("load resize scroll", function(event) {
         var currentScroll = $(window).scrollTop();
@@ -89,5 +90,7 @@ $(function() {
                 position: 'static'
             });
         }
-    });
+    }); 
+    }
+    
 });

@@ -1,14 +1,13 @@
 .modal {
     position: fixed;
     display: none;
-    width: 800px;
-    height: 500px;
+    width: 80%;
+    height: 80%;
     background: #FFF;
     z-index: 999999;
-    top: 50%;
+    top: 10%;
     left: 50%;
-    margin-top: -250px;
-    margin-left: -400px;
+    margin-left: -40%;
     padding: 1em 1em 1em;
     @include box-sizing;
     @include border-radius(8px);
@@ -37,7 +36,11 @@
     .modal_content {
         background: #FDFDFD;
         padding: 1em .5em;
-        height: 380px;
+        height:75%;
+        position:absolute;
+        bottom:10%;
+        width:97%;
+        left: 1.5%;
         border: 1px solid #DDD;
         border-top: 1px solid #BBB;
         box-shadow: 5px 5px 8px RGBA(0, 0, 0, .15) inset;
@@ -54,7 +57,7 @@
 }
 @keyframes scaleUp {
     0% {
-        transform: scale(1) translateY(-50px);
+        transform: scale(1) translateY(0px);
         opacity: 0;
     }
     100% {
