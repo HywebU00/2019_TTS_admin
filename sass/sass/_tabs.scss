@@ -1,23 +1,24 @@
 .tabSet {
     max-width: 100%;
-    margin: 20px auto;
+    margin: 0px auto;
+    background: #f3f3f3;
     overflow: hidden;
-    @include clearfix;
-    @include screen('mobile') {
+    @include clearfix();
+    @include box-shadow(rgba(0, 0, 0, .3) 0 2px 12px);
+    @include screen('(max-width:767px)') {
         max-width: 100%;
         width: auto;
         height: auto !important;
     }
 }
-
 .tabs {
     position: relative;
-    @include screen('mobile') {
+    @include screen('(max-width:767px)') {
         position: relative;
     }
     &>.tabItem {
         &.active>a {
-            background-color: $primaryColor;
+            background-color: $color-orange;
             color: #FFF;
         }
         float: left;
@@ -30,28 +31,27 @@
             float: none;
             &>a {
                 width: 100% !important;
-                border-bottom: 1px solid #888;
             }
             &.active>a {
-                border-color: #bbb;
+                border-color: $color-orange;
             }
         }
         &>a {
             display: block;
             padding: 16px 0 14px;
             text-align: center;
-            background-color: #aaa;
-            color: #fff;
+            background-color: #DDD;
+            color: #333;
             text-decoration: none;
             @include text-overflow();
             @include box-sizing();
             &:hover {
-                background: $primaryColor;
+                color: #FFF;
+                background: darken($color-orange,5);
             }
         }
     }
 }
-
 //多組 可設定差異
 .example-2 {
     .tabItem>a:hover {
@@ -61,7 +61,6 @@
         background: $secondaryColor;
     }
 }
-
 // 顯示content
 .active+.tabContent {
     display: block;
@@ -75,7 +74,8 @@
     clear: both;
     padding: 30px 20px;
     display: none;
-    @include screen('mobile') {
+    overflow:hidden;
+    @include screen('(max-width:767px)') {
         position: static;
     }
 
@@ -88,8 +88,8 @@
     li {
         margin: 0 0 1.3em 0;
         padding: 0;
-        border-bottom: 1px #CCC dashed;
-         @include screen('mobile') {
+        border-bottom: 1px #999 dashed;
+        @include screen('(max-width:767px)') {
             @include text-overflow();
         }
 
@@ -102,7 +102,7 @@
     }
     .more {
         text-align: right;
-         @include screen('mobile') {
+        @include screen('(max-width:767px)') {
             text-align: center;
         }
         a {

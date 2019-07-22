@@ -200,7 +200,7 @@
                         <h3>請選擇視覺風格</h3>
                         <div class="btn_grp">
                             <img src="images/style_fashion.jpg" alt="">
-                            <button class="btn btn-sm" id="openModal"> 01經典設計</button>
+                            <button class="btn btn-sm"> 01經典設計</button>
                         </div>
                     </div>
                     <div class="col">
@@ -216,7 +216,7 @@
                         <h3>網站狀態</h3>
                         <div class="btn_grp status_block">
                             <button class="btn btn-sm">儲存</button>
-                             <button class="btn btn-sm">頁面資訊</button>
+                            <button class="btn btn-sm" id="openModal">頁面資訊</button>
                             <p>說明文字</p>
                             <hr />
                             <button class="btn btn-sm btn-orange">預覽</button>
@@ -665,64 +665,46 @@
     </div>
     <!-- //視窗 -->
     <div id="modal1" class="modal">
-        <h2>請選擇視覺風格</h2>
+        <h2>頁面資訊</h2>
         <div class="modal_content">
-            <div class="col-4-4-4">
-                <div class="col">
-                    <div class="hy_block">
-                        <h4>01.視覺潮流<img src="images/style_fashion.jpg" alt=""></h4>
-                        <div class="btn_grp">
-                            <button class="btn">預覽</button>
-                            <button class="btn">套用</button>
-                        </div>
+            <form action="" class="form_grid">
+                <div class="form_grp">
+                    <label for="username" class="form_title">網頁名稱</label>
+                    <div class="form_content">
+                        <input type="text" id="exampleId" value="https://www.example.com.tw" placeholder="請輸入網頁名稱">
                     </div>
                 </div>
-               <div class="col">
-                    <div class="hy_block">
-                        <h4>02.經典設計<img src="images/style_classic.jpg" alt=""></h4>
-                        <div class="btn_grp">
-                            <button class="btn">預覽</button>
-                            <button class="btn">套用</button>
-                        </div>
+                <div class="form_grp">
+                    <label for="exampleId" class="form_title">FULL URL</label>
+                    <div class="form_content hasIcon">
+                        <input type="text" id="exampleId" value="https://www.example.com.tw" placeholder="請輸入網頁名稱">
+                        <button class="btn"><i class="i_copy"></i></button>
                     </div>
                 </div>
-                <div class="col">
-                    <div class="hy_block">
-                        <h4>03.極簡風格<img src="images/style_simple.jpg" alt=""></h4>
-                        <div class="btn_grp">
-                            <button class="btn">預覽</button>
-                            <button class="btn">套用</button>
-                        </div>
+                <div class="form_grp">
+                    <label for="exampleId" class="form_title">Preview URL</label>
+                    <div class="form_content hasIcon">
+                        <input type="text" id="exampleId" value="" placeholder="請輸入網頁名稱">
+                         <button class="btn"><i class="i_copy"></i></button>
                     </div>
                 </div>
-                <div class="col">
-                    <div class="hy_block">
-                        <h4>04.視覺潮流<img src="images/style_fashion.jpg" alt=""></h4>
-                        <div class="btn_grp">
-                            <button class="btn">預覽</button>
-                            <button class="btn">套用</button>
-                        </div>
+                <div class="form_grp">
+                    <label for="exampleId" class="form_title">描述</label>
+                    <div class="form_content">
+                        <textarea name="" id="exampleId" cols="30" rows="10"></textarea>
                     </div>
                 </div>
-               <div class="col">
-                    <div class="hy_block">
-                        <h4>05.經典設計<img src="images/style_classic.jpg" alt=""></h4>
-                        <div class="btn_grp">
-                            <button class="btn">預覽</button>
-                            <button class="btn">套用</button>
-                        </div>
+                <div class="form_grp">
+                    <label for="exampleId" class="form_title">狀態</label>
+                    <div class="form_content">
+                        <p>已有發布狀態，(此版未發布)</p>
                     </div>
                 </div>
-                <div class="col">
-                    <div class="hy_block">
-                        <h4>06.極簡風格<img src="images/style_simple.jpg" alt=""></h4>
-                        <div class="btn_grp">
-                            <button class="btn">預覽</button>
-                            <button class="btn">套用</button>
-                        </div>
-                    </div>
+                <div class="btn_grp">
+                    <input name="Search" type="submit" value="儲存">
+                    <input name="" type="reset" value="清除">
                 </div>
-            </div> 
+            </form>
         </div>
     </div>
 </body>
@@ -758,6 +740,5 @@ $(function() {
     $('.modal .close').click(closeModal);
 });
 </script>
-
 
 </html>

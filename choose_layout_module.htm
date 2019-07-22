@@ -200,7 +200,7 @@
                         <h3>請選擇視覺風格</h3>
                         <div class="btn_grp">
                             <img src="images/style_fashion.jpg" alt="">
-                            <button class="btn btn-sm" id="openModal"> 01經典設計</button>
+                            <button class="btn btn-sm"> 01經典設計</button>
                         </div>
                     </div>
                     <div class="col">
@@ -216,7 +216,7 @@
                         <h3>網站狀態</h3>
                         <div class="btn_grp status_block">
                             <button class="btn btn-sm">儲存</button>
-                             <button class="btn btn-sm">頁面資訊</button>
+                            <button class="btn btn-sm">頁面資訊</button>
                             <p>說明文字</p>
                             <hr />
                             <button class="btn btn-sm btn-orange">預覽</button>
@@ -225,6 +225,7 @@
                     </div>
                 </div>
             </div>
+          
             <!-- 版型管理 -->
             <div class="layout">
                 <div class="hy_block">
@@ -665,64 +666,54 @@
     </div>
     <!-- //視窗 -->
     <div id="modal1" class="modal">
-        <h2>請選擇視覺風格</h2>
+        <h2>模組屬性 <small>最新消息-大圖條列模組 | 新聞 | 新聞資料</small></h2>
         <div class="modal_content">
-            <div class="col-4-4-4">
-                <div class="col">
-                    <div class="hy_block">
-                        <h4>01.視覺潮流<img src="images/style_fashion.jpg" alt=""></h4>
-                        <div class="btn_grp">
-                            <button class="btn">預覽</button>
-                            <button class="btn">套用</button>
+            <p>模組屬性依據模組不同設定模組屬性值，若模組的資料屬於靜態資料(非後台結構性上稿資料)則可於模組中設定模組所要呈現的資料。</p>
+            <div class="tabSet">
+                <div class="tabs example-1">
+                    <h2 class="tabItem active"><a href="#">模組屬性值</a></h2>
+                    <!--選到的頁籤項目-->
+                    <div class="tabContent">
+                        <form action="" class="form_grid">
+                            <div class="form_grp">
+                                <label for="exampleId" class="form_title">標題</label>
+                                <div class="form_content">
+                                    <input type="text" id="exampleId" value="論壇研討會">
+                                </div>
+                            </div>
+                            <div class="form_grp">
+                                <label for="exampleId" class="form_title">更多文字</label>
+                                <div class="form_content hasIcon">
+                                    <input type="text" id="exampleId" value="更多最新消息">
+                                    <a href="#">預設值</a>
+                                </div>
+                            </div>
+                            <div class="form_grp">
+                                <label for="exampleId" class="form_title">更多連結</label>
+                                <div class="form_content hasIcon">
+                                    <input type="text" id="exampleId" value="/asdb.html">
+                                    <a href="#">預設值</a>
+                                </div>
+                            </div>
+                            <div class="btn_grp">
+                                <input name="Search" type="submit" value="儲存">
+                                <input name="" type="reset" value="關閉">
+                            </div>
+                        </form>
+                    </div>
+                    <h2 class="tabItem"><a href="#">靜態編輯</a></h2>
+                    <div class="tabContent">
+                        <!-- 套editor -->
+                        <div class="editer">
+                            
                         </div>
+                        <div class="btn_grp">
+                                <input name="Search" type="submit" value="儲存">
+                                <input name="" type="reset" value="關閉">
+                            </div>
                     </div>
                 </div>
-               <div class="col">
-                    <div class="hy_block">
-                        <h4>02.經典設計<img src="images/style_classic.jpg" alt=""></h4>
-                        <div class="btn_grp">
-                            <button class="btn">預覽</button>
-                            <button class="btn">套用</button>
-                        </div>
-                    </div>
-                </div>
-                <div class="col">
-                    <div class="hy_block">
-                        <h4>03.極簡風格<img src="images/style_simple.jpg" alt=""></h4>
-                        <div class="btn_grp">
-                            <button class="btn">預覽</button>
-                            <button class="btn">套用</button>
-                        </div>
-                    </div>
-                </div>
-                <div class="col">
-                    <div class="hy_block">
-                        <h4>04.視覺潮流<img src="images/style_fashion.jpg" alt=""></h4>
-                        <div class="btn_grp">
-                            <button class="btn">預覽</button>
-                            <button class="btn">套用</button>
-                        </div>
-                    </div>
-                </div>
-               <div class="col">
-                    <div class="hy_block">
-                        <h4>05.經典設計<img src="images/style_classic.jpg" alt=""></h4>
-                        <div class="btn_grp">
-                            <button class="btn">預覽</button>
-                            <button class="btn">套用</button>
-                        </div>
-                    </div>
-                </div>
-                <div class="col">
-                    <div class="hy_block">
-                        <h4>06.極簡風格<img src="images/style_simple.jpg" alt=""></h4>
-                        <div class="btn_grp">
-                            <button class="btn">預覽</button>
-                            <button class="btn">套用</button>
-                        </div>
-                    </div>
-                </div>
-            </div> 
+            </div>
         </div>
     </div>
 </body>
@@ -730,6 +721,7 @@
 <script src="js/jquery-3.3.1.min.js"></script>
 <script src="vendor/jquery.easing.min.js"></script>
 <script src="js/customize.js"></script>
+<script src="js/hyui.js"></script>
 <script src="vendor/nicescroll/jquery.nicescroll.min.js"></script>
 <script>
 /*-----------------------------------*/
@@ -741,6 +733,7 @@ $(function() {
     $('.modal_overlay').show();
     $('.modal').prepend('<button type="button" class="close">關閉</button>'); //新增關閉按鈕
     //按鈕動作
+    $('.modal').trigger('resize');
     $('#openModal').click(function(e) {
         $('#modal1').show();
         $('.modal_overlay').fadeIn(100);
@@ -758,6 +751,5 @@ $(function() {
     $('.modal .close').click(closeModal);
 });
 </script>
-
 
 </html>

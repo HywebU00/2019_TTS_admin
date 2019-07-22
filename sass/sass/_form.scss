@@ -36,6 +36,24 @@ select::-ms-expand {
         @include make-md-column(9);
         @include make-lg-column(9);
         @include gutter();
+        &.hasIcon{
+            padding-right: 4.5em;
+            button,a{
+                position:absolute;
+                top:-.21em;
+                right:.5em;
+                padding:.5em !important;
+                min-width: 1em;
+                width: auto;
+            }
+            a{
+                color:$aHover;
+                &:hover,&:focus{
+                    color:lighten($aHover,10);
+                }
+
+            }
+        }
     }
 }
 //---------------------------------------------form setting--------//
@@ -46,6 +64,8 @@ form, div {
     .btn_grp,
     .upload_grp {
         margin-bottom: .2em;
+        max-width: 70em;
+        margin: 0px auto 1em;
     }
     .check_grp,
     .radio_grp {

@@ -12,7 +12,7 @@
     @include box-sizing;
     @include border-radius(8px);
     @include box-shadow(1px 1px 35px RGBA(0, 0, 0, .75));
-    animation: scaleUp .3s ease-out;
+    // animation: scaleUp .3s ease-out;
     h2 {
         border-bottom: 1px solid $primaryColor;
         padding-bottom: .5em;
@@ -36,11 +36,12 @@
     .modal_content {
         background: #FDFDFD;
         padding: 1em .5em;
-        height:75%;
+        height:auto;
         position:absolute;
-        bottom:10%;
-        width:97%;
-        left: 1.5%;
+        bottom:5%;
+        top:100px;
+        width:96%;
+        left: 2%;
         border: 1px solid #DDD;
         border-top: 1px solid #BBB;
         box-shadow: 5px 5px 8px RGBA(0, 0, 0, .15) inset;
@@ -55,16 +56,16 @@
         }
     }
 }
-@keyframes scaleUp {
-    0% {
-        transform: scale(1) translateY(0px);
-        opacity: 0;
-    }
-    100% {
-        transform: scale(1) translateY(0px);
-        opacity: 1;
-    }
-}
+// @keyframes scaleUp {
+//     0% {
+//         transform: scale(1) translateY(0px);
+//         opacity: 0;
+//     }
+//     100% {
+//         transform: scale(1) translateY(0px);
+//         opacity: 1;
+//     }
+// }
 .modal_overlay {
     position: fixed;
     display: block;
