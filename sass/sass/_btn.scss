@@ -98,9 +98,9 @@ $btn-radius:4px;
 .btn-lg {
     font-size: $font-size * 1.25; //20px
 }
-.btn-sm {
+.btn-sm, .text-sm {
     font-size: $font-size * .938; //15px
 }
-.btn-xs {
+.btn-xs, .text-xs {
     font-size: $font-size * .75; //12px
 }

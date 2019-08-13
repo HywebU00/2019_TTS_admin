@@ -34,6 +34,12 @@
 .i_arrow_right {
     @include hyui_icon('icon_arrow_right');
 }
+.i_arrow_up {
+    @include hyui_icon('icon_arrow_up');
+}
+.i_arrow_down {
+    @include hyui_icon('icon_arrow_down');
+}
 .i_bookmark {
     @include hyui_icon('icon_bookmark');
 }
@@ -121,6 +127,10 @@
 .i_copy {
     @include hyui_icon('icon_copy');
 }
+.i_view{
+    @include hyui_icon('icon_view');
+}
+
 
 
 

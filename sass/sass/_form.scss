@@ -36,7 +36,7 @@ select::-ms-expand {
         @include make-md-column(9);
         @include make-lg-column(9);
         @include gutter();
-        &.hasIcon{
+        &.hasIcon, &.hasBtn{
             padding-right: 4.5em;
             button,a{
                 position:absolute;
@@ -52,6 +52,13 @@ select::-ms-expand {
                     color:lighten($aHover,10);
                 }
 
+            }
+        }
+        &.hasBtn{
+            padding-right: 1em;
+            button,a{
+                padding:.48em 2em!important;
+                right:.8em;
             }
         }
     }
@@ -362,4 +369,19 @@ img.captcha {
 abbr[title] {
     border-bottom: none;
     text-decoration: none;
+}
+
+.has-danger{
+    .form-control-danger{
+        input,
+        textarea,
+        select{
+            border: none;
+            outline: none;
+            box-shadow: 0 0 0 1px $color-red inset;
+        }
+        .form-control-feedback{
+            color: $color-red;
+        }
+    }
 }
