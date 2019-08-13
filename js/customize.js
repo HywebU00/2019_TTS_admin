@@ -53,7 +53,6 @@ $(function() {
     });
     // library
     $('.library ul ul').hide();
-   
     $('.library ul li:first ul').show();
     //  $('.library ul ul').niceScroll({
     //     cursorwidth: "8px",
@@ -73,24 +72,38 @@ $(function() {
         });
     });
     //控制模組定位
-    if($('.library').length>0){
-       var libraryTop = $('.library').offset().top,
-        libraryW = $('.library').width();
-    $(window).bind("load resize scroll", function(event) {
-        var currentScroll = $(window).scrollTop();
-        if (currentScroll >= libraryTop - 50) {
-            $('.library').css({
-                position: 'fixed',
-                top: '3em',
-                right: '1em',
-                width: libraryW
-            });
-        } else {
-            $('.library').css({
-                position: 'static'
+    if ($('.library').length > 0) {
+        var libraryTop = $('.library').offset().top,
+            libraryW = $('.library').width();
+        $(window).bind("load resize scroll", function(event) {
+            var currentScroll = $(window).scrollTop();
+            if (currentScroll >= libraryTop - 50) {
+                $('.library').css({
+                    position: 'fixed',
+                    top: '3em',
+                    right: '1em',
+                    width: libraryW
+                });
+            } else {
+                $('.library').css({
+                    position: 'static'
+                });
+            }
+        });
+    }
+    $(window).on("load resize", function(e) {
+        var WindowWidth = $(window).outerWidth();
+        var cellDiv1 = $(".template_setting").find('.form_grp');
+        if (WindowWidth >= 768) {
+            $(".template_setting .container .form_grp").each(function() {
+                var highestBox = 0;
+                $(cellDiv1, this).each(function() {
+                    if ($(this).height() > highestBox) {
+                        highestBox = $(this).height();
+                    }
+                });
+                $(cellDiv1, this).height(highestBox);
             });
         }
-    }); 
-    }
-    
+    });
 });
