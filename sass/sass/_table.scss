@@ -8,8 +8,11 @@ table {
     }
     th,
     td {
-        padding: .5em;
+        padding: .2em;
         text-align: left;
+        .btn, input[type="button"], input[type="submit"]{
+            padding:.2em !important;
+        }
     }
     td {
         border: #ddd 1px solid;
