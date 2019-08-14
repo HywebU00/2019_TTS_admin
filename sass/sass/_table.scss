@@ -8,7 +8,7 @@ table {
     }
     th,
     td {
-        padding: .2em;
+        padding: .3em .5em;
         text-align: left;
         .btn, input[type="button"], input[type="submit"]{
             padding:.2em !important;
@@ -17,6 +17,7 @@ table {
     td {
         border: #ddd 1px solid;
         word-break: break-all;
+        border-width: 1px 0;
         a {
             word-break: break-all;
         }
@@ -25,6 +26,7 @@ table {
         background-color: #F3F3F3;
         color: #333;
         border: #DDD 1px solid;
+        border-width: 1px 0;
         text-align: center;
         white-space: nowrap;
     }
