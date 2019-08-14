@@ -60,6 +60,9 @@ select::-ms-expand {
                 padding:.48em 2em!important;
                 right:.8em;
             }
+            >input[type="text"]{
+                padding-right: 8em;
+            }
         }
     }
 }
