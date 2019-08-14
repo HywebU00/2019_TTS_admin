@@ -2,7 +2,7 @@
 $btn-font-color:$color-word;
 $btn-border:darken($color-word, 5);
 $btn-padding:.5em 2em;
-$btn-radius:4px;
+$btn-radius:.2em;
 // 按鈕外框
 .btn_grp {
     text-align: center;
@@ -10,16 +10,20 @@ $btn-radius:4px;
 }
 // 按鈕的共用設定
 @mixin btn_setting($btn-bg:#DDD, $btn-font-color:$btn-font-color) {
-    background: $btn-bg;
-    border: 1px solid darken($btn-bg, 8);
+    background-color: $btn-bg; 
+    @include filter-gradient(lighten($btn-bg, 5), darken($btn-bg, 5), vertical); 
+    @include background-image(linear-gradient(top, lighten($btn-bg, 5) 0%, darken($btn-bg, 10) 100%));
+    border: 1px solid darken($btn-bg, 5);
     color: $btn-font-color;
-    @include box-shadow(0px 0px 2px RGBA(0, 0, 0, .08));
     @include border-radius($btn-radius);
-    outline: none;
+    text-shadow: 1px 1px 2px RGBA(0, 0, 0, .6);
     &:hover,
     &:focus {
-        background: lighten($btn-bg, 5);
-        @include box-shadow(0px 0px 2px RGBA(0, 0, 0, .15));
+        background-color: darken($btn-bg,0); // Old browsers
+        @include filter-gradient(darken($btn-bg,0), darken($btn-bg, 10), vertical); // IE6-9
+        @include background-image(linear-gradient(top, darken($btn-bg,0) 0%, darken($btn-bg, 10) 100%));
+        @include box-shadow(0px 2px 4px lighten($btn-bg, 10));
+        border: 1px solid darken($btn-bg, 10);
         cursor: pointer;
         color: #FFF;
     }
@@ -41,34 +45,29 @@ $btn-radius:4px;
     width: auto;
     min-width: 5em;
     margin: .25em .1em;
-    @include screen('xs_mobile') {
-        width: 100%;
-        max-width: 100%;
-        margin: .25em 0;
-    }
 }
 .btn {
     @extend %btn;
-    padding: $btn-padding !important;
+    padding: $btn-padding;
     touch-action: manipulation;
     @include box-sizing(border-box);
     @include btn_setting();
     @include text-shadow(RGBA(0, 0, 0, .3) 0px 0px 0px);
-    background-color: rgb(247, 247, 247); // Old browsers
-    @include filter-gradient(#f7f7f7, #eaeaea, vertical); // IE6-9
-    @include background-image(linear-gradient(top, rgba(252, 252, 252, 1) 0%, rgba(230, 230, 230, 1) 100%));
     &:hover,
     &:focus {
         color: $btn-font-color;
         background-color: rgb(230, 230, 230); // Old browsers
         @include filter-gradient(#f7f7f7, #eaeaea, vertical); // IE6-9
         @include background-image(linear-gradient(top, rgba(250, 250, 250, 1) 0%, rgba(220, 220, 220, 1) 100%));
+        outline: none;
+        box-shadow: none;
     }
 }
 //按鈕顏色
 //@include btn_setting(按鈕顏色,字的顏色);
 .btn-green {
     @extend %btn;
+    // color:#FFF;
     @include btn_setting($color-green, #FFF);
 }
 .btn-blue {
@@ -98,9 +97,9 @@ $btn-radius:4px;
 .btn-lg {
     font-size: $font-size * 1.25; //20px
 }
-.btn-sm, .text-sm {
+.btn-sm {
     font-size: $font-size * .938; //15px
 }
-.btn-xs, .text-xs {
+.btn-xs {
     font-size: $font-size * .75; //12px
 }
