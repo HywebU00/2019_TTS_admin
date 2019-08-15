@@ -1,9 +1,9 @@
 //參照雅瓊範例
 @mixin formStyle($f_color:$color-word, $f_border:$color-gray, $f_radius:5px) {
     color: $f_color;
-    font-size: 1em;
+    font-size: .938em;
     border: 1px solid #CCC;
-    padding: .5em;
+    padding: .5em .3em;
     background: #F9F9F9;
     vertical-align: middle;
     margin-bottom: .3em;
@@ -11,14 +11,27 @@
     @include border-radius($f_radius);
     @include transition(border, .2s, ease-out);
     @include transition(box-shadow, .2s, ease-out);
+    &:hover,&:focus {
+        outline:none; 
+    }
 }
 select::-ms-expand {
     display: none;
 }
 .form_grid {
     margin: .5em;
+    @media screen and (min-width:1400px) {
+        margin: .5em auto .5em 1em;
+        width: 80%;
+        min-width: 500px;
+    }
+    @include screen('mobile') {
+        margin: .2em;
+        width: 100%;
+        min-width: 1em;
+    }
     .form_grp {
-        border-bottom: 1px solid #DDD;
+        border-bottom: 1px solid #EDEEF3;
         overflow: hidden;
         padding: .2em 0;
     }
@@ -36,31 +49,39 @@ select::-ms-expand {
         @include make-md-column(9);
         @include make-lg-column(9);
         @include gutter();
-        &.hasIcon, &.hasBtn{
+        .info{
+            margin: .3em 0;
+            span{
+                display:inline-block;
+                margin-right: .3em;
+                color:$color-info;
+            }
+        }
+        &.hasIcon, &.hasBtn {
             padding-right: 4.5em;
-            button,a,input[type="button"]{
-                position:absolute;
-                top:-.22em;
-                right:.5em;
-                padding:.5em !important;
+            button, a, input[type="button"] {
+                position: absolute;
+                top: -.22em;
+                right: .5em;
+                padding: .5em !important;
                 min-width: 1em;
                 width: auto;
             }
-            a{
-                color:$aHover;
-                &:hover,&:focus{
-                    color:lighten($aHover,10);
+            a {
+                color: $aHover;
+                &:hover, &:focus {
+                    color: lighten($aHover, 10);
                 }
-
             }
         }
-        &.hasBtn{
+        &.hasBtn {
             padding-right: 1em;
-            button,a,input[type="button"]{
-                padding:.48em 2em!important;
-                right:.8em;
+            button, a, input[type="button"] {
+                padding: .25em 2em !important;
+                right: .8em;
+                top: -.25em;
             }
-            >input[type="text"]{
+            >input[type="text"] {
                 padding-right: 8em;
             }
         }
@@ -103,7 +124,7 @@ form, div {
             select {
                 width: auto;
             }
-            input[type="radio"]{
+            input[type="radio"] {
                 width: 1em;
             }
         }
@@ -128,9 +149,9 @@ form, div {
             border: 1px solid #CCC;
             width: auto;
             display: inline-block;
-            min-width:20em;
+            min-width: 20em;
             @include screen('mobile') {
-                min-width:10em;
+                min-width: 10em;
             }
         }
         .form_grp,
@@ -243,9 +264,9 @@ input[type="password"]:focus,
 textarea:focus,
 select:focus {
     border: 1px solid lighten($color-orange, 20) !important;
-    @include box-shadow(0px 0px 0px 2px lighten($color-orange, 20));
+    @include box-shadow(0px 0px 0px 1px lighten($color-orange, 20));
     outline: none;
-    background:#FFF;
+    background: #FFF;
 }
 //
 input[type="file"] {}
@@ -304,17 +325,18 @@ input[type="radio"]:checked {
 }
 //---------------------------------------------readonly disable -------//
 input[readonly],
-input[disable] {
-    background: lighten($color-gray, 15);
-    color: darken($color-gray, 10);
+input[disabled] {
+    background: lighten($color-gray, 18);
+    color: darken($color-gray, 30);
     border-color: darken($color-gray, 10);
     &~label {
         color: darken($color-gray, 10);
     }
     &:hover,
     &:focus {
+        background: lighten($color-gray, 18);
+        color: darken($color-gray, 30);
         border-color: darken($color-gray, 10);
-        box-shadow: none; // cursor: not-allowed;
     }
 }
 // 檔案上傳
@@ -376,17 +398,21 @@ abbr[title] {
     border-bottom: none;
     text-decoration: none;
 }
-
-.has-danger{
-    .form-control-danger{
+.has-danger {
+    .form-control-danger {
         input,
         textarea,
-        select{
+        select {
             border: none;
             outline: none;
+            border: 1px solid $color-red;
             box-shadow: 0 0 0 1px $color-red inset;
+            &:focus {
+                border: 1px solid lighten($color-orange, 20) !important;
+                @include box-shadow(0px 0px 0px 2px lighten($color-orange, 20));
+            }
         }
-        .form-control-feedback{
+        .form-control-feedback {
             color: $color-red;
         }
     }

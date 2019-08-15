@@ -8,40 +8,73 @@ table {
     }
     th,
     td {
-        padding: .3em .5em;
+        padding: .5em;
         text-align: left;
-        .btn, input[type="button"], input[type="submit"]{
-            padding:.2em !important;
+        .btn, input[type="button"], input[type="submit"] {
+            padding: .2em !important;
         }
     }
     td {
-        border: #ddd 1px solid;
+        border: #EDEEF3 1px solid;
         word-break: break-all;
         border-width: 1px 0;
+        color: #666;
+        span {
+            display: inline-block;
+            vertical-align: middle;
+            padding: .3em .5em;
+            min-width:5em;
+            border-radius: .2em;
+            text-align: center;
+            color: #FFF;
+            margin: 0 .2em .2em;
+            &.green {
+                background: $color-green;
+            }
+            &.red {
+                background: $color-red;
+            }
+            &.blue {
+                background: $color-blue;
+            }
+        }
         a {
             word-break: break-all;
+            color: $aColor;
+            &:hover, &:focus {
+                color: $aHover;
+            }
         }
     }
     th {
-        background-color: #F3F3F3;
+        background-color: #EDEEF3;
         color: #333;
-        border: #DDD 1px solid;
+        border: #EDEEF3 1px solid;
         border-width: 1px 0;
-        text-align: center;
+        text-align: left;
         white-space: nowrap;
     }
     &.table_hover {
         tr:hover {
-            background: #F3F3F3;
+            background: #EDEEF3;
         }
     }
     &.table_sprite {
         tr:nth-child(even) {
-            background: #F5F5F5;
+            background: #EDEEF3;
+        }
+    }
+    tbody {
+        th, td {
+            background: transparent;
+            text-align: left;
+            white-space: normal;
+        }
+        th {
+            width: 20%;
         }
     }
 }
-
 .table_list {
     @include screen('xs_mobile') {
         background-color: transparent !important; //Force table to not be like tables anymore
@@ -69,6 +102,9 @@ table {
             padding-left: 35% !important;
             white-space: normal;
             text-align: left;
+            @include screen('mobile') {
+                text-align: left !important;
+            }
             &:before {
                 content: attr(data-title);
                 position: absolute;
@@ -84,20 +120,18 @@ table {
         }
     }
 }
-
 .table_wrapper {
     @include screen('mobile') {
-        width:100%;
-        display:block;
+        width: 100%;
+        display: block;
         @include clearfix;
-        overflow:hidden;
-        overflow-x:auto;
+        overflow: hidden;
+        overflow-x: auto;
         -webkit-overflow-scrolling: touch;
         -webkit-transform: translate3d(0, 0, 0);
-        table{
-            width:100%;
-            min-width:545px;
+        table {
+            width: 100%;
+            min-width: 545px;
         }
-
     }
 }

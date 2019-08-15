@@ -1,5 +1,6 @@
- h3, h4 {
-     margin: 0 0 .5em;
+ h3,
+ h4 {
+     margin: .5em 0;
  }
  .text-right {
      text-align: right;
@@ -12,6 +13,11 @@
      @include screen('mobile') {
          text-align: center;
      }
+ }
+ .control_panel {
+     margin: 0 0 .5em;
+     padding-bottom: .3em;
+     border-bottom: 2px solid #AAA;
  }
  .radio_grp {
      img {
@@ -37,15 +43,19 @@
      border-bottom: 3px solid #CCC;
      padding: 1em;
      overflow: hidden;
+     font-size: .938em;
+     h3 {
+         margin: 1em 0;
+         font-size: 1.25em;
+         color: darken($primaryColor, 5);
+     }
  }
  .status_block {
      text-align: left;
  }
  .main_zone {
      position: relative;
-     width: 100%;
-     height: 100%;
-     padding: 3.5em 1em 4em 230px;
+     padding: 3.5em 1em 4em 225px;
      // overflow-x: hidden !important;
      // overflow-y: auto !important;
      // -webkit-overflow-scrolling: touch;
@@ -55,6 +65,7 @@
      }
      .content {
          display: block;
+         overflow: hidden;
          min-height: 500px;
      }
      .ss {
@@ -64,8 +75,9 @@
      }
      h2 {
          position: relative;
-         padding: .5em .5em .5em 1em;
+         padding: .3em .5em .3em 1em;
          line-height: 1.45em;
+         margin: .1em 0 .5em;
          &:before {
              position: absolute;
              width: 5px;
@@ -188,7 +200,8 @@
                          margin: 0px auto;
                      }
                  }
-                 .main_title, .sub_title {
+                 .main_title,
+                 .sub_title {
                      overflow: hidden;
                      width: auto;
                      font-weight: bold;
@@ -224,7 +237,8 @@
          .container {
              // max-width: 100% !important;
          }
-         .layout_header, .layout_footer {
+         .layout_header,
+         .layout_footer {
              .module {
                  min-height: 6em;
                  border: 2px solid $color-gray;
@@ -309,7 +323,8 @@
                                  /* Firefox 18- */
                                  color: darken($color-blue, 20);
                              }
-                             &:hover, &:focus {
+                             &:hover,
+                             &:focus {
                                  outline: none !important;
                                  border: none !important;
                                  box-shadow: none !important;
@@ -525,7 +540,8 @@
              width: 100%;
          }
      }
-     input[type="submit"], input[type="reset"] {
+     input[type="submit"],
+     input[type="reset"] {
          padding: 0.5em 2em;
      }
  }

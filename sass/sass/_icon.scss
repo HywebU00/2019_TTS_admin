@@ -24,7 +24,9 @@
         filter: invert(100%);
     }
 }
-
+.i_add {
+    @include hyui_icon('icon_add');
+}
 .i_apple {
     @include hyui_icon('icon_apple');
 }
@@ -129,6 +131,12 @@
 }
 .i_view{
     @include hyui_icon('icon_view');
+}
+.i_man{
+    @include hyui_icon('icon_man');
+}
+.i_calendar{
+    @include hyui_icon('icon_calendar');
 }
 
 
