@@ -54,6 +54,7 @@ select::-ms-expand {
         @include make-lg-column(3);
         @include gutter();
         padding-top: 5px;
+        font-weight: bold;
     }
     .form_content,.form_content_th {
         @include make-xs-column(12);

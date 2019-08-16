@@ -10,6 +10,8 @@
     <script src="js/html5shiv.js"></script>
     <script src="js/respond.min.js"></script>
     <![endif]-->
+    <!-- pg-calendar -->
+    <link rel="stylesheet" href="vendor/pg_calendar/css/pignose.calendar.css">
     <!-- hyUI -->
     <link rel="stylesheet" href="css/hyui_admin.css">
     <!-- favicon -->
@@ -45,6 +47,7 @@
     </header>
     <!-- 左側選單 -->
     <aside>
+
         <menu>
             <ul>
                 <li><a href="#"><img src="images/icon_global.svg" alt=""><span>展覽管理</span></a>
@@ -247,15 +250,19 @@
                     <div class="form_grp">
                         <label for="apartment_num" class="form_title">生日 </label>
                         <div class="form_content hasBtn">
-                            <input type="text" id="username" value="">
-                            <button class="btn"><i class="i_calendar"></i></button>
+                            <div class="datepick">
+                                <input name="" type="text" value="" class="calendar">
+                                <button class="btn"><i class="i_calendar_color"></i></button>
+                            </div>
                         </div>
                     </div>
                     <div class="form_grp">
                         <label for="apartment_num" class="form_title">到職日 </label>
                         <div class="form_content hasBtn">
-                            <input type="text" id="username" value="">
-                            <button class="btn"><i class="i_calendar"></i></button>
+                            <div class="datepick">
+                                <input name="" type="text" value="" class="calendar">
+                                <button class="btn"><i class="i_calendar_color"></i></button>
+                            </div>
                         </div>
                     </div>
                     <div class="form_grp">
@@ -333,8 +340,15 @@
 <script src="js/customize.js"></script>
 <script src="vendor/nicescroll/jquery.nicescroll.min.js"></script>
 <script src="js/jquery.treeview.js"></script>
+<!-- pg-calendar -->
+<script src="vendor/pg_calendar/js/pignose.calendar.full.min.js"></script>
 <script>
 $(function() {
+    $('.datepick input').pignoseCalendar({
+        lang: 'ch',
+        modal: true,
+        format: 'YYYY-MM-DD',
+    });
     $(".treeview_block ul").treeview();
 });
 </script>

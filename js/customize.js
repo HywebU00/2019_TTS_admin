@@ -1,5 +1,25 @@
 // 自行加入的JS請寫在這裡
 $(function() {
+    var Menu_Status = false;
+    $('aside').prepend('<div class="toggle_btn"><a href="#"></a></div>');
+    var _Menu_Btn = $('aside').find('.toggle_btn a');
+    _Menu_Btn.off().click(function(e) {
+        if (!Menu_Status) {
+            $('aside').addClass('closed');
+            $('header').addClass('closed');
+            $('.main_zone').addClass('closed');
+            $(this).parent().addClass('closed');
+            Menu_Status = true;
+        } else {
+            $('aside').removeClass('closed');
+            $('header').removeClass('closed');
+            $('.main_zone').removeClass('closed');
+            $(this).parent().removeClass('closed');
+            Menu_Status = false;
+        }
+        $(this).blur();
+        e.preventDefault();
+    });
     // $("aside menu").niceScroll({
     //     cursorwidth: "8px",
     //     cursoropacitymax:0.6,
@@ -107,6 +127,7 @@ $(function() {
         }
     });
     rwdTable();
+
     function rwdTable() {
         $('.table_list').find('table').each(function() {
             var $row = $(this).find('tr');
