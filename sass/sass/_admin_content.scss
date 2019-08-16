@@ -2,6 +2,43 @@
  h4 {
      margin: .5em 0;
  }
+ .window_open {
+     padding-top: 3em;
+     .modal_title {
+         @include gradient(darken($primaryColor,15),darken($primaryColor,0),horizontal);
+         color:#FFF;
+         text-shadow:2px 2px 0px 4px rgba(0,0,0,.75);
+         font-size: 1em;
+         font-weight: bold;
+         padding: .45em 1em 0;
+         margin: 0 0 1em;
+         border-bottom: 3px solid #BBB;
+         position:fixed;
+         width: 100%;
+         top:0;
+         height:2.5em;
+         z-index: 99;
+     }
+     .btn_grp{
+        width:96%;
+        margin: 2em auto 0;
+        border-top: 1px solid #BBB;
+     }
+ }
+ span {
+     &.info_blue {
+         color: darken($color-blue, 10);
+     }
+     &.info_red {
+         color: $color-red;
+     }
+     &.info_orange {
+         color: $color-orange;
+     }
+     &.info_green {
+         color: $color-green;
+     }
+ }
  .text-right {
      text-align: right;
      @include screen('mobile') {
@@ -18,6 +55,13 @@
      margin: 0 0 .5em;
      padding-bottom: .3em;
      border-bottom: 2px solid #AAA;
+     .info {
+         margin-right: 2em;
+         @include screen('mobile') {
+             display: block;
+             margin: 0 0 .5em;
+         }
+     }
  }
  .radio_grp {
      img {
@@ -43,11 +87,19 @@
      border-bottom: 3px solid #CCC;
      padding: 1em;
      overflow: hidden;
-     font-size: .938em;
+     font-size: .875em;
      h3 {
-         margin: 1em 0;
+         margin: .2em 0 .8em;
          font-size: 1.25em;
          color: darken($primaryColor, 5);
+     }
+     .info {
+         margin: 1em 0;
+         span {
+             font-size: 2em;
+             font-weight: bold;
+             color: $color-red;
+         }
      }
  }
  .status_block {

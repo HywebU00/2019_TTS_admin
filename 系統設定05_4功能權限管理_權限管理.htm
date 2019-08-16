@@ -193,49 +193,109 @@
                 </ul>
             </div>
             <!-- 節點標題 -->
-            <h2>部門組織管理</h2>
+            <h2>功能權限管理</h2>
             <div class="hy_block">
-                <div class="control_panel">
+                <h3>功能Menu Tree</h3>
+                <div class="text-left control_panel">
+                    <button class="btn btn-sm"><i class="i_close"></i>刪除</button>
                     <button class="btn btn-sm"><i class="i_edit"></i>編輯</button>
-                    <button class="btn btn-sm"><i class="i_add"></i>新增子部門</button>
+                    <button class="btn btn-sm"><i class="i_move"></i>搬移</button>
+                    <button class="btn btn-sm"><i class="i_add"></i>新增子功能</button>
                 </div>
                 <div class="table_list">
-                    <h3>新增部門至 <span>中華民國對外貿易協會</span></h3>
-                    <form action="" class="form_grid">
-                        <div class="form_grp">
-                            <label for="apartment_num" class="form_title">
-                                部門編號 <abbr class="necessary" title="">*</abbr></label>
-                            <div class="form_content">
-                                <input type="text" id="username" value="Root">
-                            </div>
-                        </div>
-                        <div class="form_grp has-danger">
-                            <label for="" class="form_title">
-                                部門名稱 <abbr class="necessary" title="">*</abbr></label>
-                            <div class="form_content form-control-danger">
-                                <input name="" type="text" value="中華民國對外貿易協會">
-                                <div id="name-danger" class="form-control-feedback text-sm">請填寫必填欄位</div>
-                            </div>
-                        </div>
-                        <div class="form_grp">
-                            <label for="" class="form_title">部門管理人員</label>
-                            <div class="form_content hasBtn">
-                                <input name="" type="text" value="金城武,林志玲" disabled>
-                                <button class="btn">..</button>
-                            </div>
-                        </div>
-                        <div class="form_grp has-danger">
-                            <label for="" class="form_title">
-                                部門描述 </label>
-                            <div class="form_content">
-                                <textarea name="" id="" cols="30" rows="10"></textarea>
-                            </div>
-                        </div>
-                        <div class="btn_grp">
-                            <input name="" type="reset" value="取消">
-                            <input name="" type="submit" value="確定新增">
-                        </div>
-                    </form>
+                    <table>
+                        <tbody>
+                            <tr>
+                                <th>功能名稱</th>
+                                <td>展覽網站管理</td>
+                            </tr>
+                            <tr>
+                                <th>功能類型</th>
+                                <td>JAVA程式</td>
+                            </tr>
+                            <tr>
+                                <th>程式位址</th>
+                                <td>.../show.html</td>
+                            </tr>
+                            <tr>
+                                <th>部門人員</th>
+                                <td><a href="#">金城武</a>、<a href="#">林志玲</a></td>
+                            </tr>
+                            <tr>
+                                <th>程式參數</th>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <th>子功能</th>
+                                <td><span>展覽管理</span><span>GTM與頁尾管理</span><span>問卷共用管理</span></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            <div class="hy_block">
+                <h3>展覽資料權限管理</h3>
+                <div class="text-left control_panel">
+                    <button class="btn btn-sm"><i class="i_close"></i>刪除</button>
+                    <button class="btn btn-sm"><i class="i_add"></i>新增權限</button>
+                </div>
+                <div class="table_list">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th><input type="checkbox"></th>
+                                <th>部門單位</th>
+                                <th>專案群組</th>
+                                <th>角色</th>
+                                <th>使用者</th>
+                                <th>例外者</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><input type="checkbox"></td>
+                                <td>一組,二組</td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td><input type="checkbox"></td>
+                                <td>一組,二組</td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                           <tr>
+                                <td><input type="checkbox"></td>
+                                <td>一組,二組</td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            <div class="hy_block">
+                <div class="table_list">
+                    <table>
+                        <tbody>
+                            <tr>
+                                <th>展覽名稱</th>
+                                <td>台北自行車展</td>
+                            </tr>
+                            <tr>
+                                <th>展覽管理者設定</th>
+                                <td><span>金城武</span><span>林志玲</span>
+                                    <button class="btn">選擇</button>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
                 </div>
             </div>
         </div>

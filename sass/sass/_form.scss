@@ -35,7 +35,19 @@ select::-ms-expand {
         overflow: hidden;
         padding: .2em 0;
     }
-    .form_title {
+    .form_title_th,.form_content_th{
+        text-align: center;
+        font-weight: bold;
+        border-bottom: 1px solid #DDD;
+        padding:.2em 0 1.5em;
+        font-size:.938em;
+        height: 3em;
+        line-height: 3em;
+        @include screen('mobile') {
+            display:none;
+        }
+    }
+    .form_title,.form_title_th {
         @include make-xs-column(12);
         @include make-sm-column(3);
         @include make-md-column(3);
@@ -43,7 +55,7 @@ select::-ms-expand {
         @include gutter();
         padding-top: 5px;
     }
-    .form_content {
+    .form_content,.form_content_th {
         @include make-xs-column(12);
         @include make-sm-column(9);
         @include make-md-column(9);
@@ -77,12 +89,36 @@ select::-ms-expand {
         &.hasBtn {
             padding-right: 1em;
             button, a, input[type="button"] {
-                padding: .25em 2em !important;
+                padding: .37em 2em !important;
                 right: .8em;
-                top: -.25em;
+                top: -.21em;
             }
             >input[type="text"] {
                 padding-right: 8em;
+            }
+        }
+        .datepick {
+            padding-right: 1em;
+            position:relative;
+            display:inline-block;
+            button, a, input[type="button"] {
+                position:absolute;
+                padding: .37em .1em !important;
+                left: 0em;
+                top: -.21em;
+                min-width:1em;
+                background:none;
+                border:none;
+                i{
+                    &:before{
+                        width: 1.75em;
+                        height: 1.75em;
+                    }
+                }
+            }
+            >input[type="text"] {
+                width: 100%;
+                padding-left: 3em;
             }
         }
     }
@@ -326,7 +362,7 @@ input[type="radio"]:checked {
 //---------------------------------------------readonly disable -------//
 input[readonly],
 input[disabled] {
-    background: lighten($color-gray, 18);
+    background: lighten($color-gray, 10) !important;
     color: darken($color-gray, 30);
     border-color: darken($color-gray, 10);
     &~label {
@@ -334,9 +370,11 @@ input[disabled] {
     }
     &:hover,
     &:focus {
-        background: lighten($color-gray, 18);
-        color: darken($color-gray, 30);
-        border-color: darken($color-gray, 10);
+        background: lighten($color-gray, 10) !important;
+        color: darken($color-gray, 30) !important;
+        border-color: darken($color-gray, 10) !important;
+        box-shadow:none !important;
+        cursor:not-allowed;
     }
 }
 // 檔案上傳

@@ -193,49 +193,51 @@
                 </ul>
             </div>
             <!-- 節點標題 -->
-            <h2>部門組織管理</h2>
+            <h2>資料選項管理</h2>
+            <div class="hy_block text-center">
+                <div class="form_inline">
+                    <div class="form_grp form_inline">
+                        <label for=""> 類型 </label>
+                        <select name="" id="selectSample">
+                            <option value="">展覽地點</option>
+                            <option value="">國別</option>
+                            <option value="">產業別</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
             <div class="hy_block">
                 <div class="control_panel">
-                    <button class="btn btn-sm"><i class="i_edit"></i>編輯</button>
-                    <button class="btn btn-sm"><i class="i_add"></i>新增子部門</button>
+                     <button class="btn btn-sm"><i class="i_close"></i>刪除</button>
+                    <button class="btn btn-sm" onclick="window.open('系統設定07_1新增資料選項.htm', '新增資料選項','width=800,height=500');"><i class="i_add"></i>新增資料選項</button>
+
                 </div>
                 <div class="table_list">
-                    <h3>新增部門至 <span>中華民國對外貿易協會</span></h3>
-                    <form action="" class="form_grid">
-                        <div class="form_grp">
-                            <label for="apartment_num" class="form_title">
-                                部門編號 <abbr class="necessary" title="">*</abbr></label>
-                            <div class="form_content">
-                                <input type="text" id="username" value="Root">
-                            </div>
-                        </div>
-                        <div class="form_grp has-danger">
-                            <label for="" class="form_title">
-                                部門名稱 <abbr class="necessary" title="">*</abbr></label>
-                            <div class="form_content form-control-danger">
-                                <input name="" type="text" value="中華民國對外貿易協會">
-                                <div id="name-danger" class="form-control-feedback text-sm">請填寫必填欄位</div>
-                            </div>
-                        </div>
-                        <div class="form_grp">
-                            <label for="" class="form_title">部門管理人員</label>
-                            <div class="form_content hasBtn">
-                                <input name="" type="text" value="金城武,林志玲" disabled>
-                                <button class="btn">..</button>
-                            </div>
-                        </div>
-                        <div class="form_grp has-danger">
-                            <label for="" class="form_title">
-                                部門描述 </label>
-                            <div class="form_content">
-                                <textarea name="" id="" cols="30" rows="10"></textarea>
-                            </div>
-                        </div>
-                        <div class="btn_grp">
-                            <input name="" type="reset" value="取消">
-                            <input name="" type="submit" value="確定新增">
-                        </div>
-                    </form>
+                    <table>
+                        <thead>
+                            <tr>
+                                <th><input type="checkbox"></th>
+                                <th>繁體中文</th>
+                                <th>英文</th>
+                                <th>排序</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><input type="checkbox"></td>
+                                <td><a href="#" onclick="window.open('系統設定07_2修改檢視資料選項.htm', '新增資料選項','width=800,height=500');">世貿一舘</a></td>
+                                <td>TWTC Exhibition Hall 1 </td>
+                               <td>1</td>
+                            </tr>
+                            <tr>
+                                <td><input type="checkbox"></td>
+                                <td><a href="#">世貿二舘</a></td>
+                                <td>TWTC Exhibition Hall 2 </td>
+                               <td>2</td>
+                            </tr>
+                            
+                        </tbody>
+                    </table>
                 </div>
             </div>
         </div>

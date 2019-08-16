@@ -8,7 +8,7 @@ table {
     }
     th,
     td {
-        padding: .5em;
+        padding: .35em .5em;
         text-align: left;
         .btn, input[type="button"], input[type="submit"] {
             padding: .2em !important;
@@ -22,19 +22,28 @@ table {
         span {
             display: inline-block;
             vertical-align: middle;
-            padding: .3em .5em;
-            min-width:5em;
             border-radius: .2em;
             text-align: center;
-            color: #FFF;
-            margin: 0 .2em .2em;
+            margin-right: .5em;
             &.green {
+                color: #FFF;
+                margin: 0 .2em 0em;
+                padding: .3em .5em;
+                min-width: 5em;
                 background: $color-green;
             }
             &.red {
+                color: #FFF;
+                margin: 0 .2em .2em;
+                padding: .3em .5em;
+                min-width: 5em;
                 background: $color-red;
             }
             &.blue {
+                color: #FFF;
+                margin: 0 .2em .2em;
+                padding: .3em .5em;
+                min-width: 5em;
                 background: $color-blue;
             }
         }

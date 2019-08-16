@@ -16,6 +16,38 @@
         }
     }
 }
+.form_6_6{
+    width:auto !important;
+    .btn_grp{
+        clear:both;
+    }
+    .form_grp{
+        width:48%;
+        float: none;
+        display:inline-block;
+        vertical-align:top;
+        max-width:100em;
+        border-bottom: none !important;
+        .form_title{
+            width:100px;
+            font-weight: bold;
+            @include screen('mobile') {
+                width:100%;
+            }
+        }
+        .form_content{
+            width: calc(100% - 110px);
+            float:right;
+             @include screen('mobile') {
+                width:100%;
+            }
+        }
+        &:nth-child(odd):last-child{
+            width:100% !important;
+            float:none;
+        }
+    }
+}
 // 可用class個別命名
 // 單欄滿版
 .full {

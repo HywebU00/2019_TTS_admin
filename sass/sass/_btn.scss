@@ -93,6 +93,10 @@ $btn-radius:.2em;
     @extend %btn;
     @include btn_setting($color-purple, #FFF);
 }
+.btn-primary {
+    @extend %btn;
+    @include btn_setting(lighten($primaryColor,4), #FFF);
+}
 // 按鈕大小
 .btn-xl {
     font-size: $font-size * 1.5; //24px

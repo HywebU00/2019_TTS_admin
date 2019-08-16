@@ -8,7 +8,6 @@
         speak: none;
     }
 }
-
 @mixin hyui_icon($icon_img) {
     &:before {
         background-image: url(../images/icon/#{$icon_img}.svg);
@@ -129,63 +128,21 @@
 .i_copy {
     @include hyui_icon('icon_copy');
 }
-.i_view{
+.i_view {
     @include hyui_icon('icon_view');
 }
-.i_man{
+.i_man {
     @include hyui_icon('icon_man');
 }
-.i_calendar{
+.i_calendar {
     @include hyui_icon('icon_calendar');
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+.i_search {
+    @include hyui_icon('icon_search');
+}
+.i_pick {
+    @include hyui_icon('icon_pick');
+}
+.i_calendar_color {
+    @include hyui_icon('icon_calendar_color');
+}

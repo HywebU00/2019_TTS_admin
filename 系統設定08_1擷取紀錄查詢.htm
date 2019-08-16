@@ -12,6 +12,8 @@
     <![endif]-->
     <!-- hyUI -->
     <link rel="stylesheet" href="css/hyui_admin.css">
+    <!-- pg-calendar -->
+    <link rel="stylesheet" href="vendor/pg_calendar/css/pignose.calendar.css">
     <!-- favicon -->
     <link rel="icon" type="image/png" href="images/ico.png" />
 </head>
@@ -193,49 +195,189 @@
                 </ul>
             </div>
             <!-- 節點標題 -->
-            <h2>部門組織管理</h2>
+            <h2>擷取記錄查詢</h2>
+            <div class="pills">
+                <ul>
+                    <li><a href="#">服務用戶管理</a></li>
+                    <li class="active"><a href="#">擷取記錄查詢</a></li>
+                </ul>
+            </div>
             <div class="hy_block">
-                <div class="control_panel">
-                    <button class="btn btn-sm"><i class="i_edit"></i>編輯</button>
-                    <button class="btn btn-sm"><i class="i_add"></i>新增子部門</button>
+                <form action="" class="form_grid form_6_6">
+                    <div class="form_grp">
+                        <label for="apartment_num" class="form_title">用戶編號</label>
+                        <div class="form_content">
+                            <input type="text" id="" value="">
+                        </div>
+                    </div>
+                    <div class="form_grp">
+                        <label for="" class="form_title">服務名稱</label>
+                        <div class="form_content">
+                            <select name="" id="selectSample">
+                                <option value="">選項一</option>
+                                <option value="">選項二</option>
+                                <option value="">選項三</option>
+                                <option value="">選項四</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="form_grp">
+                        <label for="" class="form_title">請求內容</label>
+                        <div class="form_content">
+                            <input name="" type="text" value="">
+                        </div>
+                    </div>
+                    <div class="form_grp">
+                        <label for="" class="form_title">回應內容</label>
+                        <div class="form_content">
+                            <input name="" type="text" value="行銷活動群組">
+                        </div>
+                    </div>
+                    <div class="form_grp">
+                        <label for="" class="form_title">時間區間</label>
+                        <div class="form_content">
+                            <div class="form_grp form_inline">
+                                <div class="datepick">
+                                <input name="" type="text" value="" class="calendar">
+                                <button class="btn"><i class="i_calendar_color"></i></button>
+                                </div>
+                                 ~
+                                <div class="datepick">
+                                <input name="" type="text" value="" class="calendar">
+                                <button class="btn"><i class="i_calendar_color"></i></button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+                <div class="btn_grp">
+                    <button class="btn btn-primary">查詢</button>
                 </div>
+            </div>
+            <div class="hy_block">
+                <h3>查詢結果</h3>
                 <div class="table_list">
-                    <h3>新增部門至 <span>中華民國對外貿易協會</span></h3>
-                    <form action="" class="form_grid">
-                        <div class="form_grp">
-                            <label for="apartment_num" class="form_title">
-                                部門編號 <abbr class="necessary" title="">*</abbr></label>
-                            <div class="form_content">
-                                <input type="text" id="username" value="Root">
-                            </div>
-                        </div>
-                        <div class="form_grp has-danger">
-                            <label for="" class="form_title">
-                                部門名稱 <abbr class="necessary" title="">*</abbr></label>
-                            <div class="form_content form-control-danger">
-                                <input name="" type="text" value="中華民國對外貿易協會">
-                                <div id="name-danger" class="form-control-feedback text-sm">請填寫必填欄位</div>
-                            </div>
-                        </div>
-                        <div class="form_grp">
-                            <label for="" class="form_title">部門管理人員</label>
-                            <div class="form_content hasBtn">
-                                <input name="" type="text" value="金城武,林志玲" disabled>
-                                <button class="btn">..</button>
-                            </div>
-                        </div>
-                        <div class="form_grp has-danger">
-                            <label for="" class="form_title">
-                                部門描述 </label>
-                            <div class="form_content">
-                                <textarea name="" id="" cols="30" rows="10"></textarea>
-                            </div>
-                        </div>
-                        <div class="btn_grp">
-                            <input name="" type="reset" value="取消">
-                            <input name="" type="submit" value="確定新增">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>用戶編號</th>
+                                <th>服務名稱</th>
+                                <th>操作方法</th>
+                                <th>請求內容</th>
+                                <th>回應內容</th>
+                                <th>時間</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><span class="info_blue">TTS</span></td>
+                                <td>WebFuction</td>
+                                <td>ExhibitorSearch</td>
+                                <td>UID=Peter,FormIP=10.10.7.54,OtherParaMeters={APCode=TTS,UID=peter,companyTaxID=123456789,functionName=ExhibitorSearch}</td>
+                                <td>ErrorCode=S1</td>
+                                <td><time>2012/11/09 17:16:27</time></td>
+                            </tr>
+                            <tr>
+                                <td><span class="info_blue">TTS</span></td>
+                                <td>WebFuction</td>
+                                <td>ExhibitorSearch</td>
+                                <td>UID=Peter,FormIP=10.10.7.54,OtherParaMeters={APCode=TTS,UID=peter,companyTaxID=123456789,functionName=ExhibitorSearch}</td>
+                                <td>ErrorCode=S1</td>
+                                <td><time>2012/11/09 17:16:27</time></td>
+                            </tr>
+                            <tr>
+                                <td><span class="info_blue">TTS</span></td>
+                                <td>WebFuction</td>
+                                <td>ExhibitorSearch</td>
+                                <td>UID=Peter,FormIP=10.10.7.54,OtherParaMeters={APCode=TTS,UID=peter,companyTaxID=123456789,functionName=ExhibitorSearch}</td>
+                                <td>ErrorCode=S1</td>
+                                <td><time>2012/11/09 17:16:27</time></td>
+                            </tr>
+                            <tr>
+                                <td><span class="info_blue">TTS</span></td>
+                                <td>WebFuction</td>
+                                <td>ExhibitorSearch</td>
+                                <td>UID=Peter,FormIP=10.10.7.54,OtherParaMeters={APCode=TTS,UID=peter,companyTaxID=123456789,functionName=ExhibitorSearch}</td>
+                                <td>ErrorCode=S1</td>
+                                <td><time>2012/11/09 17:16:27</time></td>
+                            </tr>
+                            <tr>
+                                <td><span class="info_blue">TTS</span></td>
+                                <td>WebFuction</td>
+                                <td>ExhibitorSearch</td>
+                                <td>UID=Peter,FormIP=10.10.7.54,OtherParaMeters={APCode=TTS,UID=peter,companyTaxID=123456789,functionName=ExhibitorSearch}</td>
+                                <td>ErrorCode=S1</td>
+                                <td><time>2012/11/09 17:16:27</time></td>
+                            </tr>
+                            <tr>
+                                <td><span class="info_blue">TTS</span></td>
+                                <td>WebFuction</td>
+                                <td>ExhibitorSearch</td>
+                                <td>UID=Peter,FormIP=10.10.7.54,OtherParaMeters={APCode=TTS,UID=peter,companyTaxID=123456789,functionName=ExhibitorSearch}</td>
+                                <td>ErrorCode=S1</td>
+                                <td><time>2012/11/09 17:16:27</time></td>
+                            </tr>
+                            <tr>
+                                <td><span class="info_blue">TTS</span></td>
+                                <td>WebFuction</td>
+                                <td>ExhibitorSearch</td>
+                                <td>UID=Peter,FormIP=10.10.7.54,OtherParaMeters={APCode=TTS,UID=peter,companyTaxID=123456789,functionName=ExhibitorSearch}</td>
+                                <td>ErrorCode=S1</td>
+                                <td><time>2012/11/09 17:16:27</time></td>
+                            </tr>
+                            <tr>
+                                <td><span class="info_blue">TTS</span></td>
+                                <td>WebFuction</td>
+                                <td>ExhibitorSearch</td>
+                                <td>UID=Peter,FormIP=10.10.7.54,OtherParaMeters={APCode=TTS,UID=peter,companyTaxID=123456789,functionName=ExhibitorSearch}</td>
+                                <td>ErrorCode=S1</td>
+                                <td><time>2012/11/09 17:16:27</time></td>
+                            </tr>
+                            <tr>
+                                <td><span class="info_blue">TTS</span></td>
+                                <td>WebFuction</td>
+                                <td>ExhibitorSearch</td>
+                                <td>UID=Peter,FormIP=10.10.7.54,OtherParaMeters={APCode=TTS,UID=peter,companyTaxID=123456789,functionName=ExhibitorSearch}</td>
+                                <td>ErrorCode=S1</td>
+                                <td><time>2012/11/09 17:16:27</time></td>
+                            </tr>
+                            <tr>
+                                <td><span class="info_blue">TTS</span></td>
+                                <td>WebFuction</td>
+                                <td>ExhibitorSearch</td>
+                                <td>UID=Peter,FormIP=10.10.7.54,OtherParaMeters={APCode=TTS,UID=peter,companyTaxID=123456789,functionName=ExhibitorSearch}</td>
+                                <td>ErrorCode=S1</td>
+                                <td><time>2012/11/09 17:16:27</time></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="pagination">
+                    <form action="" class="form_inline">
+                        <div class="total"> 共<span>308</span>筆資料，第<span>1/18</span>頁，每頁顯示 <select name="" id="">
+                                <option value="">10</option>
+                                <option value="">20</option>
+                                <option value="">30</option>
+                                <option value="">40</option>
+                            </select> 筆， <button class="btn">確定</button>
                         </div>
                     </form>
+                    <ul class="page">
+                        <li class="first"><a href="#" title="第一頁">第一頁 </a></li>
+                        <li class="prev"><a href="#" title="回上一頁">回上一頁 </a></li>
+                        <li class="active"><a href="#">1</a></li>
+                        <li><a href="#">2</a></li>
+                        <li><a href="#">3</a></li>
+                        <li><a href="#">4</a></li>
+                        <li><a href="#">5</a></li>
+                        <li><a href="#">6</a></li>
+                        <li><a href="#">7</a></li>
+                        <li><a href="#">8</a></li>
+                        <li><a href="#">9</a></li>
+                        <li><a href="#">10</a></li>
+                        <li class="next"><a href="#" title="下一頁">下一頁 </a></li>
+                        <li class="last"><a href="#" title="最後一頁">最後一頁 </a></li>
+                    </ul>
                 </div>
             </div>
         </div>
@@ -247,8 +389,15 @@
 <script src="js/customize.js"></script>
 <script src="vendor/nicescroll/jquery.nicescroll.min.js"></script>
 <script src="js/jquery.treeview.js"></script>
+<!-- pg-calendar -->
+<script src="vendor/pg_calendar/js/pignose.calendar.full.min.js"></script>
 <script>
 $(function() {
+    $('.datepick input').pignoseCalendar({
+        lang: 'ch',
+        modal: true,
+        format: 'YYYY-MM-DD',
+    });
     $(".treeview_block ul").treeview();
 });
 </script>

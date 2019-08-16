@@ -1,3 +1,36 @@
+// pills
+.pills {
+    padding: .2em 0;
+    @include clearfix;
+    ul {
+        @include li-reset;
+        li {
+            display: block;
+            float: left;
+            margin: 0 .2em .2em 0;
+            &.active {
+                a {
+                    color: #FFF;
+                    background: $primaryColor;
+                }
+            }
+            a {
+                border-radius: .2em;
+                text-align: center;
+                background: #DDD;
+                color: #555;
+                display: block;
+                padding: .5em .8em;
+                font-size: .938em;
+                &:hover, &:focus {
+                    color: #FFF;
+                    background: $primaryColor;
+                }
+            }
+        }
+    }
+}
+// dropdown
 .dropdown-btn {
     position: relative;
     &:before {
@@ -31,7 +64,7 @@
     @include gradient(#FFF, #EEE, vertical);
     display: none;
     z-index: 9999;
-    top:3em;
+    top: 3em;
     &:before {
         position: absolute;
         top: -6px;
@@ -64,8 +97,9 @@
     background: #FFF;
     margin: 0 1em 0 0;
     font-size: .938em;
-    min-height:100%;
-    position:relative;
+    min-height: 100%;
+    position: relative;
+    min-height: 550px;
 }
 .treeview {
     @include li-reset;
