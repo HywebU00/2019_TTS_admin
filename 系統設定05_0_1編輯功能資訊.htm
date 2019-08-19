@@ -12,10 +12,11 @@
     <![endif]-->
     <!-- hyUI -->
     <link rel="stylesheet" href="css/hyui_admin.css">
+    <!-- pg-calendar -->
+    <link rel="stylesheet" href="vendor/pg_calendar/css/pignose.calendar.css">
     <!-- favicon -->
     <link rel="icon" type="image/png" href="images/ico.png" />
 </head>
-
 <body>
     <div class="window_open">
         <div class="table_list">
@@ -56,7 +57,22 @@
 <!-- JS都需要放在最下面 -->
 <script src="js/jquery-3.3.1.min.js"></script>
 <script src="vendor/jquery.easing.min.js"></script>
+<!-- TTS admin 專用 -->
 <script src="js/customize.js"></script>
+<!-- tree view -->
 <script src="js/jquery.treeview.js"></script>
+<!-- pg-calendar -->
+<script src="vendor/pg_calendar/js/pignose.calendar.full.min.js"></script>
+<script>
+$(function() {
+    if ($('.datepick').length > 0) {
+        $('.datepick input').pignoseCalendar({
+            lang: 'ch',
+            modal: true,
+            format: 'YYYY-MM-DD',
+        });
+    }
+});
+</script>
 
 </html>

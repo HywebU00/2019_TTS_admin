@@ -99,7 +99,10 @@ select::-ms-expand {
             }
         }
         .datepick {
-            padding-right: 1em;
+            &+.datepick{
+                margin-left: .5em;
+            }
+            padding-right: .5em;
             position:relative;
             display:inline-block;
             button, a, input[type="button"] {
@@ -118,7 +121,8 @@ select::-ms-expand {
                 }
             }
             >input[type="text"] {
-                width: 100%;
+                width: auto;
+                min-width:10em;
                 padding-left: 3em;
             }
         }

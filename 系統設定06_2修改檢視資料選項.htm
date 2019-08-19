@@ -12,14 +12,15 @@
     <![endif]-->
     <!-- hyUI -->
     <link rel="stylesheet" href="css/hyui_admin.css">
+    <!-- pg-calendar -->
+    <link rel="stylesheet" href="vendor/pg_calendar/css/pignose.calendar.css">
     <!-- favicon -->
     <link rel="icon" type="image/png" href="images/ico.png" />
 </head>
-
 <body>
     <div class="window_open">
         <div class="table_list">
-            <h3 class="modal_title">新增資料選項</h3>
+            <h3 class="modal_title">修改/檢視資料選項</h3>
             <form action="" class="form_grid">
                 <div class="form_grp">
                     <div class="form_title_th">
@@ -32,19 +33,19 @@
                 <div class="form_grp">
                     <label for="apartment_num" class="form_title"> 中文<abbr class="necessary" title="">*</abbr></label>
                     <div class="form_content">
-                        <input type="text" id="" value="">
+                        <input type="text" id="" value="世貿一舘">
                     </div>
                 </div>
                 <div class="form_grp">
                     <label for="" class="form_title"> 英文<abbr class="necessary" title="">*</abbr> </label>
                     <div class="form_content">
-                        <input name="" type="text" value="">
+                        <input name="" type="text" value="TWTC Exhibition Hall 1">
                     </div>
                 </div>
                 <div class="form_grp">
                     <label for="" class="form_title"> 排序<abbr class="necessary" title="">*</abbr></label>
                     <div class="form_content">
-                        <input name="" type="text" value="">
+                        <input name="" type="text" value="1">
                     </div>
                 </div>
             </form>
@@ -57,7 +58,22 @@
 <!-- JS都需要放在最下面 -->
 <script src="js/jquery-3.3.1.min.js"></script>
 <script src="vendor/jquery.easing.min.js"></script>
+<!-- TTS admin 專用 -->
 <script src="js/customize.js"></script>
+<!-- tree view -->
 <script src="js/jquery.treeview.js"></script>
+<!-- pg-calendar -->
+<script src="vendor/pg_calendar/js/pignose.calendar.full.min.js"></script>
+<script>
+$(function() {
+    if ($('.datepick').length > 0) {
+        $('.datepick input').pignoseCalendar({
+            lang: 'ch',
+            modal: true,
+            format: 'YYYY-MM-DD',
+        });
+    }
+});
+</script>
 
 </html>

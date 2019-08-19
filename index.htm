@@ -5,17 +5,133 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>單位名稱切版檔案</title>
+    <title>TTS後台切版檔案</title>
     <!--[if lt IE 9]>
     <script src="js/html5shiv.js"></script>
     <script src="js/respond.min.js"></script>
     <![endif]-->
     <!-- hyUI -->
     <link rel="stylesheet" href="css/hyui_admin.css">
-<style>
-body{background:#DEDEDE}h1{}h3{color:#333}.demo_wrap{max-width:1000px;margin:0em auto 1em;padding:15px 15px 3em;clear:both}.demo_wrap h1{display:block;margin:0px auto;max-width:600px;float:left;line-height:1.35em;margin-right:1em}.demo_wrap h1 small{margin:0px .5em}.demo_wrap h1 img{width:100px;margin-right:.5em}@media screen and (max-width:545px){.demo_wrap h1{max-width:100%;float:none;text-align:center;font-size:1.5em}.demo_wrap h1 small{display:block}.demo_wrap h1 img{width:30px}}.num{width:12%}body{counter-reset:num}table{margin-bottom:1em;background:#FFF}th:last-child{width:15%}table caption{text-align:left;font-weight:bold;font-size:1.25em;padding:.5em 0;color:#ff5050}tbody tr td:first-child:before{counter-increment:num;display:block;text-align:center;content:counters(num,".") " "}tbody tr td:nth-child(2){width:35%}.btn_grp{text-align:right}@media screen and (max-width:545px){.btn_grp{text-align:center}hr{display:none}}hr{border:1px solid transparent}td a{color:#ff5050}td span{display:block;background:rgba(0,128,0,.1);color:green;text-align:center;padding:.2em .5em;border-radius:.4em;margin:0px auto;max-width:4em}.line td{background: #AAA;color:#FFF;}</style>
-</head>
+    <style>
+    body {
+        background: #FFF
+    }
+    h1 {
+    }
+    h3 {
+        color: #333
+    }
+    .demo_wrap {
+        max-width: 1000px;
+        margin: 0em auto 1em;
+        padding: 15px 15px 3em;
+        clear: both;
+        font-size: .938em
+    }
+    .demo_wrap h1 {
+        display: block;
+        margin: 0px auto;
+        max-width: 600px;
+        float: left;
+        line-height: 1.35em;
+        margin-right: 1em;
+    }
+    .demo_wrap h1 small {
+        margin: 0px .5em
+    }
+    .demo_wrap h1 img {
+        width: 50px;
+        margin-right: .5em
+    }
+    @media screen and (max-width:545px) {
+        .demo_wrap h1 {
+            max-width: 100%;
+            float: none;
+            text-align: center;
+            font-size: 1.5em
+        }
+        .demo_wrap h1 small {
+            display: block
+        }
+        .demo_wrap h1 img {
+            width: 30px
+        }
+    }
+    .num {
+        width: 12%
+    }
+    body {
+        
+    }
+    table {
+        margin-bottom: 1em;
+        background: #FFF;
+        counter-reset: num
+    }
+    th:last-child {
+        width: 15%
+    }
+    table caption {
+        text-align: left;
+        font-weight: bold;
+        font-size: 1.25em;
+        padding: .5em 0;
+        color: #ff5050
+    }
+    tbody tr td:first-child:before {
+        counter-increment: num;
+        display: block;
+        text-align: center;
+        content: counters(num, ".") " "
+    }
+    tbody tr td:nth-child(2) {
+        width: 35%
+    }
+    .btn_grp {
+        text-align: right
+    }
+    @media screen and (max-width:545px) {
+        .btn_grp {
+            text-align: center
+        }
+        hr {
+            display: none
+        }
+    }
+    hr {
+        border: 1px solid transparent
+    }
+    td a {
+        color: #ff5050
+    }
+    td span {
+        display: block;
+        background: rgba(0, 128, 0, .1);
+        color: green;
+        text-align: center;
+        padding: .2em .5em;
+        border-radius: .4em;
+        margin: 0px auto;
+        max-width: 4em
+    }
+    .line td {
+        background: #EDEEF3;
+        color: #333;
+        font-weight: bold
+    }
+    .window td {
+        color: #AAA
+    }
+    .window td:nth-child(2):before {
+        content: "-  ";
+        padding-left: 1em
+    }
+    .window td:nth-child(3) {
+        padding-left: 2em
+    }
 
+    </style>
+</head>
 
 <body>
     <div class="demo_wrap">
@@ -23,7 +139,6 @@ body{background:#DEDEDE}h1{}h3{color:#333}.demo_wrap{max-width:1000px;margin:0em
         <div class="btn_grp">
             <a href="https://github.com/hahamimidido/TTS_CMS" class="btn" target="_blank">切版檔案請按此下載</a>
         </div>
-        <hr>
         <div class="table_wrapper">
             <!-- hyUI 標準頁面 -->
             <table>
@@ -70,13 +185,13 @@ body{background:#DEDEDE}h1{}h3{color:#333}.demo_wrap{max-width:1000px;margin:0em
                         <td></td>
                         <td colspan="3">系統設定</td>
                     </tr>
-                     <tr>
+                    <tr>
                         <td></td>
                         <td>部門組織管理</td>
                         <td><a href="系統設定01_0部門組織管理.htm"></a></td>
                         <td></td>
                     </tr>
-                     <tr>
+                    <tr>
                         <td></td>
                         <td>新增子部門</td>
                         <td><a href="系統設定01_1新增子部門.htm"></a></td>
@@ -88,7 +203,7 @@ body{background:#DEDEDE}h1{}h3{color:#333}.demo_wrap{max-width:1000px;margin:0em
                         <td><a href="系統設定01_2修改部門.htm"></a></td>
                         <td></td>
                     </tr>
-                     <tr>
+                    <tr>
                         <td></td>
                         <td>人員帳號管理</td>
                         <td><a href="系統設定02_0人員帳號管理.htm"></a></td>
@@ -106,7 +221,7 @@ body{background:#DEDEDE}h1{}h3{color:#333}.demo_wrap{max-width:1000px;margin:0em
                         <td><a href="系統設定03_0專案群組管理.htm"></a></td>
                         <td></td>
                     </tr>
-                     <tr>
+                    <tr>
                         <td></td>
                         <td>新增群組</td>
                         <td><a href="系統設定03_1專案群組管理_新增群組.htm"></a></td>
@@ -124,10 +239,112 @@ body{background:#DEDEDE}h1{}h3{color:#333}.demo_wrap{max-width:1000px;margin:0em
                         <td><a href="系統設定04_0角色級職管理.htm"></a></td>
                         <td></td>
                     </tr>
+                    <tr class="window">
+                        <td></td>
+                        <td>新增功能資訊</td>
+                        <td><a href="系統設定04_1新增功能資訊.htm"></a></td>
+                        <td></td>
+                    </tr>
+                    <tr class="window">
+                        <td></td>
+                        <td>新增角色</td>
+                        <td><a href="系統設定04_2新增角色.htm"></a></td>
+                        <td></td>
+                    </tr>
+                    <tr class="window">
+                        <td></td>
+                        <td>修改檢視角色</td>
+                        <td><a href="系統設定04_3修改檢視角色.htm"></a></td>
+                        <td></td>
+                    </tr>
                     <tr>
                         <td></td>
-                        <td>角色級職管理</td>
-                        <td><a href="系統設定04_0角色級職管理.htm"></a></td>
+                        <td>功能權限管理</td>
+                        <td><a href="系統設定05_0功能權限管理.htm"></a></td>
+                        <td></td>
+                    </tr>
+                    <tr class="window">
+                        <td></td>
+                        <td>編輯功能資訊</td>
+                        <td><a href="系統設定05_0_1編輯功能資訊.htm"></a></td>
+                        <td></td>
+                    </tr>
+                    <tr class="window">
+                        <td></td>
+                        <td>新增功能權限</td>
+                        <td><a href="系統設定05_0_3新增功能權限.htm"></a></td>
+                        <td></td>
+                    </tr>
+                    <tr class="window">
+                        <td></td>
+                        <td>編輯功能權限</td>
+                        <td><a href="系統設定05_0_5編輯功能權限.htm"></a></td>
+                        <td></td>
+                    </tr>
+                    <tr class="window">
+                        <td></td>
+                        <td>編輯功能權限</td>
+                        <td><a href="系統設定05_0_6編輯功能權限.htm"></a></td>
+                        <td></td>
+                    </tr>
+                    <tr class="window">
+                        <td></td>
+                        <td>新增功能資訊</td>
+                        <td><a href="系統設定05_0_7新增功能資訊.htm"></a></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>後台帳號功能查詢</td>
+                        <td><a href="系統設定05_1功能權限管理_後台帳號功能查詢.htm"></a></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>後台帳號登入紀錄</td>
+                        <td><a href="系統設定05_2功能權限管理_後台帳號登入紀錄.htm"></a></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>前台會員登入紀錄</td>
+                        <td><a href="系統設定05_3功能權限管理_前台會員登入紀錄.htm"></a></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>權限管理</td>
+                        <td><a href="系統設定05_4功能權限管理_權限管理.htm"></a></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>資料選項管理</td>
+                        <td><a href="系統設定06_0資料選項管理.htm"></a></td>
+                        <td></td>
+                    </tr>
+                    <tr class="window">
+                        <td></td>
+                        <td>新增資料選項</td>
+                        <td><a href="系統設定06_1新增資料選項.htm"></a></td>
+                        <td></td>
+                    </tr>
+                    <tr class="window">
+                        <td></td>
+                        <td>修改檢視資料選項</td>
+                        <td><a href="系統設定06_2修改檢視資料選項.htm"></a></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>服務客戶</td>
+                        <td><a href="系統設定07_0服務客戶.htm"></a></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>擷取紀錄查詢</td>
+                        <td><a href="系統設定07_1擷取紀錄查詢.htm"></a></td>
                         <td></td>
                     </tr>
                 </tbody>

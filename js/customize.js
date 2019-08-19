@@ -20,21 +20,6 @@ $(function() {
         $(this).blur();
         e.preventDefault();
     });
-    // $("aside menu").niceScroll({
-    //     cursorwidth: "8px",
-    //     cursoropacitymax:0.6,
-    //     touchbehavior:true,
-    //     smoothscroll: true
-    // });
-    // login forget
-    $('.forget').click(function(event) {
-        $('.login_block').animate({ 'left': '-100%' }, 400, 'easeOutQuint');
-        $('.forget_block').animate({ 'left': '0' }, 400, 'easeOutQuint');
-    });
-    $('.back').click(function(event) {
-        $('.login_block').animate({ 'left': '0%' }, 400, 'easeOutQuint');
-        $('.forget_block').animate({ 'left': '100%' }, 400, 'easeOutQuint');
-    });
     // menu
     var _menu = $('aside menu'),
         _menuItem = $('aside menu>ul>li').has('ul');
@@ -56,6 +41,21 @@ $(function() {
         }, function() {
             $(this).children('ul').hide();
         });
+    });
+    // $("aside menu").niceScroll({
+    //     cursorwidth: "8px",
+    //     cursoropacitymax:0.6,
+    //     touchbehavior:true,
+    //     smoothscroll: true
+    // });
+    // login forget
+    $('.forget').click(function(event) {
+        $('.login_block').animate({ 'left': '-100%' }, 400, 'easeOutQuint');
+        $('.forget_block').animate({ 'left': '0' }, 400, 'easeOutQuint');
+    });
+    $('.back').click(function(event) {
+        $('.login_block').animate({ 'left': '0%' }, 400, 'easeOutQuint');
+        $('.forget_block').animate({ 'left': '100%' }, 400, 'easeOutQuint');
     });
     // dropdown
     $('.dropdown-content').hide();
@@ -126,18 +126,24 @@ $(function() {
             });
         }
     });
-    rwdTable();
-
+    // RWD table
     function rwdTable() {
-        $('.table_list').find('table').each(function() {
-            var $row = $(this).find('tr');
-            rowCount = $row.length;
-            for (var n = 1; n <= rowCount; n++) {
-                $(this).find('th').each(function(index) {
-                    var thText = $(this).text();
-                    $row.eq(n).find('td').eq(index).attr('data-title', thText);
-                });
-            }
-        });
+        if ($('.table_list').length > 0) {
+            $('.table_list').find('table').each(function() {
+                var $row = $(this).find('tr');
+                rowCount = $row.length;
+                for (var n = 1; n <= rowCount; n++) {
+                    $(this).find('th').each(function(index) {
+                        var thText = $(this).text();
+                        $row.eq(n).find('td').eq(index).attr('data-title', thText);
+                    });
+                }
+            });
+        }
+    }
+    rwdTable();
+    // 目錄樹
+    if ($('.treeview').length > 0) {
+        $(".treeview_block ul").treeview();
     }
 });

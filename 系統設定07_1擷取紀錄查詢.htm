@@ -386,8 +386,9 @@
 <!-- JS都需要放在最下面 -->
 <script src="js/jquery-3.3.1.min.js"></script>
 <script src="vendor/jquery.easing.min.js"></script>
+<!-- TTS admin 專用 -->
 <script src="js/customize.js"></script>
-<script src="vendor/nicescroll/jquery.nicescroll.min.js"></script>
+<!-- tree view -->
 <script src="js/jquery.treeview.js"></script>
 <!-- pg-calendar -->
 <script src="vendor/pg_calendar/js/pignose.calendar.full.min.js"></script>
@@ -398,7 +399,10 @@ $(function() {
         modal: true,
         format: 'YYYY-MM-DD',
     });
-    $(".treeview_block ul").treeview();
+    // header file：00header.htm    
+    // menu file：00menu.htm
+    $('header').load('00header.htm');
+    $('aside').load('00menu.htm');
 });
 </script>
 

@@ -36,10 +36,6 @@ aside {
     background: $color_menubg;
     background: url(../images/menu_bg.jpg) no-repeat left top;
     background-size: cover;
-    overflow-x: none;
-    overflow-y: auto;
-    -webkit-overflow-scrolling: touch;
-    -webkit-transform: translate3d(0, 0, 0);
     @include box-sizing;
     z-index: 100;
     padding-top: 3em;
@@ -99,8 +95,14 @@ aside {
         }
     }
     menu {
+        position: absolute;
+        width: 100%;
+        height: 100%;
         margin: 0;
         padding: 0;
+        overflow-y: auto;
+        -webkit-overflow-scrolling: touch;
+        -webkit-transform: translate3d(0, 0, 0);
         @include box-sizing;
         >ul {
             margin: 0;
@@ -131,6 +133,9 @@ aside {
                         top: .7em;
                         margin: 0;
                         padding: 0;
+                        &:focus {
+                            background: transparent;
+                        }
                         &.open {
                             &:before {
                                 top: .55em;
