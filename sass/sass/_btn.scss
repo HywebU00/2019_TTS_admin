@@ -1,7 +1,7 @@
 // 按鈕設定
 $btn-font-color:$color-word;
 $btn-border:darken($color-word, 5);
-$btn-padding:.5em 1em;
+$btn-padding:.5em 1.5em;
 $btn-radius:.2em;
 // 按鈕外框
 .btn_grp {
@@ -21,7 +21,7 @@ $btn-radius:.2em;
         background-color: darken($btn-bg, 0); // Old browsers
         @include filter-gradient(darken($btn-bg, 0), darken($btn-bg, 10), vertical); // IE6-9
         @include background-image(linear-gradient(top, darken($btn-bg, 0) 0%, darken($btn-bg, 10) 100%));
-        @include box-shadow(0px 2px 4px lighten($btn-bg, 10));
+        // @include box-shadow(0px 2px 4px lighten($btn-bg, 10));
         border: 1px solid darken($btn-bg, 10);
         cursor: pointer;
         color: #FFF;
@@ -94,8 +94,7 @@ $btn-radius:.2em;
     @include btn_setting($color-purple, #FFF);
 }
 .btn-primary {
-    @extend %btn;
-    @include btn_setting(lighten($primaryColor,4), #FFF);
+    @extend.btn-purple;
 }
 // 按鈕大小
 .btn-xl {

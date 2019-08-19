@@ -134,8 +134,8 @@
      }
      h2 {
          position: relative;
-         padding: .3em .5em .3em 1em;
-         line-height: 1.45em;
+         padding: 0em .5em 0em 1em;
+         line-height: 1.25em;
          margin: .1em 0 .5em;
          &:before {
              position: absolute;
@@ -144,7 +144,16 @@
              content: "";
              top: 0;
              left: 0;
-             @include gradient($primaryColor, lighten($secondaryColor, 20), vertical);
+             background:lighten($primaryColor,10);
+         }
+         &:after {
+             position: absolute;
+             width: 5px;
+             height: 50%;
+             content: "";
+             bottom: 0;
+             left: 0;
+             background:lighten($secondaryColor,30);
          }
      }
  }
@@ -621,12 +630,13 @@
      .grp_wrap {
          h4 {
              font-size: 1em;
-             margin:0 .5em;
+             margin: 0 .5em .5em;
              border-bottom: 1px solid #DDD;
          }
+         min-height:200px;
          background: #FFF;
          box-shadow: 2px 2px 3px rgba(0, 0, 0, .3) inset;
-         padding: .5em 0 0;
+         padding: .5em 0;
          float: left;
          width: 44%;
          //display: inline-block;
@@ -637,10 +647,15 @@
              min-width: 150px;
              font-size: .875em;
              overflow-y: auto;
-             padding: .5em;
-             label{
-                margin-bottom: .1em;
+             padding: 0 .5em;
+             label {
+                 margin-bottom: .1em;
              }
+         }
+         select{
+            width:95%;
+            margin: 0 auto !important;
+            display:block;
          }
      }
      .add_remove_btn_wrap {
@@ -650,7 +665,8 @@
          background: none;
          .btn_grp {
              border: none;
-             margin: 1em auto;
+             margin: .2em auto 0em;
+             padding: .2em;
          }
      }
  }
