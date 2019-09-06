@@ -4,6 +4,7 @@ aside {
     &.closed {
         width: 3em;
         overflow-x: auto;
+        overflow-y:hidden;
         menu {
             >ul {
                 li {

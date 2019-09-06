@@ -13,7 +13,7 @@ $(function() {
         _menuPos = $('.menu_setting').offset();
         console.log(_menuPos.left);
     $('.show_list').css('left', -1 * _showlistW);
-    $('.menu_setting').find('.title a').off().click(function(e) {
+    $('.show_choose').off().click(function(e) {
         _menuPos = $('.menu_setting').offset();
         $('.show_list').fadeIn().animate({ 'left': _menuPos.left-15 }, 400, 'easeOutQuint');
         e.preventDefault();
