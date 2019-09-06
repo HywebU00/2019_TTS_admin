@@ -1,5 +1,28 @@
 // 自行加入的JS請寫在這裡
 $(function() {
+    // 表單移除error
+    $('input').focus(function(event) {
+        $(this).removeClass('error');
+        $(this).siblings('[class^="notice"]').remove();
+    });
+    $('.menu_setting').find('ul').each(function(index, el) {
+        $(this).find('li:last').addClass('last');
+    });
+    var _leftDis = $('aside').width(),
+        _showlistW = $('.show_list').width(),
+        _menuPos = $('.menu_setting').offset();
+        console.log(_menuPos.left);
+    $('.show_list').css('left', -1 * _showlistW);
+    $('.menu_setting').find('.title a').off().click(function(e) {
+        _menuPos = $('.menu_setting').offset();
+        $('.show_list').fadeIn().animate({ 'left': _menuPos.left-15 }, 400, 'easeOutQuint');
+        e.preventDefault();
+    });
+    $('.show_list').find('h3 .close_btn').off().click(function(e) {
+        $('.show_list').fadeIn().animate({ 'left': -1 * _showlistW }, 400, 'easeOutQuint');
+        e.preventDefault();
+    });
+    // 
     var Menu_Status = false;
     $('aside').prepend('<div class="toggle_btn"><a href="#"></a></div>');
     var _Menu_Btn = $('aside').find('.toggle_btn a');
@@ -17,6 +40,7 @@ $(function() {
             $(this).parent().removeClass('closed');
             Menu_Status = false;
         }
+
         $(this).blur();
         e.preventDefault();
     });

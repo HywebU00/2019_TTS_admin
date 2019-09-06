@@ -89,7 +89,7 @@
     min-height: 500px;
 }
 // treeview
-.treeview_block {
+.treeview_block, .menu_setting {
     width: 230px;
     float: left;
     overflow: hidden;
@@ -205,4 +205,198 @@
 }
 .treeview span.file {
     background: url(../images/treeview/file.gif) 0 0 no-repeat;
+}
+.show_list {
+    position: fixed;
+    z-index: 99;
+    background: RGBA(0, 0, 0, .85);
+    top: 3em;
+    left: -400px;
+    width: 400px;
+    height: 100%;
+    background: #FFF;
+    box-shadow: 0px 5px 5px RGBA(0, 0, 0, .4);
+    padding: 4em 1em 1em;
+    overflow: hidden;
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
+    -webkit-transform: translate3d(0, 0, 0);
+    h3 {
+        position: absolute;
+        width: 100%;
+        height: 2.5em;
+        line-height: 1.5em;
+        @include gradient(#242635, #714795, horizontal);
+        color: #FFF;
+        padding: .5em 1em;
+        top: 0;
+        left: 0;
+        margin: 0;
+        a.close_btn {
+            position: absolute;
+            width: 2.5em;
+            height: 2.5em;
+            top: 0;
+            right: 0;
+            &:hover, &:focus {
+                background: $primaryColor;
+            }
+            &:before {
+                position: absolute;
+                width: 12px;
+                height: 12px;
+                border: 2px solid #FFF;
+                content: "";
+                left: 40%;
+                top: 32%;
+                border-left: none;
+                border-bottom: none;
+                transform: rotate(-135deg);
+                z-index: 1;
+                display: block;
+            }
+        }
+    }
+    ul {
+        display: block;
+        @include li-reset;
+        li {
+            display: block;
+            border-bottom: 1px dashed #DDD;
+            margin-bottom: .3em;
+            a {
+                padding: .2em;
+                display: block;
+                color: #666;
+                &:hover, &:focus {
+                    color: $aHover;
+                }
+            }
+            img {
+                width: 1em;
+                height: 1em;
+                margin-right: .3em;
+            }
+        }
+    }
+}
+.menu_setting {
+    width: 300px;
+    padding-top: 3em !important;
+    .title {
+        position: absolute;
+        width: 100%;
+        height: 2.5em;
+        line-height: 1.5em;
+        @include gradient(#242635, #714795, horizontal);
+        color: #FFF;
+        padding: .5em 1em;
+        top: 0;
+        left: 0;
+        .btn {
+            background: transparent;
+            border: 1px solid #EEE;
+            color: #FFF;
+            padding: .2em 1em;
+            position: absolute;
+            right: .5em;
+            top: .4em;
+            font-size: .75em;
+            &:hover, &:focus {
+                background: rgba(0, 0, 0, .4);
+            }
+        }
+    }
+    h3 {
+        top: 0;
+        left: 0;
+        margin: 0 0 .5em;
+        padding-bottom: .3em;
+        border-bottom: 2px solid #DDD;
+    }
+    .btn_grp {
+        margin: 0 0 .2em;
+        padding: 0;
+    }
+    .menu_tree {
+        @include li-reset;
+        margin-bottom: 2em;
+        &>li:first-child {
+            &>span {
+                background: #D1D1D1;
+                border-bottom: 2px solid #BBB;
+            }
+        }
+        ul {
+            @include li-reset;
+        }
+        li {
+            margin: 0;
+            display: block;
+            padding-bottom: .1em;
+            span {
+                display: block;
+                background: #F1F1F1;
+                border-bottom: 2px solid #DDD;
+                padding: .4em .4em .4em 1em;
+                padding-right: 60px;
+                position: relative;
+                overflow: hidden;
+                a {
+                    opacity: .5;
+                    &:hover, &:focus {
+                        opacity: 1;
+                    }
+                }
+                .i_add {
+                    position: absolute;
+                    right: .5em;
+                    top: .5em;
+                    background: #FFF;
+                    border-radius:4px;
+                    width: 1.5em;
+                    text-align: center;
+                }
+                .i_edit {
+                    position: absolute;
+                    right: 2em;
+                    top: .3em;
+                }
+                .i_trash {
+                    position: absolute;
+                    right: .4em;
+                    top: .3em;
+                }
+            }
+            li {
+                background: url(../images/menu_tree_line_li.gif) no-repeat left top;
+                padding-left: 1em;
+                padding-top: .2em;
+                position: relative;
+                span {
+                    &:before {
+                        position: absolute;
+                        width: 10px;
+                        height: 100%;
+                        background: url(../images/icon/icon_dot.svg) center center no-repeat rgba(0, 0, 0, 0);
+                        background-size: 20px;
+                        content: "";
+                        top: 0;
+                        left: 2px;
+                        opacity: .5;
+                    }
+                }
+                &:hover {
+                    cursor: move;
+                }
+                &:focus {
+                    opacity: .9;
+                }
+                &.last {
+                    background: url(../images/menu_tree_line_li_last.gif) no-repeat left top;
+                    padding-bottom: 0;
+                }
+            }
+        }
+    }
 }

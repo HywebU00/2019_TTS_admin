@@ -1,12 +1,12 @@
 //參照雅瓊範例
 @mixin formStyle($f_color:$color-word, $f_border:$color-gray, $f_radius:5px) {
     color: $f_color;
-    font-size: .938em;
-    border: 1px solid #CCC;
-    padding: .5em .3em;
-    background: #F9F9F9;
+    font-size: 1em;
+    border: 1px solid transparent;
+    padding: .5em;
+    background: #F8F8F8;
     vertical-align: middle;
-    margin-bottom: .3em;
+    margin-bottom: .2em;
     @include box-sizing();
     @include border-radius($f_radius);
     @include transition(border, .2s, ease-out);
@@ -31,7 +31,7 @@ select::-ms-expand {
         min-width: 1em;
     }
     .form_grp {
-        border-bottom: 1px solid #EDEEF3;
+        border-bottom: 1px dashed #EDEEF3;
         overflow: hidden;
         padding: .2em 0;
     }
@@ -89,10 +89,15 @@ select::-ms-expand {
         }
         &.hasBtn {
             padding-right: 1em;
+            position:relative;
             button, a, input[type="button"] {
-                padding: .37em 2em !important;
-                right: .8em;
-                top: -.21em;
+                padding: .2em 1em !important;
+                right: 1.3em;
+                top: .3em;
+                font-size: .938em;
+                margin:0;
+                border:1px solid #DDD;
+                min-width:4em;
             }
             >input[type="text"] {
                 padding-right: 8em;
@@ -137,7 +142,7 @@ form, div {
     .upload_grp {
         //margin-bottom: .2em;
         max-width: 70em;
-        margin: 0px auto .5em;
+        margin: 0px auto .2em;
     }
     .check_grp,
     .radio_grp {
@@ -149,6 +154,7 @@ form, div {
             label {
                 display: inline-block;
                 margin: .2em .5em 0 0;
+                vertical-align:middle;
             }
         }
     }
@@ -186,7 +192,8 @@ form, div {
         input[type="text"],
         input[type="password"],
         select,
-        textarea {
+        textarea
+         {
             border: 1px solid #CCC;
             width: auto;
             display: inline-block;
@@ -249,6 +256,11 @@ textarea,
 select,
 button {
     @include formStyle(); // 預設載入formStyle設定
+    &.error{
+        border:1px solid $color-red;
+        box-shadow:0px 0px 0px 1px $color-red;
+        color:red;
+    }
 }
 input,
 select,
@@ -316,8 +328,8 @@ select {
     line-height: 2.4em;
     height: 2.4em;
     padding: 0 24px 0 .5em;
-    border: 1px solid $color-gray;
-    background: #fff url(../images/basic/icon_select_arrow.svg) no-repeat right center;
+    border: 1px solid transparent;
+    background: #F8F8F8 url(../images/basic/icon_select_arrow.svg) no-repeat right center;
     background-size: 20px;
     option {
         outline: none;
@@ -367,7 +379,7 @@ input[type="radio"]:checked {
 //---------------------------------------------readonly disable -------//
 input[readonly],
 input[disabled] {
-    background: lighten($color-gray, 10) !important;
+    background: lighten($color-gray, 40) !important;
     color: darken($color-gray, 30);
     border-color: darken($color-gray, 10);
     &~label {
@@ -394,8 +406,8 @@ input[disabled] {
     .upload_btn {
         position: absolute;
         overflow: hidden;
-        top: 1px;
-        right: 3px;
+        top: 0px;
+        right: 2px;
         @extend %btn;
         @include btn_setting($form-btn, #FFF);
         padding: .2em 1em !important;
