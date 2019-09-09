@@ -55,6 +55,7 @@
      margin: 0 0 .5em;
      padding-bottom: .3em;
      border-bottom: 2px solid #AAA;
+     text-align: right;
      .info {
          margin-right: 2em;
          @include screen('mobile') {
@@ -163,6 +164,7 @@
  }
  // 卡片式
  .card {
+    margin-top: 1em;
      overflow: hidden;
      ul {
          @include li-reset;

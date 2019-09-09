@@ -1,5 +1,18 @@
 // 自行加入的JS請寫在這裡
 $(function() {
+    // btn_style radio
+    $('.radio_grp.btn_style').find('label').each(function(index, el) {
+        $(this).change(function(event) {
+            $(this).toggleClass('active');
+            $(this).siblings('.active').removeClass('active');
+        });
+    });
+     // btn_style checkbox
+    $('.check_grp.btn_style').find('label').each(function(index, el) {
+        $(this).change(function(event) {
+            $(this).toggleClass('active');
+        });
+    });
     // 表單移除error
     $('input').focus(function(event) {
         $(this).removeClass('error');
@@ -11,11 +24,10 @@ $(function() {
     var _leftDis = $('aside').width(),
         _showlistW = $('.show_list').width(),
         _menuPos = $('.menu_setting').offset();
-        console.log(_menuPos.left);
     $('.show_list').css('left', -1 * _showlistW);
     $('.show_choose').off().click(function(e) {
         _menuPos = $('.menu_setting').offset();
-        $('.show_list').fadeIn().animate({ 'left': _menuPos.left-15 }, 400, 'easeOutQuint');
+        $('.show_list').fadeIn().animate({ 'left': _menuPos.left - 15 }, 400, 'easeOutQuint');
         e.preventDefault();
     });
     $('.show_list').find('h3 .close_btn').off().click(function(e) {
@@ -40,7 +52,6 @@ $(function() {
             $(this).parent().removeClass('closed');
             Menu_Status = false;
         }
-
         $(this).blur();
         e.preventDefault();
     });
