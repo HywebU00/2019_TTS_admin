@@ -3,9 +3,10 @@ $color_menu : #714795;
 aside {
     &.closed {
         width: 3em;
-        overflow-x: auto;
-        overflow-y:hidden;
+        // overflow-x: auto;
+        // overflow-y:hidden;
         menu {
+            overflow-y: visible;
             >ul {
                 li {
                     position: relative;
@@ -27,6 +28,20 @@ aside {
                     top: 0;
                     left: 3em;
                     width: 210px;
+                    ul{
+                        left:210px;
+                    }
+                    @include li-reset;
+                    ul {
+                        padding-left: 0;
+                    }
+                    li {
+                        a {
+                            display: block;
+                            text-align: left;
+                            padding-left: 1em;
+                        }
+                    }
                 }
             }
         }
@@ -101,7 +116,7 @@ aside {
         height: 100%;
         margin: 0;
         padding: 0;
-        overflow-y: auto;
+        // overflow-y: auto;
         -webkit-overflow-scrolling: touch;
         -webkit-transform: translate3d(0, 0, 0);
         @include box-sizing;
@@ -168,7 +183,7 @@ aside {
                     font-size: .938em;
                     &:hover, &:focus {
                         color: #FFF;
-                        background: $color_menu;
+                        background: darken($color_menu,10);
                         .toggle_btn {
                             &:before {
                                 border: 2px solid #FFF;
@@ -216,11 +231,11 @@ aside {
                         padding: .4em 1em .4em 2.5em;
                         text-shadow: none;
                         &:hover, &:focus {
+                            color:$color-yellow;
                             background: transparent;
                         }
                     }
-                }
-                ul {
+                    ul {
                     position: absolute;
                     top: 0;
                     width: 220px;
@@ -230,6 +245,8 @@ aside {
                     padding: 0;
                     @include li-reset;
                 }
+                }
+                
             }
         }
     }

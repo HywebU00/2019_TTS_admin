@@ -13,7 +13,15 @@
         </li>
         <li><a href="#"><img src="images/icon_data.svg" alt=""><span>展覽資料管理</span></a>
             <ul>
-                <li><a href="#">選單管理</a></li>
+                <li><a href="#">選單管理</a>
+                    <ul>
+                        <li><a href="#">level3</a></li>
+                        <li><a href="#">level3</a></li>
+                        <li><a href="#">level3</a></li>
+                        <li><a href="#">level3</a></li>
+                        <li><a href="#">level3</a></li>
+                    </ul>
+                </li>
                 <li><a href="#">形象大圖輪播管理</a></li>
                 <li><a href="#">新聞類訊息管理</a></li>
                 <li><a href="#">圖文連結管理</a></li>
@@ -121,8 +129,8 @@ $(function() {
     });
     // menu
     var _menu = $('aside menu'),
-        _menuItem = $('aside menu>ul>li').has('ul');
-    _menuItem_2 = $('aside menu>ul>li>ul>li').has('ul');
+        _menuItem = $('aside menu>ul>li').has('ul'),
+        _menuItem_2 = $('aside menu>ul>li>ul>li').has('ul');
     _menuItem.each(function(index, el) {
         $(this).children('ul').hide();
         $(this).children('a').append('<a href="javascript:;" class="toggle_btn"></a>');
@@ -141,5 +149,16 @@ $(function() {
             $(this).children('ul').hide();
         });
     });
+    if ($('aside').hasClass('closed')) {
+        _menuItem.each(function(index, el) {
+            $(this).children('a').hover(function() {
+                $(this).parent('li').siblings().find('ul').slideUp(600, 'easeOutQuint');
+                $(this).next('ul').slideDown(600, 'easeOutQuint');
+                console.log('aaaa');
+            }, function() {
+                $(this).next('ul').slideUp(600, 'easeOutQuint');
+            });
+        });
+    }
 });
 </script>
