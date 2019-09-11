@@ -11,8 +11,8 @@
     @include border-radius($f_radius);
     @include transition(border, .2s, ease-out);
     @include transition(box-shadow, .2s, ease-out);
-    &:hover,&:focus {
-        outline:none; 
+    &:hover, &:focus {
+        outline: none;
     }
 }
 select::-ms-expand {
@@ -20,7 +20,7 @@ select::-ms-expand {
 }
 .form_grid {
     margin: .5em;
-    @media screen and (min-width:1400px) {
+    @media screen and (min-width: 1400px) {
         margin: .5em auto .5em 1em;
         width: 80%;
         min-width: 500px;
@@ -35,19 +35,19 @@ select::-ms-expand {
         overflow: hidden;
         padding: .2em 0;
     }
-    .form_title_th,.form_content_th{
+    .form_title_th, .form_content_th {
         text-align: center;
         font-weight: bold;
         border-bottom: 1px solid #DDD;
-        padding:.2em 0 1.5em;
-        font-size:.938em;
+        padding: .2em 0 1.5em;
+        font-size: .938em;
         height: 3em;
         line-height: 3em;
         @include screen('mobile') {
-            display:none;
+            display: none;
         }
     }
-    .form_title,.form_title_th {
+    .form_title, .form_title_th {
         @include make-xs-column(12);
         @include make-sm-column(3);
         @include make-md-column(3);
@@ -56,18 +56,28 @@ select::-ms-expand {
         padding-top: 5px;
         font-weight: bold;
     }
-    .form_content,.form_content_th {
+    .form_content, .form_content_th {
         @include make-xs-column(12);
         @include make-sm-column(9);
         @include make-md-column(9);
         @include make-lg-column(9);
         @include gutter();
-        .info{
+        .info {
             margin: .3em 0;
-            span{
-                display:inline-block;
+            span {
+                display: inline-block;
                 margin-right: .3em;
-                color:$color-info;
+                color: $color-info;
+            }
+        }
+        .sub_form_content {
+            margin-bottom: .3em;
+            &.hasBtn {
+                padding-right: 1em;
+                position: relative;
+                button, a, input[type="button"] {
+                    top: -.2em;
+                }
             }
         }
         &.hasIcon, &.hasBtn {
@@ -89,37 +99,39 @@ select::-ms-expand {
         }
         &.hasBtn {
             padding-right: 1em;
-            position:relative;
+            position: relative;
             button, a, input[type="button"] {
-                padding: .2em 1em !important;
-                right: 1.3em;
-                top: .3em;
-                font-size: .938em;
-                margin:0;
-                border:1px solid #DDD;
-                min-width:4em;
+                padding: .5em 1em !important;
+                right: 1.1em;
+                top: 0em;
+                font-size: 1em;
+                margin: 0;
+                border: 1px solid #DDD;
+                width: 7.5em;
+                position: absolute;
+                @include text-overflow;
             }
             >input[type="text"] {
-                padding-right: 8em;
+                width: calc(100% - 8em);
             }
         }
         .datepick {
-            &+.datepick{
+            &+.datepick {
                 margin-left: .5em;
             }
             padding-right: .5em;
             position:relative;
             display:inline-block;
             button, a, input[type="button"] {
-                position:absolute;
+                position: absolute;
                 padding: .37em .1em !important;
                 left: 0em;
                 top: -.21em;
-                min-width:1em;
-                background:none;
-                border:none;
-                i{
-                    &:before{
+                min-width: 1em;
+                background: none;
+                border: none;
+                i {
+                    &:before {
                         width: 1.75em;
                         height: 1.75em;
                     }
@@ -127,7 +139,7 @@ select::-ms-expand {
             }
             >input[type="text"] {
                 width: auto;
-                min-width:10em;
+                min-width: 10em;
                 padding-left: 3em;
             }
         }
@@ -154,7 +166,7 @@ form, div {
             label {
                 display: inline-block;
                 margin: .2em .5em 0 0;
-                vertical-align:middle;
+                vertical-align: middle;
             }
         }
     }
@@ -192,8 +204,7 @@ form, div {
         input[type="text"],
         input[type="password"],
         select,
-        textarea
-         {
+        textarea {
             border: 1px solid #CCC;
             width: auto;
             display: inline-block;
@@ -256,10 +267,10 @@ textarea,
 select,
 button {
     @include formStyle(); // 預設載入formStyle設定
-    &.error{
-        border:1px solid $color-red;
-        box-shadow:0px 0px 0px 1px $color-red;
-        color:red;
+    &.error {
+        border: 1px solid $color-red;
+        box-shadow: 0px 0px 0px 1px $color-red;
+        color: red;
     }
 }
 input,
@@ -390,8 +401,8 @@ input[disabled] {
         background: lighten($color-gray, 10) !important;
         color: darken($color-gray, 30) !important;
         border-color: darken($color-gray, 10) !important;
-        box-shadow:none !important;
-        cursor:not-allowed;
+        box-shadow: none !important;
+        cursor: not-allowed;
     }
 }
 // 檔案上傳
@@ -453,7 +464,10 @@ abbr[title] {
     border-bottom: none;
     text-decoration: none;
 }
-.has-danger {
+.has-error {
+    .form_title {
+        color: $color-red;
+    }
     .form-control-danger {
         input,
         textarea,

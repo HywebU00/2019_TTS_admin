@@ -216,7 +216,7 @@
     height: 100%;
     background: #FFF;
     box-shadow: 0px 5px 5px RGBA(0, 0, 0, .4);
-    padding: 4em 1em 1em;
+    padding: 4em 1em ;
     overflow: hidden;
     overflow-y: auto;
     -webkit-overflow-scrolling: touch;
@@ -257,9 +257,20 @@
             }
         }
     }
+    h4 {
+        color: $primaryColor;
+        margin-top: 0;
+    }
     ul {
+        &.tts_show {
+            border-left: 2px solid $primaryColor;
+        }
+        &.not_tts_show {
+            border-left: 2px solid #AAA;
+        }
         display: block;
         @include li-reset;
+        padding-left: 1em;
         li {
             display: block;
             border-bottom: 1px dashed #DDD;
@@ -446,7 +457,7 @@
                 .tag_grp {
                     .tag {
                         background: RGBA(0, 0, 0, .75);
-                        color:#FFF;
+                        color: #FFF;
                     }
                 }
             }
@@ -512,12 +523,12 @@
     border-radius: .4em;
     overflow: hidden;
     transition: all .2s;
-    label{
-        position:absolute;
-        top:.5em;
+    label {
+        position: absolute;
+        top: .5em;
         right: .5em;
         z-index: 2;
-        input{
+        input {
             width: 1.25em;
             height: 1.25em;
         }
@@ -560,7 +571,7 @@
                 border-radius: 30px;
                 background: rgba(#fff, .6);
                 color: $secondaryColor;
-                display:inline-block;
+                display: inline-block;
             }
         }
     }
@@ -584,18 +595,18 @@
         text-align: left;
         height: 5.2em;
         overflow-y: auto;
-        color:#666;
-        li{
+        color: #666;
+        li {
             border-bottom: 1px dashed #DDD;
         }
         p {
-            margin:0;
+            margin: 0;
             span {
                 display: block;
             }
         }
-        time{
-            color:$color-orange;
+        time {
+            color: $color-orange;
         }
     }
     &:hover {
@@ -611,7 +622,7 @@
         .tag_grp {
             .tag {
                 background: RGBA(0, 0, 0, .75);
-                color:#FFF;
+                color: #FFF;
             }
         }
     }

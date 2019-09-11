@@ -27,11 +27,11 @@ $(function() {
     $('.show_list').css('left', -1 * _showlistW);
     $('.show_choose').off().click(function(e) {
         _menuPos = $('.menu_setting').offset();
-        $('.show_list').fadeIn().animate({ 'left': _menuPos.left - 15 }, 400, 'easeOutQuint');
+        $('.show_list').fadeIn().animate({ 'left':($('menu').width())}, 400, 'easeOutQuint');
         e.preventDefault();
     });
     $('.show_list').find('h3 .close_btn').off().click(function(e) {
-        $('.show_list').fadeIn().animate({ 'left': -1 * _showlistW }, 400, 'easeOutQuint');
+        $('.show_list').fadeIn().animate({ 'left':-1*$('.show_list').width()}, 400, 'easeOutQuint');
         e.preventDefault();
     });
     // 

@@ -12,8 +12,125 @@
     <![endif]-->
     <!-- hyUI -->
     <link rel="stylesheet" href="css/hyui_admin.css">
-<style>
-    body{background:#FFF}h1{}h3{color:#333}.demo_wrap{max-width:1000px;margin:0em auto 1em;padding:15px 15px 3em;clear:both;font-size:.938em}.demo_wrap h1{display:block;margin:0px auto;max-width:600px;float:left;line-height:1.35em;margin-right:1em}.demo_wrap h1 small{margin:0px .5em}.demo_wrap h1 img{width:50px;margin-right:.5em}@media screen and (max-width:545px){.demo_wrap h1{max-width:100%;float:none;text-align:center;font-size:1.5em}.demo_wrap h1 small{display:block}.demo_wrap h1 img{width:30px}}.num{width:12%}body{}table{margin-bottom:1em;background:#FFF;counter-reset:num}th:last-child{width:15%}table caption{text-align:left;font-weight:bold;font-size:1.25em;padding:.5em 0;color:#ff5050}tbody tr td:first-child:before{counter-increment:num;display:block;text-align:center;content:counters(num,".") " "}tbody tr td:nth-child(2){width:35%}.btn_grp{text-align:right}@media screen and (max-width:545px){.btn_grp{text-align:center}hr{display:none}}hr{border:1px solid transparent}td a{color:#ff5050}td span{display:block;background:rgba(0,128,0,.1);color:green;text-align:center;padding:.2em .5em;border-radius:.4em;margin:0px auto;max-width:4em}.line td{background:#EDEEF3;color:#333;font-weight:bold}.window td{color:#AAA}.window td:nth-child(2):before{content:"-  ";padding-left:1em}.window td:nth-child(3){padding-left:2em}</style>
+    <style>
+    body {
+        background: #FFF
+    }
+    h1 {}
+    h3 {
+        color: #333
+    }
+    .element {
+        border: 2px solid purple;
+        margin-bottom: 2em;
+    }
+    .demo_wrap {
+        max-width: 1000px;
+        margin: 0em auto 1em;
+        padding: 15px 15px 3em;
+        clear: both;
+        font-size: .938em
+    }
+    .demo_wrap h1 {
+        display: block;
+        margin: 0px auto;
+        max-width: 600px;
+        float: left;
+        line-height: 1.35em;
+        margin-right: 1em
+    }
+    .demo_wrap h1 small {
+        margin: 0px .5em
+    }
+    .demo_wrap h1 img {
+        width: 50px;
+        margin-right: .5em
+    }
+    @media screen and (max-width:545px) {
+        .demo_wrap h1 {
+            max-width: 100%;
+            float: none;
+            text-align: center;
+            font-size: 1.5em
+        }
+        .demo_wrap h1 small {
+            display: block
+        }
+        .demo_wrap h1 img {
+            width: 30px
+        }
+    }
+    .num {
+        width: 12%
+    }
+    body {}
+    table {
+        margin-bottom: 1em;
+        background: #FFF;
+        counter-reset: num
+    }
+    th:last-child {
+        width: 15%
+    }
+    table caption {
+        text-align: left;
+        font-weight: bold;
+        font-size: 1.25em;
+        padding: .5em 0;
+        color: #ff5050
+    }
+    tbody tr td:first-child:before {
+        counter-increment: num;
+        display: block;
+        text-align: center;
+        content: counters(num, ".") " "
+    }
+    tbody tr td:nth-child(2) {
+        width: 35%
+    }
+    .btn_grp {
+        text-align: right
+    }
+    @media screen and (max-width:545px) {
+        .btn_grp {
+            text-align: center
+        }
+        hr {
+            display: none
+        }
+    }
+    hr {
+        border: 1px solid transparent
+    }
+    td a {
+        color: #ff5050
+    }
+    td span {
+        display: block;
+        background: rgba(0, 128, 0, .1);
+        color: green;
+        text-align: center;
+        padding: .2em .5em;
+        border-radius: .4em;
+        margin: 0px auto;
+        max-width: 4em
+    }
+    .line td {
+        background: #EDEEF3;
+        color: #333;
+        font-weight: bold
+    }
+    .window td {
+        color: #AAA
+    }
+    .window td:nth-child(2):before {
+        content: "-  ";
+        padding-left: 1em
+    }
+    .window td:nth-child(3) {
+        padding-left: 2em
+    }
+    </style>
 </head>
 
 <body>
@@ -22,6 +139,66 @@
         <div class="btn_grp">
             <a href="https://github.com/hahamimidido/TTS_CMS" class="btn" target="_blank">切版檔案請按此下載</a>
         </div>
+        <h2>網頁元素</h2>
+        <div class="element">
+            <div class="table_wrapper">
+                <table>
+                    <thead>
+                        <tr>
+                            <th class="num">編號</th>
+                            <th>頁面名稱</th>
+                            <th>檔案名稱</th>
+                            <th>進度</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td></td>
+                            <td>輸入表單樣式</td>
+                            <td><a href="基本元素00_form.htm"></a></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td>卡片樣式</td>
+                            <td><a href="基本元素00_卡片式.htm"></a></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td>表格樣式</td>
+                            <td><a href="基本元素00_表格.htm"></a></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td>icon樣式</td>
+                            <td><a href="基本元素00_icon.htm"></a></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td>按鈕樣式</td>
+                            <td><a href="基本元素00_btn.htm"></a></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td>按鈕樣式</td>
+                            <td><a href="基本元素00_btn.htm"></a></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td>選單管理模組</td>
+                            <td><a href="基本元素00_showlist.htm"></a></td>
+                            <td></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <h2>範例頁面</h2>
         <div class="table_wrapper">
             <!-- hyUI 標準頁面 -->
             <table>
@@ -62,40 +239,6 @@
                         <td></td>
                         <td>版型設定 頁面資訊</td>
                         <td><a href="choose_layout_pagesetting.htm"></a></td>
-                        <td></td>
-                    </tr>
-                     <tr class="line">
-                        <td></td>
-                        <td colspan="3">元素</td>
-                    </tr>
-                    <tr>
-                        <td></td>
-                        <td>輸入表單樣式</td>
-                        <td><a href="基本元素00_form.htm"></a></td>
-                        <td></td>
-                    </tr>
-                    <tr>
-                        <td></td>
-                        <td>卡片樣式</td>
-                        <td><a href="基本元素00_卡片式.htm"></a></td>
-                        <td></td>
-                    </tr>
-                    <tr>
-                        <td></td>
-                        <td>表格樣式</td>
-                        <td><a href="基本元素00_表格.htm"></a></td>
-                        <td></td>
-                    </tr>
-                    <tr>
-                        <td></td>
-                        <td>icon樣式</td>
-                        <td><a href="基本元素00_icon.htm"></a></td>
-                        <td></td>
-                    </tr>
-                    <tr>
-                        <td></td>
-                        <td>按鈕樣式</td>
-                        <td><a href="基本元素00_btn.htm"></a></td>
                         <td></td>
                     </tr>
                     <tr class="line">
