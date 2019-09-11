@@ -71,7 +71,6 @@
     }
 .btn_grp{
     margin-top: 1em;
-    border-top: 1px solid $primaryColor;
     padding:.5em;
 }
     .form_grid {
@@ -89,7 +88,7 @@
             }
         }
         .form_title{
-            @include gutter(4px);
+            text-align: right;
             font-size: .938em;
         }
         .form_content{
