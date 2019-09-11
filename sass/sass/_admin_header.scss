@@ -11,6 +11,9 @@ header {
     color: #FFF;
     padding-left: 210px;
     box-shadow: 1px 3px 21px 0px rgba(0, 0, 0, 0.2);
+    @include screen('tablet') {
+        @include gutter;
+    }
     h1 {
         font-size: 1.25em;
         width: auto;

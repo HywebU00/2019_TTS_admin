@@ -1,10 +1,10 @@
 //參照雅瓊範例
-@mixin formStyle($f_color:$color-word, $f_border:$color-gray, $f_radius:5px) {
+@mixin formStyle($f_color:$color-word, $f_border:$color-gray, $f_radius:.2em) {
     color: $f_color;
     font-size: 1em;
     border: 1px solid transparent;
     padding: .5em;
-    background: #F8F8F8;
+    background: #F4F4F4;
     vertical-align: middle;
     margin-bottom: .2em;
     @include box-sizing();
@@ -62,6 +62,9 @@ select::-ms-expand {
         @include make-md-column(9);
         @include make-lg-column(9);
         @include gutter();
+        .form_grp{
+            border-bottom: none;
+        }
         .info {
             margin: .3em 0;
             span {
@@ -198,6 +201,7 @@ form, div {
                 margin: .2em .5em 0 0;
                 vertical-align: middle;
             }
+
         }
     }
     .form_grp,
@@ -235,7 +239,6 @@ form, div {
         input[type="password"],
         select,
         textarea {
-            border: 1px solid #CCC;
             width: auto;
             display: inline-block;
             min-width: 20em;
@@ -266,6 +269,10 @@ form, div {
         select,
         textarea {
             width: auto;
+            
+        }
+        select{
+            min-width:4em;
         }
     }
 }
@@ -357,10 +364,10 @@ input[type="file"]:focus,
 input[type="password"]:focus,
 textarea:focus,
 select:focus {
-    border: 1px solid lighten($color-orange, 20) !important;
-    @include box-shadow(0px 0px 0px 1px lighten($color-orange, 20));
+    border: 1px solid transparent !important;
+    @include box-shadow(0px 0px 0px 1px transparent);
     outline: none;
-    background: #FFF;
+    background: #F8F8F8;
 }
 //
 input[type="file"] {}
@@ -370,7 +377,7 @@ select {
     height: 2.4em;
     padding: 0 24px 0 .5em;
     border: 1px solid transparent;
-    background: #F8F8F8 url(../images/basic/icon_select_arrow.svg) no-repeat right center;
+    background: #F4F4F4 url(../images/basic/icon_select_arrow.svg) no-repeat right center;
     background-size: 20px;
     option {
         outline: none;
@@ -507,8 +514,8 @@ abbr[title] {
             border: 1px solid $color-red;
             box-shadow: 0 0 0 1px $color-red inset;
             &:focus {
-                border: 1px solid lighten($color-orange, 20) !important;
-                @include box-shadow(0px 0px 0px 2px lighten($color-orange, 20));
+                border: 1px solid transparent !important;
+                @include box-shadow(0px 0px 0px 2px transparent);
             }
         }
         .form-control-feedback {

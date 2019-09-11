@@ -31,6 +31,35 @@
         }
     }
 }
+.step{
+    ul{
+        @include li-reset;
+        li{
+            display:inline-block;
+            width:10em;
+            height:5em;
+            margin: 0 .3em .3em 0;
+            @include gradient(#AAA,#888,vertical);
+            border-radius:.5em;
+            padding:.4em .5em;
+            color:#FFF;
+            text-shadow:1px 1px 2px RGBA(0,0,0,.75);
+            span{
+                font-weight:bold;
+                display:block;
+                &.num{
+                    font-size: .75em;
+                    em{
+                        font-size: 2em;
+                    }
+                }
+            }
+            &.done{
+                @include gradient(#714795,lighten(#714795,10),vertical);
+            }
+        }
+    }
+}
 // dropdown
 .dropdown-btn {
     position: relative;
