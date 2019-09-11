@@ -1,13 +1,13 @@
 // 自行加入的JS請寫在這裡
 $(function() {
-    // btn_style radio
+    // 按鈕式btn_style radio
     $('.radio_grp.btn_style').find('label').each(function(index, el) {
         $(this).change(function(event) {
             $(this).toggleClass('active');
             $(this).siblings('.active').removeClass('active');
         });
     });
-     // btn_style checkbox
+    // 按鈕式btn_style checkbox
     $('.check_grp.btn_style').find('label').each(function(index, el) {
         $(this).change(function(event) {
             $(this).toggleClass('active');
@@ -18,6 +18,7 @@ $(function() {
         $(this).removeClass('error');
         $(this).siblings('[class^="notice"]').remove();
     });
+    // 展覽選單showlist設定
     $('.menu_setting').find('ul').each(function(index, el) {
         $(this).find('li:last').addClass('last');
     });
@@ -27,14 +28,14 @@ $(function() {
     $('.show_list').css('left', -1 * _showlistW);
     $('.show_choose').off().click(function(e) {
         _menuPos = $('.menu_setting').offset();
-        $('.show_list').fadeIn().animate({ 'left':($('menu').width())}, 400, 'easeOutQuint');
+        $('.show_list').fadeIn().animate({ 'left': ($('menu').width()) }, 400, 'easeOutQuint');
         e.preventDefault();
     });
     $('.show_list').find('h3 .close_btn').off().click(function(e) {
-        $('.show_list').fadeIn().animate({ 'left':-1*$('.show_list').width()}, 400, 'easeOutQuint');
+        $('.show_list').fadeIn().animate({ 'left': -1 * $('.show_list').width() }, 400, 'easeOutQuint');
         e.preventDefault();
     });
-    // 
+    // menu設定
     var Menu_Status = false;
     $('aside').prepend('<div class="toggle_btn"><a href="#"></a></div>');
     var _Menu_Btn = $('aside').find('.toggle_btn a');
@@ -77,12 +78,7 @@ $(function() {
             $(this).children('ul').hide();
         });
     });
-    // $("aside menu").niceScroll({
-    //     cursorwidth: "8px",
-    //     cursoropacitymax:0.6,
-    //     touchbehavior:true,
-    //     smoothscroll: true
-    // });
+
     // login forget
     $('.forget').click(function(event) {
         $('.login_block').animate({ 'left': '-100%' }, 400, 'easeOutQuint');
@@ -109,12 +105,6 @@ $(function() {
     // library
     $('.library ul ul').hide();
     $('.library ul li:first ul').show();
-    //  $('.library ul ul').niceScroll({
-    //     cursorwidth: "8px",
-    //     cursoropacitymax:0.6,
-    //     touchbehavior:true,
-    //     smoothscroll: true
-    // });
     $('.library>.hy_block>ul>li>a').addClass('open');
     $('.library>.hy_block>ul>li:nth-child(2)>a').removeClass('open');
     $('.library').find('.hy_block>ul>li').each(function(index, el) {
@@ -126,7 +116,7 @@ $(function() {
             e.preventDefault();
         });
     });
-    //控制模組定位
+    //控制版型拖拉模組定位
     if ($('.library').length > 0) {
         var libraryTop = $('.library').offset().top,
             libraryW = $('.library').width();
@@ -146,6 +136,7 @@ $(function() {
             }
         });
     }
+    // 
     $(window).on("load resize", function(e) {
         var WindowWidth = $(window).outerWidth();
         var cellDiv1 = $(".template_setting").find('.form_grp');

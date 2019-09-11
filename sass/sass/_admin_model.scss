@@ -1,6 +1,7 @@
 // pills
 .pills {
     padding: .2em 0;
+    margin-bottom: .5em;
     @include clearfix;
     ul {
         @include li-reset;

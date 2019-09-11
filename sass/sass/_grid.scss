@@ -16,35 +16,35 @@
         }
     }
 }
-.form_6_6{
-    width:auto !important;
-    .btn_grp{
-        clear:both;
+.form_6_6 {
+    width: auto !important;
+    .btn_grp {
+        clear: both;
     }
-    .form_grp{
-        width:48%;
+    .form_grp {
+        width: 48%;
         float: none;
-        display:inline-block;
-        vertical-align:top;
-        max-width:100em;
+        display: inline-block;
+        vertical-align: top;
+        max-width: 100em;
         border-bottom: none !important;
-        .form_title{
-            width:100px;
+        .form_title {
+            width: 100px;
             font-weight: bold;
             @include screen('mobile') {
-                width:100%;
+                width: 100%;
             }
         }
-        .form_content{
+        .form_content {
             width: calc(100% - 110px);
-            float:right;
-             @include screen('mobile') {
-                width:100%;
+            float: right;
+            @include screen('mobile') {
+                width: 100%;
             }
         }
-        &:nth-child(odd):last-child{
-            width:100% !important;
-            float:none;
+        &:nth-child(odd):last-child {
+            width: 100% !important;
+            float: none;
         }
     }
 }
@@ -64,6 +64,59 @@
         @include make-sm-column(6);
         @include make-md-column(6);
         @include make-lg-column(6);
+        // &.col:nth-child(odd):last-child{
+        //     float:none;
+        //     width: 100%;
+        // }
+    }
+.btn_grp{
+    margin-top: 1em;
+    border-top: 1px solid $primaryColor;
+    padding:.5em;
+}
+    .form_grid {
+        width: 100%;
+        margin: 0 auto;
+        .form_grp {
+            border-bottom: none;
+            display:inline-block;
+            vertical-align:top;
+            width:48%;
+            @include box-sizing;
+            @include screen('mobile') {
+                width:100%;
+                display:block;
+            }
+        }
+        .form_title{
+            @include gutter(4px);
+            font-size: .938em;
+        }
+        .form_content{
+             @include gutter(4px);
+             
+            .datepick{
+                width:48.5%;
+                display:inline-block;
+                vertical-align:top;
+                margin-left: -4px;
+                >input[type="text"]{
+                    width: 100%;
+                    min-width:1em;
+                    padding-right: 2em;
+                }
+            }
+            &+.datepick{
+                padding-right: 0;
+                &:before{
+                    content:"~";
+                    display:inline-block;
+                    position:absolute;
+                    left: -.6em;
+                    top:.3em;
+                }
+            }
+        }
     }
 }
 // 三欄 4-4-4

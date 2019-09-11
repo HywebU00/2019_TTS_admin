@@ -16,7 +16,7 @@ $btn-radius:.2em;
     border: 1px solid darken($btn-bg, 5);
     color: $btn-font-color;
     @include border-radius($btn-radius);
-    text-shadow: -1px -1px 2px RGBA(0, 0, 0, .6);
+    text-shadow: 1px 1px 2px RGBA(0, 0, 0, .6);
     &:hover,&:focus {
         background-color: darken($btn-bg, 0); // Old browsers
         @include filter-gradient(lighten($btn-bg, 5), darken($btn-bg, 15), vertical); // IE6-9

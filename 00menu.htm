@@ -124,6 +124,9 @@ $(function() {
             $(this).parent().removeClass('closed');
             Menu_Status = false;
         }
+        if ($('.show_list').position().left > 0) {
+            $('.show_list').css("left", $('menu').width());
+        }
         $(this).blur();
         e.preventDefault();
     });

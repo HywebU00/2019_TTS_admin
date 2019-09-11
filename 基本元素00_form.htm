@@ -85,6 +85,52 @@
                     </div>
                 </form>
             </div>
+            <h2>常用雙欄進階功能區</h2>
+            <div class="hy_block">
+                <div class="col-6-6">
+                    <form action="" class="form_grid">
+                        <div class="form_grp">
+                            <label for="" class="form_title">展覽名稱（代碼 </label>
+                            <div class="form_content">
+                                <input name="" type="text" value="">
+                            </div>
+                        </div>
+                        <div class="form_grp">
+                            <label for="" class="form_title">人員帳號 </label>
+                            <div class="form_content hasBtn">
+                                <input name="" type="text" value="">
+                                <button class="btn">選擇人員</button>
+                            </div>
+                        </div>
+                        <div class="form_grp">
+                            <div class="form_title">起始日期</div>
+                            <div class="form_content hasBtn">
+                                <div class="datepick">
+                                    <input name="" type="text" value="" class="calendar" placeholder="開始日期">
+                                    <button class="btn"><i class="i_calendar_color"></i></button>
+                                </div>
+                                <div class="datepick">
+                                    <input name="" type="text" value="" class="calendar" placeholder="結束日期">
+                                    <button class="btn"><i class="i_calendar_color"></i></button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form_grp">
+                            <label for="" class="form_title">下拉選單</label>
+                            <div class="form_content">
+                                <select id="selectSample" name="">
+                                    <option value="">6F電腦教室</option>
+                                    <option value="">B1國際會議廳</option>
+                                </select>
+                            </div>
+                        </div>
+                    </form>
+                    <div class="btn_grp">
+                        <button class="btn reset">取消</button>
+                        <button class="btn btn-primary">確認</button>
+                    </div>
+                </div>
+            </div>
             <!-- 節點標題 -->
             <h2>基本表單元素</h2>
             <div class="hy_block">
@@ -168,9 +214,23 @@
                         </div>
                     </div>
                     <div class="form_grp">
+                        <div class="form_title">起始日期</div>
+                        <div class="form_content hasBtn">
+                            <div class="datepick">
+                                <input name="" type="text" value="" class="calendar" placeholder="開始日期">
+                                <button class="btn"><i class="i_calendar_color"></i></button>
+                            </div>
+                            <div class="datepick">
+                                <input name="" type="text" value="" class="calendar" placeholder="結束日期">
+                                <button class="btn"><i class="i_calendar_color"></i></button>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- multi_form_set -->
+                    <div class="form_grp">
                         <div class="form_title">多重組合</div>
                         <div class="form_content">
-                            <label for="" class="form_title"> 垂直radio </label>
+                            <label for="" class="form_title">裡面每個表單要用sub_form_content包覆</label>
                             <div class="form_content">
                                 <div class="sub_form_content">
                                     <input name="" type="text" value="">
@@ -195,13 +255,29 @@
                                     <label><input name="radioSample" type="radio" value="">檔案下載</label>
                                     <label><input name="radioSample" type="radio" value="">網站功能頁</label>
                                 </div>
+                                <div class="sub_form_content check_grp">
+                                    <label><input name="radioSample" type="checkbox" value="">選單節點</label>
+                                    <label><input name="radioSample" type="checkbox" value="">一般資料</label>
+                                    <label><input name="radioSample" type="checkbox" value="">URL連結</label>
+                                    <label><input name="radioSample" type="checkbox" value="">檔案下載</label>
+                                    <label><input name="radioSample" type="checkbox" value="">網站功能頁</label>
+                                </div>
+                                <div class="sub_form_content radio_grp">
+                                    <label><input name="radioSample" type="radio" value="">選單節點</label>
+                                    <label><input name="radioSample" type="radio" value="">一般資料</label>
+                                    <label><input name="radioSample" type="radio" value="">URL連結</label>
+                                    <label><input name="radioSample" type="radio" value="">檔案下載</label>
+                                    <label><input name="radioSample" type="radio" value="">網站功能頁</label>
+                                </div>
                                 <div class="sub_form_content hasBtn">
                                     <input name="" type="text" disabled>
                                     <button class="btn">文字文字文字</button>
                                 </div>
+                                <div class="sub_form_content">
+                                    <textarea name="" id="" cols="30" rows="10"></textarea>
+                                </div>
                             </div>
                         </div>
-                        
                     </div>
                     <div class="form_grp">
                         <label for="" class="form_title">下拉選單</label>
