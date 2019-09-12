@@ -127,6 +127,15 @@
         </div>
         <div class="show_list">
             <h3>展覽列表：<a href="#" class="close_btn"></a></h3>
+            <div class="form_grid">
+                <div class="form_grp">
+                    <label for="" class="form_title">查詢展覽</label>
+                    <div class="form_content hasBtn">
+                        <input name="" type="text" placeholder="請輸入展覽關鍵字">
+                        <button class="btn"><i class="i_search"></i>查詢</button>
+                    </div>
+                </div>
+            </div>
             <h4>會內展覽：</h4>
             <ul class="tts_show">
                 <li><a href="#"><img src="images/ex_01.png" alt="">台北國際禮品展台北國際禮品展(QE)</a></li>
@@ -143,10 +152,9 @@
                 <li><a href="#"><img src="images/ex_06.png" alt="">台灣國際人工智慧暨物聯網展(IO)</a></li>
                 <li><a href="#"><img src="images/ex_01.png" alt="">台北國際禮品展台北國際禮品展(QE)</a></li>
                 <li><a href="#"><img src="images/ex_02.png" alt="">高雄國際清真產品展(HK)</a></li>
-                
             </ul>
             <h4>會外展覽：</h4>
-             <ul class="not_tts_show">
+            <ul class="not_tts_show">
                 <li><a href="#"><img src="images/ex_06.png" alt="">台灣國際人工智慧暨物聯網展(IO)</a></li>
                 <li><a href="#"><img src="images/ex_01.png" alt="">台北國際禮品展台北國際禮品展(QE)</a></li>
                 <li><a href="#"><img src="images/ex_02.png" alt="">高雄國際清真產品展(HK)</a></li>
@@ -161,7 +169,6 @@
             </ul>
         </div>
         <div class="content">
-            
         </div>
     </div>
 </body>
@@ -174,6 +181,8 @@
 <script src="js/jquery.treeview.js"></script>
 <!-- pg-calendar -->
 <script src="vendor/pg_calendar/js/pignose.calendar.full.min.js"></script>
+<!-- scrollbar -->
+<script src="vendor/scrollbar/jquery.scrollbar.min.js"></script>
 <script>
 $(function() {
     if ($('.datepick').length > 0) {

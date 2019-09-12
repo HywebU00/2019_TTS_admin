@@ -95,7 +95,7 @@ $btn-radius:.2em;
     @include btn_setting($color-purple, #FFF);
 }
 .btn-primary {
-    @extend .btn-blue;
+    @extend .btn-orange;
 }
 // 按鈕大小
 .btn-xl {

@@ -167,6 +167,7 @@
  }
  // 卡片式
  .card {
+     
     margin-top: 1em;
      overflow: hidden;
      ul {
@@ -716,23 +717,11 @@
          }
      }
      .file {
-         &.notice_error {
-             background: #FFD2D2;
-             border-left: none;
-             .progress_bar {
-                 display: none;
-             }
-             span {
-                 color: #555;
-                 em {
-                     color: red;
-                 }
-             }
-         }
+
          display: block;
          margin: 0px 0 .5em;
          border-radius: 4px;
-         padding: .5em 140px .5em 1em;
+         padding: .5em 140px .5em 3.5em;
          background:#F1F1F1;
          position: relative;
          &>span {
@@ -742,6 +731,39 @@
                  font-size: 12px;
                  font-style: normal;
                  margin-left: .5em;
+             }
+         }
+         .pic{
+            width:40px;
+            height:30px;
+            margin: 0px .5em 0 0;
+            position:absolute;
+            top:.3em;
+            left: .3em;
+            border-radius:4px;
+            img{
+                width: 100%;
+                height: 100%;
+                object-fit:cover;
+                 border-radius:4px;
+            }
+        }
+         &.notice_error {
+             background: #FFD2D2;
+             border-left: none;
+             .pic{
+                img{
+                    display:none;
+                }
+             }
+             .progress_bar {
+                 display: none;
+             }
+             span {
+                 color: #555;
+                 em {
+                     color: red;
+                 }
              }
          }
          .delete {

@@ -76,7 +76,6 @@ select::-ms-expand {
         .sub_form_content{
             margin-bottom: .3em;
              &.hasBtn{
-            padding-right: 1em;
             position: relative;
             button, a, input[type="button"] {
                 padding: .5em 1em !important;
@@ -84,7 +83,6 @@ select::-ms-expand {
                 top: 0;
                 font-size: 1em;
                 margin: 0;
-                border: 1px solid #DDD;
                 width: 7.5em;
                 position:absolute;
                 @include text-overflow;
@@ -111,7 +109,7 @@ select::-ms-expand {
                 }
             }
         }
-        &.hasBtn{
+        &.hasBtn,{
             padding-right: 1em;
             position: relative;
             button, a, input[type="button"] {
@@ -120,7 +118,6 @@ select::-ms-expand {
                 top: 0em;
                 font-size: 1em;
                 margin: 0;
-                border: 1px solid #DDD;
                 width: 7.5em;
                  position:absolute;
                 @include text-overflow;
@@ -427,18 +424,17 @@ input[type="radio"]:checked {
 //---------------------------------------------readonly disable -------//
 input[readonly],
 input[disabled] {
-    background: lighten($color-gray, 40) !important;
+    background: #DDD !important;
     color: darken($color-gray, 30);
-    border-color: darken($color-gray, 10);
     &~label {
         color: darken($color-gray, 10);
     }
     &:hover,
     &:focus {
-        background: lighten($color-gray, 10) !important;
-        color: darken($color-gray, 30) !important;
-        border-color: darken($color-gray, 10) !important;
-        box-shadow: none !important;
+        // background: lighten($color-gray, 10) !important;
+        // color: darken($color-gray, 30) !important;
+        // border-color: darken($color-gray, 10) !important;
+        // box-shadow: none !important;
         cursor: not-allowed;
     }
 }

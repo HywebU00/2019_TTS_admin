@@ -31,31 +31,31 @@
         }
     }
 }
-.step{
-    ul{
+.step {
+    ul {
         @include li-reset;
-        li{
-            display:inline-block;
-            width:10em;
-            height:5em;
+        li {
+            display: inline-block;
+            width: 10em;
+            height: 5em;
             margin: 0 .3em .3em 0;
-            @include gradient(#AAA,#888,vertical);
-            border-radius:.5em;
-            padding:.4em .5em;
-            color:#FFF;
-            text-shadow:1px 1px 2px RGBA(0,0,0,.75);
-            span{
-                font-weight:bold;
-                display:block;
-                &.num{
+            @include gradient(#AAA, #888, vertical);
+            border-radius: .5em;
+            padding: .4em .5em;
+            color: #FFF;
+            text-shadow: 1px 1px 2px RGBA(0, 0, 0, .75);
+            span {
+                font-weight: bold;
+                display: block;
+                &.num {
                     font-size: .75em;
-                    em{
+                    em {
                         font-size: 2em;
                     }
                 }
             }
-            &.done{
-                @include gradient(#714795,lighten(#714795,10),vertical);
+            &.done {
+                @include gradient(#714795, lighten(#714795, 10), vertical);
             }
         }
     }
@@ -237,6 +237,22 @@
     background: url(../images/treeview/file.gif) 0 0 no-repeat;
 }
 .show_list {
+    .form_grid {
+        margin: 0 auto !important;
+        .form_grp {
+            border-bottom: none;
+        }
+        .form_title {
+            @include gutter(0);
+            display: none;
+        }
+        .form_content {
+            padding-left: 0;
+            float: none;
+            width: 100% !important;
+        }
+        min-width:100%;
+    }
     position: fixed;
     z-index: 99;
     background: RGBA(0, 0, 0, .85);
@@ -246,7 +262,7 @@
     height: 100%;
     background: #FFF;
     box-shadow: 0px 5px 5px RGBA(0, 0, 0, .4);
-    padding: 4em 1em ;
+    padding: 3.5em 1em 4em;
     overflow: hidden;
     overflow-y: auto;
     -webkit-overflow-scrolling: touch;
@@ -444,7 +460,27 @@
 .editor_area, {
     height: 200px;
 }
+.card {
+    &.dragable {
+        ul {
+            li {
+                &:hover {
+                    cursor: move;
+                }
+            }
+        }
+    }
+}
 .slider_imgs {
+    &.dragable {
+        ul {
+            li {
+                &:hover {
+                    cursor: move;
+                }
+            }
+        }
+    }
     overflow: hidden;
     font-size: .875em;
     ul {
@@ -474,7 +510,6 @@
                 -moz-box-shadow: 0px 1px 6px 1px RGBA(0, 0, 0, 0.25);
                 -webkit-box-shadow: 0px 1px 6px 1px RGBA(0, 0, 0, 0.25);
                 box-shadow: 0px 1px 6px 1px RGBA(0, 0, 0, 0.25);
-                cursor: move;
                 .main_title {
                     color: $secondaryColor;
                 }
@@ -497,6 +532,16 @@
                 padding: .5em;
                 border-radius: .4em;
                 background: #fff;
+                label {
+                    position: absolute;
+                    top: .8em;
+                    right: .6em;
+                    z-index: 2;
+                    input {
+                        width: 1.5em;
+                        height: 1.5em;
+                    }
+                }
                 .img-container {
                     @include aspect-ratio(4, 3);
                     position: relative;
@@ -563,9 +608,6 @@
             height: 1.25em;
         }
     }
-    &:hover {
-        cursor: move;
-    }
     .order_num {
         top: .4em;
         left: .4em;
@@ -620,17 +662,19 @@
     .gra_text {
         padding: 0 1em;
         color: $color-word;
-        margin: .5em 0;
-        font-size: .875em;
+        margin: .5em 1em;
+        font-size: .938em;
         text-align: left;
         height: 5.2em;
         overflow-y: auto;
         color: #666;
         li {
             border-bottom: 1px dashed #DDD;
+            margin-bottom: .2em;
         }
         p {
             margin: 0;
+            line-height: 1.8em;
             span {
                 display: block;
             }

@@ -1,5 +1,9 @@
 // 自行加入的JS請寫在這裡
 $(function() {
+    // scrollbar
+    if ($('.gra_text').length > 0) {
+        $('.gra_text').scrollbar();
+    }
     // 按鈕式btn_style radio
     $('.radio_grp.btn_style').find('label').each(function(index, el) {
         $(this).change(function(event) {
@@ -78,7 +82,6 @@ $(function() {
             $(this).children('ul').hide();
         });
     });
-
     // login forget
     $('.forget').click(function(event) {
         $('.login_block').animate({ 'left': '-100%' }, 400, 'easeOutQuint');
