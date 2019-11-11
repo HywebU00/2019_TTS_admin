@@ -55,7 +55,7 @@ aside {
     background: url(../images/menu_bg.jpg) no-repeat left top;
     background-size: cover;
     @include box-sizing;
-    z-index: 100;
+    z-index: 999999;
     padding-top: 3em;
     &:before {
         content: "";

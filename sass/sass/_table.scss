@@ -13,6 +13,11 @@ table {
         .btn, input[type="button"], input[type="submit"] {
             padding: .2em !important;
         }
+        img{
+            width: 100px;
+            max-height:50px;
+            display:block;
+        }
     }
     td {
         border: #EDEEF3 1px solid;

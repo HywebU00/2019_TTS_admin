@@ -17,6 +17,7 @@
 @import "sass/_tooltip";				//tooltip
 @import "sass/_tabs";					//頁籤
 @import "sass/_table";					//表格
+@import "sass/_tag";					//表格
 @import "sass/_form";					//表單
 @import "sass/_icon";					//圖示
 @import "sass/_element";				//小元素
@@ -41,7 +42,7 @@
 @import "sass/_share";					//社群分享
 @import "sass/_notice";					//提示
 @import "sass/_modal";					//提示
-
+@import "sass/_fix_forD";					//提示
 // 頁面
 @import "page/_template";				//版型初始設定
 @import "page/_login";					//版型初始設定

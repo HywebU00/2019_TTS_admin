@@ -161,3 +161,9 @@
 .i_minus{
     @include hyui_icon('icon_minus');
 }
+.i_export{
+    @include hyui_icon('icon_export');
+}
+.i_import{
+    @include hyui_icon('icon_import');
+}

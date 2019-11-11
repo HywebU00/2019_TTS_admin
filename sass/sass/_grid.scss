@@ -65,62 +65,6 @@
         @include make-md-column(6);
         @include make-lg-column(6);
     }
-    .btn_grp {
-        margin-top: 1em;
-        padding: .5em;
-    }
-    .form_grid {
-        width: 100%;
-        margin: 0 auto;
-        .form_grp {
-            border-bottom: none;
-            display: inline-block;
-            vertical-align: top;
-            width: 48%;
-            @include box-sizing;
-            @include screen('mobile') {
-                width: 100%;
-                display: block;
-            }
-        }
-        .form_title {
-            text-align: right;
-            font-size: .938em;
-        }
-        .form_content {
-            &.hasBtn{
-                padding-right: 0;
-                button, a, input[type="button"] {
-                    right: .2em;
-                }
-            }
-            @include gutter(4px);
-            .datepick {
-                width: 48%;
-                display: inline-block;
-                vertical-align: top;
-                >input[type="text"] {
-                    width: 100%;
-                    min-width: 1em;
-                    padding-right: 2em;
-                }
-                button, a, input[type="button"] {
-                    right: .5em;
-                }
-            }
-            &+.datepick {
-                padding-right: 0;
-                margin-left: -4px;
-                &:before {
-                    content: "~";
-                    display: inline-block;
-                    position: absolute;
-                    left: -.6em;
-                    top: .3em;
-                }
-            }
-        }
-    }
 }
 // 三欄 4-4-4
 .col-4-4-4 {
