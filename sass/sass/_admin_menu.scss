@@ -1,5 +1,5 @@
-$color_menubg: #242635;
-$color_menu : #714795;
+$color_menubg: #30323f;
+$color_menu : #30323f;
 aside {
     &.closed {
         width: 3em;
@@ -7,6 +7,7 @@ aside {
         // overflow-y:hidden;
         menu {
             overflow-y: visible;
+            overflow:visible;
             >ul {
                 li {
                     position: relative;
@@ -30,8 +31,8 @@ aside {
                     top: 0;
                     left: 3em;
                     width: 210px;
-                    ul{
-                        left:210px;
+                    ul {
+                        left: 210px;
                     }
                     @include li-reset;
                     ul {
@@ -52,7 +53,7 @@ aside {
     height: 100%;
     width: 210px;
     background: $color_menubg;
-    background: url(../images/menu_bg.jpg) no-repeat left top;
+    // background: url(../images/menu_bg.jpg) no-repeat left top;
     background-size: cover;
     @include box-sizing;
     z-index: 999999;
@@ -64,7 +65,7 @@ aside {
         left: 0;
         width: 100%;
         height: 100%;
-        @include gradient(darken($primaryColor, 30), darken($primaryColor, 18), vertical);
+        @include gradient(darken($color_menubg, 0), darken($color_menu, 0), vertical);
         opacity: .8;
     }
     @include screen('tablet') {
@@ -77,7 +78,9 @@ aside {
         left: 0;
         height: 3em;
         width: 100%;
-        background: rgba(0, 0, 0, .5);
+        // background: url(../images/bubble_yellow.svg) no-repeat  20px -100px #f4b145;
+        // background-size: 120%;
+        background: lighten($color_menubg,10);
         z-index: 9;
         &.closed {
             a {
@@ -118,10 +121,14 @@ aside {
         height: 100%;
         margin: 0;
         padding: 0;
-        // overflow-y: auto;
+        overflow:hidden;
+        overflow-y: auto;
         -webkit-overflow-scrolling: touch;
         -webkit-transform: translate3d(0, 0, 0);
         @include box-sizing;
+        &.open_overflow{
+            overflow:visible;
+        }
         >ul {
             margin: 0;
             padding: 0;
@@ -185,7 +192,7 @@ aside {
                     font-size: .938em;
                     &:hover, &:focus {
                         color: #FFF;
-                        background: darken($color_menu,10);
+                        background: darken($color_menu, 10);
                         .toggle_btn {
                             &:before {
                                 border: 2px solid #FFF;
@@ -233,22 +240,21 @@ aside {
                         padding: .4em 1em .4em 2.5em;
                         text-shadow: none;
                         &:hover, &:focus {
-                            color:$color-yellow;
+                            color: $color-yellow;
                             background: transparent;
                         }
                     }
                     ul {
-                    position: absolute;
-                    top: 0;
-                    width: 220px;
-                    left: 210px;
-                    background: #1D2226;
-                    z-index: 99;
-                    padding: 0;
-                    @include li-reset;
+                        position: absolute;
+                        top: 0;
+                        width: 220px;
+                        left: 210px;
+                        background: #1D2226;
+                        z-index: 99;
+                        padding: 0;
+                        @include li-reset;
+                    }
                 }
-                }
-                
             }
         }
     }

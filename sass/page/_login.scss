@@ -2,76 +2,62 @@
     overflow: hidden;
     width: 100%;
     height: 100%;
-    position: absolute;
+    position: relative;
     margin: 0px auto;
-    background: url(../images/admin_bg.jpg) no-repeat center center;
-    background-size:cover;
-    
-    @include box-sizing;
+    box-sizing: border-box;
     @include screen('mobile') {
         position: relative;
     }
+    &:before, &:after {
+        position: fixed;
+        z-index: -1;
+        bottom: -10em;
+        left: -6em;
+        width: 40em;
+        height: 40em;
+        content: "";
+        background: url(../images/bubble_green.svg) no-repeat center center;
+        background-size: contain;
+        @include screen('mobile') {
+            z-index: 0;
+            bottom: 0em;
+            left: -12em;
+            width: 20em;
+            height: 20em;
+        }
+    }
+    &:after {
+        top: -20em;
+        right: -28em;
+        left: auto;
+        width: 70em;
+        height: 60em;
+        background: url(../images/bubble_yellow.svg) no-repeat center center;
+        @include screen('mobile') {
+            width: 40em;
+            height: 40em;
+        }
+    }
     .login {
-        .mask {
-            width: 96%;
-            height: 380px;
-            margin: 0px auto;
-            overflow: hidden;
-            position: relative;
-            @include screen('xs_mobile') {
-                height: 450px;
-                width: 100%;
-            }
-            .login_block {
-                position: absolute;
-                width: 100%;
-                // outline: 1px solid red;
-            }
-            .forget_block {
-                position: absolute;
-                left: 100%;
-                width: 100%;
-            }
-        }
-        &:before {
-            position: absolute;
-            width: 80px;
-            height: 80px;
-            top: -60px;
-            left: 50%;
-            margin-left: -40px;
-            content: "";
-            background: url(../images/user.png) no-repeat center center #FFF;
-            background-size: 80px;
-            @include border-radius(50%);
-            border: 5px solid #FFF;
-            @include box-shadow(2px 2px 15px rgba(0, 0, 0, .4));
-            display: none;
-        }
-        &:after {
-            position: absolute;
-            width: 100%;
-            height: 20px;
-            background: #dedede;
-            bottom: 0;
-            left: 0;
-            content: "";
-            @include border-radius(0px 0px 5px 5px);
-        }
+        width: 800px;
+        margin-left: -400px;
         animation-fill-mode: both;
         animation-duration: 1s;
         animation-name: bounceInDown;
         position: fixed;
-        width: 420px;
         min-height: 440px;
         background: #FFF;
-        @include border-radius(.5em);
-        top:8%;
+        top: 2em;
         left: 50%;
-        margin-left: -210px;
-        padding:2em 1.5em;
-        @include box-sizing;
-        @include box-shadow(0px 15px 35px RGBA(0, 0, 0, .65));
+        padding: 1em 3em;
+        border-radius: 1em;
+        box-shadow: 0 1em 3em -1em rgba(0, 0, 0, 0.5);
+        z-index: 9;
+        box-sizing: border-box;
+        @include screen('mobile') {
+            width: 80%;
+            margin-left: -40%;
+        }
         @include screen('xs_mobile') {
             top: 20px;
             width: 90%;
@@ -80,12 +66,80 @@
             margin-left: 0;
             padding: 1em;
         }
+        &:before{
+            position:absolute;
+            top:.5em;
+            right: .5em;
+            background: #444;
+            text-align: center;
+            border-radius:8px;
+            content:"PC版";
+            color:#FFF;
+            font-weight: bold;
+            padding:.3em 1.2em;
+            font-size: .938em;
+        }
+        .mask {
+            width: 60%;
+            height: 420px;
+            margin: 0px auto;
+            overflow: hidden;
+            position: relative;
+            z-index: 2;
+            @include screen('mobile') {
+                height: 450px;
+                width: 100%;
+            }
+            @include screen('xs_mobile') {
+                height: 450px;
+                width: 100%;
+            }
+            .login_block {
+                position: absolute;
+                width: 100%;
+                padding: .5em 2em;
+                .form_grp:last-child {
+                    display: none;
+                    .form_content {
+                        text-align: right;
+                        padding-top: 2em;
+                    }
+                }
+            }
+            .forget_block {
+                position: absolute;
+                left: 100%;
+                width: 100%;
+                h2 {
+                    width: 90%;
+                    margin: 1em auto;
+                }
+                .form_grid {
+                    width: 90%;
+                    margin: 0 auto;
+                    input[type="text"] {
+                        background: url(../images/icon/icon_mail.svg) no-repeat 1em 1em #FDFDFD;
+                        background-size: 16px;
+                    }
+                }
+            }
+            .form_grid {
+                min-width: 1em;
+                margin: .5em auto;
+            }
+        }
         label {
             display: none;
         }
         .form_grp {
             border-bottom: none;
-            margin-bottom: .1em !important;
+            margin-bottom: .7em !important;
+            overflow: visible;
+            &:after {
+                content: "";
+                clear: both;
+                display: block;
+            }
         }
         .btn_grp {
             margin-bottom: 1.6em;
@@ -99,56 +153,74 @@
             }
         }
         .form_content {
+            width: 100%;
+            @include gutter(.4em);
+            input[type="text"], input[type="password"] {
+                box-shadow: 0px 0px 15px RGBA(0, 0, 0, .2);
+                border: none;
+                padding: .8em 1em .8em 2.8em;
+                border-radius: 2em;
+                transition: .3s ease-out;
+                &:focus {
+                    border: none !important;
+                    box-shadow: 0px 0px 20px RGBA(0, 0, 0, .4);
+                }
+            }
+            input {
+                transition: .3s ease-out;
+                &.id {
+                    background: url(../images/icon/icon_man.svg) no-repeat .8em .8em #FDFDFD;
+                    background-size: 20px;
+                }
+                &.pw {
+                    background: url(../images/icon/icon_lock.svg) no-repeat 1em 1em #FDFDFD;
+                    background-size: 16px;
+                }
+            }
             .captcha {
-                float: left;
+                display: inline-block;
                 margin: 0px .5em .5em 0;
+                @include screen('xs_mobile') {
+                    display: block;
+                }
                 &~input[type="text"] {
                     display: inline-block;
                     width: auto;
                     text-align: center;
                     width: 8em;
+                    padding: .6em;
+                    border-radius: .5em;
+                    box-shadow: none;
+                    margin-right: .5em;
+                    font-weight: bold;
+                    letter-spacing: .05em;
+                    @include screen('xs_mobile') {
+                        width: 100%;
+                        display: block;
+                    }
                 }
                 &~a {
-                    display: block;
-                    position: absolute;
-                    top: .5em;
-                    right: .2em;
+                    display: inline-block;
+                    position: relative;
                     width: 26px;
                     height: 26px;
+                    vertical-align: middle;
                     @include border-radius(50%);
                     background: #DEDEDE;
                     text-align: center;
+                    @include screen('xs_mobile') {
+                        position: absolute;
+                        top: .4em;
+                        right: .4em;
+                    }
+                    &:hover, &:focus {
+                        img {
+                            opacity: 1;
+                        }
+                    }
                     img {
                         margin-top: .3em;
                         opacity: .4;
-                    }
-                }
-            }
-            width: 100%;
-            @include gutter(.4em);
-            input[type="text"],
-            input[type="password"] {
-                font-weight: bold;
-                @include border-radius(.2em);
-            }
-            input {
-                transition: .3s ease-out;
-                &.id {
-                    background: url(../images/icon_id.svg) no-repeat .5em .75em #F5F5F5;
-                    padding-left: 2em;
-                    background-size:1em;
-                    &:focus{
-                        background: url(../images/icon_id.svg) no-repeat .5em .75em #FEFEFE;
-                        background-size:1em;
-                    }
-                }
-                &.pw {
-                    background: url(../images/icon_pw.svg) no-repeat .5em .75em #F5F5F5;
-                    padding-left: 2em;
-                     background-size:1em;
-                     &:focus{
-                        background: url(../images/icon_pw.svg) no-repeat .5em .75em #FEFEFE;
-                        background-size:1em;
                     }
                 }
             }
@@ -157,23 +229,52 @@
     h1 {
         line-height: 1.2em;
         text-align: center;
-        margin: .2em 0 .5em;
-        img{
-            width: 40px;
-            display:inline-block;
-            margin: 0 .2em .2em 0;
+        margin: .2em 0;
+        img {
+            height: 60px;
+            display: block;
+            margin: 0 auto;
             vertical-align: middle;
+            @include screen('xs_mobile') {
+                max-width: 100%;
+                max-height: 60px;
+            }
+            &+img {
+                height: 70px;
+            }
         }
-        small{
-            display:block;
-            color:#666;
+        small {
+            display: block;
+            color: #666;
         }
-        @include screen('mobile') {
+        @include screen('xs_mobile') {
             font-size: 1.8em;
-            margin-bottom: 1em;
+            margin-bottom: .5em;
         }
     }
     h2 {
         text-align: left;
+    }
+    .btn {
+        text-shadow: 1px 2px 2px RGBA(0, 0, 0, .75);
+        border: none;
+        @include border-radius(2em);
+        @include gradient(darken($color-blue, 15), adjust_hue(saturate(lighten($color-blue, 13), 31), -8), vertical);
+        box-shadow: 0px 0px 0em saturate($color-blue, 15);
+        transition: .3s ease-out;
+        width: 80%;
+        color: #FFF;
+        font-weight: bold;
+        font-size: 1.125em;
+        &:hover, &:focus {
+            border:none !important;
+            background-color: darken($color-blue, 10); // Old browsers
+            // border: 1px solid darken($color-blue, 20) !important;
+            cursor: pointer;
+            color: #FFF;
+            outline: none;
+            box-shadow: 0px 0px 1.5em adjust_hue(saturate(lighten($color-blue, 13), 31), -8);
+            @include gradient(darken($color-blue, 15), adjust_hue(saturate(lighten($color-blue, 13), 31), -8), vertical);
+        }
     }
 }

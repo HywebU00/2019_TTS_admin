@@ -101,18 +101,19 @@
      border-bottom: 3px solid #BBB;
      padding: 1em;
      font-size: .938em;
-     .form_grp{
-        overflow:visible !important;
+     .form_grp {
+         overflow: visible !important;
      }
  }
  .hy_block {
      background: #FFF;
      margin-bottom: 1em;
-     border: 1px solid #DDD;
-     border-bottom: 3px solid #BBB;
-     padding: 1em;
      overflow: hidden;
      font-size: .938em;
+     border-radius: .5em;
+     padding:1em;
+     // box-shadow: 0 1em .5em -.9em rgba(0, 0, 0, 0.15);
+     box-shadow: 0 2px 5px 0 rgba(0,0,0,.1);
      h3 {
          margin: .2em 0 .8em;
          font-size: 1.25em;

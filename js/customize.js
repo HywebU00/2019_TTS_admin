@@ -99,7 +99,7 @@ $(function() {
             e.preventDefault();
         });
     });
-    // 
+    //
     $('.col_control').prepend('<div class="col_name"></div>');
     $('.col_control .col_name').each(function(index, el) {
         var col_name = $(this).parent().parent().parent().attr('class');
@@ -139,7 +139,7 @@ $(function() {
             }
         });
     }
-    // 
+    //
     $(window).on("load resize", function(e) {
         var WindowWidth = $(window).outerWidth();
         var cellDiv1 = $(".template_setting").find('.form_grp');
