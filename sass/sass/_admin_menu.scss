@@ -1,5 +1,4 @@
-$color_menubg: #117dc6;
-$color_menu : #00ba75;
+
 aside {
     &.closed {
         width: 3em;
@@ -201,6 +200,7 @@ aside {
                     padding: .6em .5em;
                     position: relative;
                     font-size: .938em;
+                    font-weight: bold;
                     &:hover, &:focus {
                         color: #FFF;
                         // background: darken($color_menu, 10);
