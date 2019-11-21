@@ -111,9 +111,9 @@
      overflow: hidden;
      font-size: .938em;
      border-radius: .5em;
-     padding:1em;
+     padding: 1em;
      // box-shadow: 0 1em .5em -.9em rgba(0, 0, 0, 0.15);
-     box-shadow: 0 2px 5px 0 rgba(0,0,0,.1);
+     box-shadow: 0 2px 5px 0 rgba(0, 0, 0, .1);
      h3 {
          margin: .2em 0 .8em;
          font-size: 1.25em;
@@ -465,10 +465,10 @@
          .dropdown-content {
              min-width: 15em;
              right: 0;
-             left:auto;
-             &:before{
-                right:5%;
-                left:auto;
+             left: auto;
+             &:before {
+                 right: 5%;
+                 left: auto;
              }
              .btn {
                  padding-left: .5em;
@@ -828,4 +828,25 @@
      to {
          background-position: 0 0;
      }
+ }
+ // scrollbar
+ /* width */
+ ::-webkit-scrollbar,::-ms-scrollbar {
+     width: 4px;
+     opacity: .5;
+ }
+ /* Track */
+ ::-webkit-scrollbar-track, ::-ms-scrollbar-track{
+     background: transparent;
+ }
+ /* Handle */
+ ::-webkit-scrollbar-thumb,::-ms-scrollbar-thumb {
+     background: #888;
+     width: 4px;
+     border-radius: 2px;
+     opacity: .5;
+ }
+ /* Handle on hover */
+ ::-webkit-scrollbar-thumb:hover,::-ms-scrollbar-thumb:hover {
+     background: #555;
  }

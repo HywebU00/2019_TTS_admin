@@ -129,7 +129,7 @@ aside {
         margin: 0;
         padding: 0;
         overflow: hidden;
-        // overflow-y: auto;
+        overflow-y: auto;
         -webkit-overflow-scrolling: touch;
         -webkit-transform: translate3d(0, 0, 0);
         @include box-sizing;
