@@ -105,6 +105,12 @@
     </ul>
 </menu>
 <!-- 以下js已存在customize.js 這裏只是為了demo用 -->
+<script src="vendor/nicescroll/jquery.nicescroll.min.js"></script>
+<script>
+$(document).ready(function() {
+    $("aside menu").getNiceScroll().resize();
+});
+</script>
 <script>
 $(function() {
     var Menu_Status = false;

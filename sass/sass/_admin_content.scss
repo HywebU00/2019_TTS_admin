@@ -170,7 +170,7 @@
              content: "";
              top: 0;
              left: 0;
-             background: lighten($primaryColor, 10);
+             background: lighten($color_menubg, 5);
          }
          &:after {
              position: absolute;
@@ -179,7 +179,7 @@
              content: "";
              bottom: 0;
              left: 0;
-             background: lighten($secondaryColor, 30);
+             background: lighten($color_menu, 5);
          }
      }
  }
@@ -464,6 +464,12 @@
          }
          .dropdown-content {
              min-width: 15em;
+             right: 0;
+             left:auto;
+             &:before{
+                right:5%;
+                left:auto;
+             }
              .btn {
                  padding-left: .5em;
                  padding-right: .5em;

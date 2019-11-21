@@ -94,7 +94,7 @@ $(function() {
     // dropdown
     $('.dropdown-content').hide();
     $('.dropdown-btn').each(function(index, el) {
-        $(this).click(function(e) {
+        $(this).off().click(function(e) {
             $(this).siblings('.dropdown-content').stop(true, true).slideToggle(400, 'easeOutQuint');
             e.preventDefault();
         });
