@@ -11,23 +11,23 @@ $btn-radius:6px;
 // 按鈕的共用設定
 @mixin btn_setting($btn-bg:#EEE, $btn-font-color:$btn-font-color) {
     background-color: $btn-bg;
-    @include filter-gradient(lighten($btn-bg, 15), darken($btn-bg, 10), vertical);
-    @include background-image(linear-gradient(top, lighten($btn-bg, 15) 0%, darken($btn-bg, 10) 100%));
-    border: 1px solid darken($btn-bg, 10);
+    @include filter-gradient(lighten($btn-bg,0), darken($btn-bg,0), vertical);
+    @include background-image(linear-gradient(top, lighten($btn-bg, 0) 0%, darken($btn-bg, 0) 100%));
+    border: 1px solid darken($btn-bg, 0);
     color: $btn-font-color;
     @include border-radius($btn-radius);
     text-shadow: 1px 1px 2px RGBA(0, 0, 0, .6);
     &:hover,&:focus {
-        background-color: darken($btn-bg, 10); // Old browsers
-        @include filter-gradient(lighten($btn-bg, 5), darken($btn-bg, 15), vertical); // IE6-9
-        @include background-image(linear-gradient(top, lighten($btn-bg, 5) 0%, darken($btn-bg, 15) 100%));
-        border:1px solid darken($btn-bg, 15) !important;
+        background-color: darken($btn-bg, 5); // Old browsers
+        @include filter-gradient(darken($btn-bg, 5), darken($btn-bg, 5), vertical); // IE6-9
+        @include background-image(linear-gradient(top, darken($btn-bg, 5) 0%, darken($btn-bg, 5) 100%));
+        border:1px solid darken($btn-bg, 5) !important;
         // box-shadow: 0px 0px 0px 1px $form-focus;
         cursor: pointer;
         color: #FFF;
     }
     &.active {
-        background: lighten($btn-bg, 5);
+        background: darken($btn-bg, 5);
         cursor: pointer;
     }
 }
@@ -60,8 +60,8 @@ $btn-radius:6px;
     &:focus {
         color: $btn-font-color;
         background-color: rgb(230, 230, 230); // Old browsers
-        @include filter-gradient(#f7f7f7, #eaeaea, vertical); // IE6-9
-        @include background-image(linear-gradient(top, rgba(250, 250, 250, 1) 0%, rgba(220, 220, 220, 1) 100%));
+        @include filter-gradient(#eaeaea, #eaeaea, vertical); // IE6-9
+        @include background-image(linear-gradient(top, #eaeaea 0%, #eaeaea 100%));
         outline: none;
 
 

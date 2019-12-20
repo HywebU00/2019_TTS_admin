@@ -1,5 +1,8 @@
 // 自行加入的JS請寫在這裡
 $(function() {
+    if($('.fix_block').length < 1 || $('.fix_btngrp').length < 1){
+        $('.content').addClass('full');
+    }
     // scrollbar
     // if ($('.gra_text').length > 0) {
     //     $('.gra_text').scrollbar();

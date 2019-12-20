@@ -12,6 +12,13 @@ table {
         text-align: left;
         .btn, input[type="button"], input[type="submit"] {
             padding: .2em !important;
+            i{
+                margin:0
+            }
+            &:hover,&:focus {
+                border:1px solid $aHover;
+                background:#FFF;
+            }
         }
         img{
             width: 100px;
@@ -61,12 +68,17 @@ table {
         }
     }
     th {
-        background-color: #EDEEF3;
+        background-color: #DEDEDE;
         color: #333;
-        border: #EDEEF3 1px solid;
+        border: #DEDEDE 1px solid;
         border-width: 1px 0;
         text-align: left;
         white-space: nowrap;
+        .i_sort{
+            font-size: .75em;
+            margin-left: .2em;
+            opacity: .45;
+        }
     }
     &.table_hover {
         tr:hover {

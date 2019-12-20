@@ -1,5 +1,15 @@
-
+$menu_color:#006e3e;
 aside {
+    &:after{
+        position:absolute;
+        width:.5em;
+        height: 100%;
+        content:"";
+        top:0;
+        right: 0;
+        @include gradient(rgba(0,0,0,0),rgba(0,0,0,.15),horizontal);
+        z-index: 1;
+    }
     &.closed {
         width: 3em;
         // overflow-x: auto;
@@ -51,12 +61,13 @@ aside {
     position: fixed;
     height: 100%;
     width: 210px;
-    // @include gradient(#00b295,#79c91f,vertical);
+    // @include gradient(#00cdb7,#00eeaf,vertical);
+    background:url(../images/menu_bg2.png),rgba(57, 63, 77, .5);
     // background: $color_menubg;
     // background: url(../images/sections.png) left top;
     // background: url(../images/bubble_yellow.svg) no-repeat center center;
-    // background-size: cover;
-    background: url(../images/sections.png), linear-gradient(to top right, $color_menubg, $color_menu);
+    background-size: cover;
+    // background: url(../images/menu_bg2.jpg), linear-gradient(to top right, $color_menubg, $color_menu);
     @include box-sizing;
     z-index: 999999;
     padding-top: 3em;
@@ -67,7 +78,7 @@ aside {
         left: 0;
         width: 100%;
         height: 100%;
-        // @include gradient(darken($color_menubg, 5), lighten($color_menu, 5), vertical);
+        @include gradient(darken($color_menubg, 5), lighten($color_menu, 5), vertical);
         opacity: .8;
     }
     @include screen('tablet') {
@@ -82,7 +93,7 @@ aside {
         width: 100%;
         // background: url(../images/bubble_yellow.svg) no-repeat  20px -100px #f4b145;
         // background-size: 120%;
-        background: rgba(255, 255, 255, .5);
+        background: rgba(255, 255, 255, .35);
         z-index: 9;
         &.closed {
             a {
@@ -130,7 +141,7 @@ aside {
         padding-bottom: 30%;
         padding: 0;
         overflow: hidden;
-        overflow-y: auto;
+        overflow-y: scroll;
         -webkit-overflow-scrolling: touch;
         -webkit-transform: translate3d(0, 0, 0);
         @include box-sizing;
@@ -200,7 +211,7 @@ aside {
                     display: block;
                     padding: .6em .5em;
                     position: relative;
-                    font-size: .938em;
+                    font-size: .875em;
                     font-weight: bold;
                     &:hover, &:focus {
                         color: #FFF;
@@ -220,7 +231,7 @@ aside {
                 padding: .5em 0;
                 display: none;
                 position: relative;
-                background: darken($color_menubg, 20);
+                background: rgba(0,0,0,.65);
                 li {
                     border: none;
                     position: relative;
@@ -240,7 +251,7 @@ aside {
                     }
                     &:hover, &:focus {
                         color: $color_menu;
-                        background: rgba(29, 34, 38, .5);
+                        // background: rgba(29, 34, 38, .5);
                         &:before {
                             left: 1em;
                             opacity: 1;

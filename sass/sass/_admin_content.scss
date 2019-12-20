@@ -1,6 +1,6 @@
  h3,
  h4 {
-     margin: .5em 0;
+     margin: .3em 0;
  }
  code {
      font-family: arial;
@@ -54,12 +54,15 @@
          text-align: center;
      }
  }
- .control_panel {
+ .control_panel,.sort {
      overflow: hidden;
      margin: 0 0 .5em;
      padding-bottom: .3em;
      border-bottom: 2px solid #AAA;
      text-align: right;
+     .btn_grp{
+        padding:.2em 0;
+     }
      span {
          float: left;
          display: block;
@@ -73,8 +76,27 @@
          }
      }
      .btn {
-         padding-left: .4em;
-         padding-right: .8em;
+         padding-left: .8em;
+         padding-right: 1.2em;
+         font-size: .875em;
+         background:#FFF;
+         border-radius:1.5em;
+         border:2px solid #DDD;
+         &:hover,&:focus {
+            border:2px solid $aHover !important;
+         }
+         .i_sort{
+            font-size: .75em;
+         }
+     }
+     .btn-red {
+        background:$color-red;
+        color:#FFF;
+         border:2px solid $color-red;
+        &:hover,&:focus {
+            background:darken($color-red,10);
+            border:2px solid darken($color-red,10) !important;
+        }
      }
  }
  .radio_grp {
@@ -115,9 +137,11 @@
      // box-shadow: 0 1em .5em -.9em rgba(0, 0, 0, 0.15);
      box-shadow: 0 2px 5px 0 rgba(0, 0, 0, .1);
      h3 {
-         margin: .2em 0 .8em;
-         font-size: 1.25em;
+         margin: .2em 0 .2em;
+         font-size: 1.125em;
          color: darken($primaryColor, 5);
+         color:#333;
+         font-weight: bold;
      }
      .info {
          margin: 1em 0;
@@ -149,9 +173,13 @@
          padding: 3em 1em 1em;
      }
      .content {
+        &.full{
+            width:100%;
+        }
          display: block;
          overflow: hidden;
          min-height: 500px;
+         width: calc(100% - 250px);
      }
      .ss {
          .hy_block {
@@ -160,9 +188,10 @@
      }
      h2 {
          position: relative;
-         padding: 0em .5em 0em 1em;
+         padding: 0em .5em 0em .5em;
          line-height: 1.25em;
          margin: .1em 0 .5em;
+         font-size:1.25em;
          &:before {
              position: absolute;
              width: 5px;
@@ -225,6 +254,7 @@
              @include box-shadow(0px 1px 4px 1px RGBA(0, 0, 0, .15));
              margin-bottom: 1em;
              transition: .3s ease-out;
+             border-radius:6px;
              &:hover {
                  @include box-shadow(0px 1px 6px 1px RGBA(0, 0, 0, .25));
                  background: #FFF;
@@ -241,8 +271,9 @@
                  text-align: center;
                  color: #FFF;
                  z-index: 3;
+                 border-radius:3px 3px 0 0;
                  &.red {
-                     @include gradient(red, $color-orange, horizontal);
+                    @include gradient(darken($color_menubg, 5), lighten($color_menu, 5), horizontal);
                  }
                  &.green {
                      @include gradient(#89c900, #89c900, horizontal);
@@ -486,7 +517,6 @@
          position: fixed;
          top: 3em;
          width: 23%;
-         right: 0em;
      }
      .hy_block {
          &>ul {
@@ -844,4 +874,40 @@
     border-radius: 10px;
     background: rgba(0,0,0,.3);
     // -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.5);
+}
+
+
+.bar_style{
+    background:transparent;
+    padding:.2em;
+    margin: 2px 2px 20px 2px;
+    border-top:5px solid $color-red;
+    border-radius:0 !important;
+    // border-radius:4px;
+}
+.pointer{
+    text-decoration: none !important;
+}
+ul.condition{
+    @include li-reset;
+    li{
+        width: 33%;
+        display:inline-block;
+        padding-bottom:.5em;
+        border-bottom: 1px solid #DDD;
+        span{
+            color:$color-red;
+            font-size: 2em;
+            margin: 0 .3em;
+        }
+    }
+}
+.ui-jqgrid .ui-jqgrid-view{
+    margin-top: 1px !important;
+}
+.ui-jqgrid tr.ui-row-ltr td{
+    padding:.1em !important;
+}
+.ui-jqgrid .ui-icon-asc{
+    margin-left: -1px !important;
 }

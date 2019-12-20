@@ -271,6 +271,7 @@ form, div {
                 display: inline-block;
                 margin: .2em .5em 0 0;
                 vertical-align: middle;
+                font-size: .875em;
             }
         }
     }
@@ -423,6 +424,7 @@ input[type="button"],
     {
     @extend %btn;
     @include btn_setting($form-btn, #FFF);
+    text-shadow:none !important;
 }
 input[type="submit"] {
     @extend %btn;
