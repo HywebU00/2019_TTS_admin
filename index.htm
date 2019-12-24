@@ -12,125 +12,8 @@
     <![endif]-->
     <!-- hyUI -->
     <link rel="stylesheet" href="css/hyui_admin.css">
-    <style>
-    body {
-        background: #FFF
-    }
-    h1 {}
-    h3 {
-        color: #333
-    }
-    .element {
-        border: 2px solid purple;
-        margin-bottom: 2em;
-    }
-    .demo_wrap {
-        max-width: 1000px;
-        margin: 0em auto 1em;
-        padding: 15px 15px 3em;
-        clear: both;
-        font-size: .938em
-    }
-    .demo_wrap h1 {
-        display: block;
-        margin: 0px auto;
-        max-width: 600px;
-        float: left;
-        line-height: 1.35em;
-        margin-right: 1em
-    }
-    .demo_wrap h1 small {
-        margin: 0px .5em
-    }
-    .demo_wrap h1 img {
-        width: 50px;
-        margin-right: .5em
-    }
-    @media screen and (max-width:545px) {
-        .demo_wrap h1 {
-            max-width: 100%;
-            float: none;
-            text-align: center;
-            font-size: 1.5em
-        }
-        .demo_wrap h1 small {
-            display: block
-        }
-        .demo_wrap h1 img {
-            width: 30px
-        }
-    }
-    .num {
-        width: 12%
-    }
-    body {}
-    table {
-        margin-bottom: 1em;
-        background: #FFF;
-        counter-reset: num
-    }
-    th:last-child {
-        width: 15%
-    }
-    table caption {
-        text-align: left;
-        font-weight: bold;
-        font-size: 1.25em;
-        padding: .5em 0;
-        color: #ff5050
-    }
-    tbody tr td:first-child:before {
-        counter-increment: num;
-        display: block;
-        text-align: center;
-        content: counters(num, ".") " "
-    }
-    tbody tr td:nth-child(2) {
-        width: 35%
-    }
-    .btn_grp {
-        text-align: right
-    }
-    @media screen and (max-width:545px) {
-        .btn_grp {
-            text-align: center
-        }
-        hr {
-            display: none
-        }
-    }
-    hr {
-        border: 1px solid transparent
-    }
-    td a {
-        color: #ff5050
-    }
-    td span {
-        display: block;
-        background: rgba(0, 128, 0, .1);
-        color: green;
-        text-align: center;
-        padding: .2em .5em;
-        border-radius: .4em;
-        margin: 0px auto;
-        max-width: 4em
-    }
-    .line td {
-        background: #EDEEF3;
-        color: #333;
-        font-weight: bold
-    }
-    .window td {
-        color: #AAA
-    }
-    .window td:nth-child(2):before {
-        content: "-  ";
-        padding-left: 1em
-    }
-    .window td:nth-child(3) {
-        padding-left: 2em
-    }
-    </style>
+<style>
+    body{background:#FFF}h1{}h3{color:#333}.element{border:5px solid orange;margin-bottom:2em}.demo_wrap{max-width:1000px;margin:0em auto 1em;padding:15px 15px 3em;clear:both;font-size:.938em}.demo_wrap h1{display:block;margin:0px auto;max-width:600px;float:left;line-height:1.35em;margin-right:1em}.demo_wrap h1 small{margin:0px .5em}.demo_wrap h1 img{width:50px;margin-right:.5em}@media screen and (max-width:545px){.demo_wrap h1{max-width:100%;float:none;text-align:center;font-size:1.5em}.demo_wrap h1 small{display:block}.demo_wrap h1 img{width:30px}}.num{width:12%}body{}table{margin-bottom:1em;background:#FFF;counter-reset:num}th:last-child{width:15%}table caption{text-align:left;font-weight:bold;font-size:1.25em;padding:.5em 0;color:#ff5050}tbody tr td:first-child:before{counter-increment:num;display:block;text-align:center;content:counters(num,".") " "}tbody tr td:nth-child(2){width:35%}.btn_grp{text-align:right}@media screen and (max-width:545px){.btn_grp{text-align:center}hr{display:none}}hr{border:1px solid transparent}td a{color:#ff5050}td span{display:block;background:rgba(0,128,0,.1);color:green;text-align:center;padding:.2em .5em;border-radius:.4em;margin:0px auto;max-width:4em}.line td{background:#EDEEF3;color:#333;font-weight:bold}.window td{color:#AAA}.window td:nth-child(2):before{content:"-  ";padding-left:1em}.window td:nth-child(3){padding-left:2em}</style>
 </head>
 
 <body>
@@ -139,7 +22,7 @@
         <div class="btn_grp">
             <a href="https://github.com/HywebU00/2019_TTS_admin" class="btn" target="_blank">切版檔案請按此下載</a>
         </div>
-        <h2>網頁元素</h2>
+        <h2>網頁共用元素</h2>
         <div class="element">
             <div class="table_wrapper">
                 <table>
@@ -154,44 +37,56 @@
                     <tbody>
                         <tr>
                             <td></td>
+                            <td>年度展覽管理</td>
+                            <td><a href="年度展覽管理_new.htm"></a></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td>版型管理</td>
+                            <td><a href="版型管理_new.htm"></a></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td></td>
                             <td>輸入表單樣式</td>
-                            <td><a href="基本元素00_form.htm"></a></td>
+                            <td><a href="基本元素00_form_new.htm"></a></td>
                             <td></td>
                         </tr>
                         <tr>
                             <td></td>
                             <td>卡片樣式</td>
-                            <td><a href="基本元素00_卡片式.htm"></a></td>
+                            <td><a href="基本元素00_卡片式_new.htm"></a></td>
                             <td></td>
                         </tr>
                         <tr>
                             <td></td>
                             <td>表格樣式</td>
-                            <td><a href="基本元素00_表格.htm"></a></td>
+                            <td><a href="基本元素00_表格_new.htm"></a></td>
                             <td></td>
                         </tr>
                         <tr>
                             <td></td>
                             <td>icon樣式</td>
-                            <td><a href="基本元素00_icon.htm"></a></td>
+                            <td><a href="基本元素00_icon_new.htm"></a></td>
                             <td></td>
                         </tr>
                         <tr>
                             <td></td>
                             <td>按鈕樣式</td>
-                            <td><a href="基本元素00_btn.htm"></a></td>
+                            <td><a href="基本元素00_btn_new.htm"></a></td>
                             <td></td>
                         </tr>
                         <tr>
                             <td></td>
                             <td>選單管理模組</td>
-                            <td><a href="基本元素00_showlist.htm"></a></td>
+                            <td><a href="基本元素00_showlist_new.htm"></a></td>
                             <td></td>
                         </tr>
                         <tr>
                             <td></td>
                             <td>其他模組</td>
-                            <td><a href="基本元素00_other.htm"></a></td>
+                            <td><a href="基本元素00_other_new.htm"></a></td>
                             <td></td>
                         </tr>
                     </tbody>

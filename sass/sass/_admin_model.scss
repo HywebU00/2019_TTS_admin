@@ -87,7 +87,7 @@
                 }
             }
             &.done {
-               @include gradient(darken($color_menubg, 5), lighten($color_menu, 5), diagonal);
+               @include gradient(darken($color_menu, 5), lighten($color_menu, 5), vertical);
             }
         }
     }
@@ -121,14 +121,15 @@
 }
 .dropdown-content {
     position: absolute;
-    left: 0;
+    left: auto;
+    right:0;
     @include border-radius(.5em);
     padding: 1em;
     min-width: 2em;
     background: #FFF;
     color: $color-word;
-    box-shadow: 0px 2px 5px RGBA(0, 0, 0, .45);
-    @include gradient(#FFF, #EEE, vertical);
+    background: rgba(255, 255, 255, 1);
+    box-shadow: 0px 5px 15px -5px rgba(0, 0, 0, .75);
     display: none;
     z-index: 9999;
     top: 3em;

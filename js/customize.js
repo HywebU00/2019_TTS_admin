@@ -1,6 +1,6 @@
 // 自行加入的JS請寫在這裡
 $(function() {
-    if($('.fix_block').length < 1 || $('.fix_btngrp').length < 1){
+    if ($('.fix_block').length < 1 || $('.fix_btngrp').length < 1) {
         $('.content').addClass('full');
     }
     // scrollbar
@@ -95,13 +95,13 @@ $(function() {
         $('.forget_block').animate({ 'left': '100%' }, 400, 'easeOutQuint');
     });
     // dropdown
-    $('.dropdown-content').hide();
-    $('.dropdown-btn').each(function(index, el) {
-        $(this).off().click(function(e) {
-            $(this).siblings('.dropdown-content').stop(true, true).slideToggle(400, 'easeOutQuint');
-            e.preventDefault();
-        });
-    });
+    // $('.dropdown-content').hide();
+    // $('.dropdown-btn').each(function(index, el) {
+    //     $(this).off().click(function(e) {
+    //         $(this).siblings('.dropdown-content').stop(true, true).slideToggle(400, 'easeOutQuint');
+    //         e.preventDefault();
+    //     });
+    // });
     //
     $('.col_control').prepend('<div class="col_name"></div>');
     $('.col_control .col_name').each(function(index, el) {
@@ -126,18 +126,21 @@ $(function() {
     if ($('.library').length > 0) {
         var libraryTop = $('.library').offset().top,
             libraryW = $('.library').width();
+            libraryLeft = $('.library').offset().left;
         $(window).bind("load resize scroll", function(event) {
+            console.log(libraryLeft);
             var currentScroll = $(window).scrollTop();
-            if (currentScroll >= libraryTop - 50) {
+            if (currentScroll >= libraryTop - 100) {
                 $('.library').css({
                     position: 'fixed',
-                    top: '3em',
-                    right: '1em',
+                    top: '6.2em',
+                    left: libraryLeft,
                     width: libraryW
                 });
             } else {
                 $('.library').css({
-                    position: 'static'
+                    position: 'static',
+                    right:'1em'
                 });
             }
         });
@@ -177,5 +180,6 @@ $(function() {
     // 目錄樹
     if ($('.treeview').length > 0) {
         $(".treeview_block ul").treeview();
+        $('.content').removeClass('full');
     }
 });
