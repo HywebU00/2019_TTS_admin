@@ -1,5 +1,17 @@
 // 自行加入的JS請寫在這裡
 $(function() {
+    if($('.template_choose').length>0){
+        $('.modal_overlay').hide();
+        $('.template_content').css('right', -1*($('.template_content').width()) ).hide();
+        $('.dropdown-btn').off().click(function(e) {
+            $('.template_content').show().animate({ 'right': 0}, 400, 'easeOutQuint');
+            e.preventDefault();
+        });
+        $('.template_content a.close').off().click(function(e) {
+             $('.template_content').animate({ 'right': -400}, 400, 'easeOutQuint');
+             e.preventDefault();
+        });
+    }
     if ($('.fix_block').length < 1 || $('.fix_btngrp').length < 1) {
         $('.content').addClass('full');
     }
@@ -125,16 +137,19 @@ $(function() {
     //控制版型拖拉模組定位
     if ($('.library').length > 0) {
         var libraryTop = $('.library').offset().top,
-            libraryW = $('.library').width();
+            libraryW = $('.library').width(),
             libraryLeft = $('.library').offset().left;
-        $(window).bind("load resize scroll", function(event) {
+        $(window).on("load resize scroll", function(event) {
+            var libraryLeft = $('.library').offset().left,
+            finalLeft= $('aside').outerWidth()+$('.content').outerWidth()-$('.library').outerWidth()+15;
+
             console.log(libraryLeft);
             var currentScroll = $(window).scrollTop();
             if (currentScroll >= libraryTop - 100) {
                 $('.library').css({
                     position: 'fixed',
                     top: '6.2em',
-                    left: libraryLeft,
+                    left: finalLeft,
                     width: libraryW
                 });
             } else {

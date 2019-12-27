@@ -27,58 +27,77 @@
     <div class="main_zone">
         <div class="content">
             <!-- 節點標題 -->
-            <h2>版型設定1</h2>
+            <h2>版型設定</h2>
             <div class="hy_block">
-                <div class="col-4-4-4">
-                    <div class="col">
-                        <h3>請選擇視覺風格</h3>
-                        <div class="btn_grp">
-                            <img src="images/style_fashion.jpg" alt="">
-                            <button class="btn btn-sm"> 01經典設計</button>
-                        </div>
-                    </div>
-                    <div class="col">
-                        <h3>請選擇色系</h3>
-                        <div class="radio_grp">
-                            <label><input name="radioSample" type="radio" value="">藍色<img src="images/color-scheme-blue.jpg" alt=""></label>
-                            <label><input name="radioSample" type="radio" value="">綠色<img src="images/color-scheme-green.jpg" alt=""></label>
-                            <label><input name="radioSample" type="radio" value="">紅色<img src="images/color-scheme-red.jpg" alt=""></label>
-                            <label><input name="radioSample" type="radio" value="">紫色<img src="images/color-scheme-purple.jpg" alt=""></label>
-                        </div>
-                    </div>
-                    <div class="col">
-                        <div class="form_grp">
-                            <div class="form_grp">
-                                <h3>請選擇分眾</h3>
+                <div class="col">
+                    <div class="template_choose">
+                        <div class="form_grp ">
+                            <form action="">
+                                <h3>分眾</h3>
                                 <select name="" id="selectSample">
                                     <option value="">參觀者</option>
                                     <option value="">廠商</option>
                                     <option value="">媒體</option>
                                 </select>
+                                <h3>語系</h3>
+                                <select name="" id="selectSample">
+                                    <option value="">繁體中文</option>
+                                    <option value="">英文</option>
+                                    <option value="">日文</option>
+                                    <option value="">簡體中文</option>
+                                    <option value="">...</option>
+                                </select>
+                                <button class="btn btn-primary">切換</button>
+                            </form>
+                        </div>
+                        <a href="#" class="btn dropdown-btn">
+                            設定版型與色系
+                        </a>
+                        <div class="template_content">
+                            <a  href="#" class="close">關閉</a>
+                            <div>
+                                <div class="col">
+                                    <div class="style_choose">
+                                        <h3>請選擇視覺風格</h3>
+                                        <div class="btn_grp">
+                                            <img src="images/style_fashion.jpg" alt="">
+                                            <button class="btn btn-sm btn-primary"> 01經典設計</button>
+                                        </div>
+                                        <hr>
+                                        <div class="radio_grp form_inline">
+                                            <h3>版型快速設定</h3>
+                                            <label><input name="radioSample" type="radio" value="">建議版面</label>
+                                            <label><input name="radioSample" type="radio" value="">複製<select name="" id="selectSample2">
+                                                    <option value="">下拉選單</option>
+                                                    <option value="">同繁體中文</option>
+                                                    <option value="">...</option>
+                                                </select></label>
+                                            <button class="btn btn-primary">切換</button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <hr>
+                                <div class="col">
+                                    <div class="color_choose">
+                                        <h3>請選擇色系</h3>
+                                        <div class="radio_grp">
+                                            <label><input name="radioSample" type="radio" value="">藍色<img src="images/color-scheme-blue.jpg" alt=""></label>
+                                            <label><input name="radioSample" type="radio" value="">紅色<img src="images/color-scheme-red.jpg" alt=""></label>
+                                            <label><input name="radioSample" type="radio" value="">咖啡<img src="images/color-scheme-brown.jpg" alt=""></label>
+                                            <label><input name="radioSample" type="radio" value="">黃色<img src="images/color-scheme-yellow.jpg" alt=""></label>
+                                            <label><input name="radioSample" type="radio" value="">綠色<img src="images/color-scheme-green.jpg" alt=""></label>
+                                            <label><input name="radioSample" type="radio" value="">青色<img src="images/color-scheme-cyanblue.jpg" alt=""></label>
+                                            <label><input name="radioSample" type="radio" value="">紫色<img src="images/color-scheme-purple.jpg" alt=""></label>
+                                            <label><input name="radioSample" type="radio" value="">深灰<img src="images/color-scheme-purple.jpg" alt=""></label>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
-                            <h3>請選擇語系</h3>
-                            <select name="" id="selectSample">
-                                <option value="">繁體中文</option>
-                                <option value="">英文</option>
-                                <option value="">日文</option>
-                                <option value="">簡體中文</option>
-                                <option value="">...</option>
-                            </select>
-                            <h3>版型快速設定</h3>
-                            <div class="radio_grp form_inline">
-                                <label><input name="radioSample" type="radio" value="" checked="">自訂</label>
-                                <label><input name="radioSample" type="radio" value="">複製</label>
-                                <label><input name="radioSample" type="radio" value="">選擇既有版型</label>
-                            </div>
-                            <select name="" id="selectSample2">
-                                <option value="">下拉選單</option>
-                                <option value="">同繁體中文</option>
-                                <option value="">...</option>
-                            </select>
                         </div>
                     </div>
                 </div>
-            </div <!-- 版型管理 -->
+            </div>
+            <!-- 版型管理 -->
             <div class="layout">
                 <div class="hy_block">
                     <h3>請設定首頁呈現模組</h3>
@@ -93,7 +112,7 @@
                                     <ul>
                                         <button class="btn btn-sm"><i class="i_setting"></i>設定模組屬性</button>
                                         <button class="btn btn-sm"><i class="i_edit"></i>設定資料條件</button>
-                                        <button cla btn-redss="btn btn-sm bnt-red"><i class="i_trash"></i>移除模組</button>
+                                        <button class="btn btn-sm bnt-red"><i class="i_trash"></i>移除模組</button>
                                     </ul>
                                 </div>
                             </div>
@@ -469,7 +488,7 @@
                                     <ul>
                                         <button class="btn btn-sm"><i class="i_setting"></i>設定模組屬性</button>
                                         <button class="btn btn-sm"><i class="i_edit"></i>設定資料條件</button>
-                                        <button cla btn-redss="btn btn-sm btn-red"><i class="i_trash"></i>移除模組</button>
+                                        <button class="btn btn-sm btn-red"><i class="i_trash"></i>移除模組</button>
                                     </ul>
                                 </div>
                             </div>
@@ -585,12 +604,11 @@
             <button class="btn btn-sm">預覽</button>
             <div class="now">
                 <p>目前版型：<span>C極簡風格</span></p>
-            <p>目前色系：<span>紫色</span></p>
+                <p>目前色系：<img src="images/color-scheme-purple.jpg" alt=""></p>
             </div>
-
             <hr />
-            <button class="btn btn-sm btn-primary not-allowed">正式發布</button>
-             <button class="btn btn-sm btn-primary ">正式發布</button>
+            <!-- <button class="btn btn-sm btn-primary not-allowed">正式發布</button> -->
+            <button class="btn btn-sm btn-primary ">正式發布</button>
         </div>
         <h3>異動資訊</h3>
         <div class="table_list">

@@ -23,41 +23,38 @@
                 display: block;
                 padding: .5em .8em;
                 font-size: .938em;
-                position:relative;
-                &.active,&:hover, &:focus {
+                position: relative;
+                &.active, &:hover, &:focus {
                     color: #FFF;
                     background: $primaryColor;
                 }
-                i{
-                    position:absolute;
-                    width:1.3em;
+                i {
+                    position: absolute;
+                    width: 1.3em;
                     height: 1.3em;
-                    bottom:-.2em;
-                    right:-.2em;
-                    border-radius:50%;
+                    bottom: -.2em;
+                    right: -.2em;
+                    border-radius: 50%;
                     z-index: 9;
-
                 }
-                .i_check{
+                .i_check {
                     background: $color-green;
-                    &:before{
+                    &:before {
                         width: .8em;
                         height: .8em;
-                        filter:invert(100%);
-                        margin-top:-.2em;
+                        filter: invert(100%);
+                        margin-top: -.2em;
                     }
-
                 }
-                .i_close{
+                .i_close {
                     background: $color-red;
-                    &:before{
+                    &:before {
                         width: .7em;
                         height: .7em;
-                        filter:invert(100%);
-                        margin-top:-.3em;
+                        filter: invert(100%);
+                        margin-top: -.3em;
                         margin-left: 0px;
                     }
-
                 }
             }
         }
@@ -87,7 +84,7 @@
                 }
             }
             &.done {
-               @include gradient(darken($color_menu, 5), lighten($color_menu, 5), vertical);
+                @include gradient(darken($color_menu, 5), lighten($color_menu, 5), vertical);
             }
         }
     }
@@ -122,7 +119,7 @@
 .dropdown-content {
     position: absolute;
     left: auto;
-    right:0;
+    right: 0;
     @include border-radius(.5em);
     padding: 1em;
     min-width: 2em;
@@ -284,7 +281,6 @@
             @include gutter(0);
             display: none;
         }
-
         .form_content {
             padding-left: 0;
             float: none;
@@ -697,9 +693,9 @@
         font-weight: bold;
         margin: .5em;
         color: #555;
-        height:3em;
+        height: 3em;
         line-height: 1.5em;
-        overflow:hidden;
+        overflow: hidden;
     }
     .gra_text {
         padding: 0 1em;
@@ -720,7 +716,7 @@
                 opacity: .5;
                 &:hover, &:focus {
                     opacity: 1;
-                    cursor:pointer;
+                    cursor: pointer;
                 }
             }
             .i_edit {
@@ -730,7 +726,7 @@
                 opacity: .5;
                 &:hover, &:focus {
                     opacity: 1;
-                    cursor:pointer;
+                    cursor: pointer;
                 }
             }
         }
@@ -969,6 +965,159 @@
                 height: 100px;
                 object-fit: cover;
             }
+        }
+    }
+}
+.style_choose {
+    .btn_grp {
+        background: #F1F1F1;
+        border: 1px solid #CCC;
+        padding: 1em;
+        img {
+            margin-bottom: 1em;
+        }
+        button {
+            width: 200px;
+        }
+    }
+}
+.template_content {
+    .color_choose {
+        .radio_grp {
+            label {
+                float: left;
+                width: 50%;
+            }
+        }
+    }
+    &:before {
+        content: "";
+        position: absolute;
+        height: 48px;
+        width: 100%;
+        top: 0;
+        left: 0;
+        height: 2.5em;
+        line-height: 1.5em;
+        @include gradient(darken($color_menubg, 5), lighten($color_menu, 5), horizontal);
+        color: #FFF;
+        padding: .5em 1em;
+    }
+    a.close {
+        position: absolute;
+        top: 15px;
+        right: 15px;
+        width: 20px !important;
+        min-width: auto;
+        height: 20px;
+        font-size: 0em;
+        border: none;
+        display: block;
+        padding: 0;
+        background: url(../images/basic/icon_close.svg) no-repeat center center;
+        background-size: contain;
+        filter: invert(70%);
+        filter: brightness(30);
+        &:hover, &:focus {
+            cursor: pointer;
+            border: none !important;
+            filter: invert(100%);
+            filter: brightness(30);
+        }
+    }
+    position: fixed;
+    @extend .hy_block;
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, .85) !important;
+    border-radius: 0em !important;
+    top: 0;
+    right: 0;
+    background: #FFF;
+    z-index: 9999;
+    padding: 4em 2em 1em !important;
+    top: 0%;
+    width: 360px;
+    height: 100%;
+    right: 0%;
+    margin-left: 0%;
+    overflow: hidden;
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
+    -webkit-transform: translate3d(0, 0, 0);
+    h3 {
+        margin-bottom: .5em !important;
+    }
+    .col {
+        margin-bottom: 1em;
+        clear: both;
+        float: none;
+    }
+}
+.template_choose {
+    position: relative;
+    padding-right: 7em;
+    .dropdown-btn {
+        position: absolute;
+        top: -.25em;
+        right: .5em;
+        padding-left: 1.5em;
+        border: 1px solid #CCC;
+        &:hover, &:focus {
+            border: 1px solid #AAA !important;
+        }
+        &:before {
+            left: .5em;
+            transform: rotate(-45deg);
+        }
+    }
+    .form_grp {
+        h3, select, button {
+            display: inline-block;
+            width: auto;
+            vertical-align: top;
+        }
+        button {
+            margin: 0 .2em;
+            top: -.1em;
+        }
+        h3 {
+            margin-right: .5em;
+            &:after {
+                content: ":";
+                display: inline-block;
+                margin-left: .3em;
+            }
+        }
+        select {
+            min-width: 10em;
+        }
+    }
+    .radio_grp {
+        vertical-align: top;
+        margin-top: 1em;
+        label {
+            &:nth-child(2) {
+                display: block;
+                &>* {
+                    display: inline-block;
+                }
+                select {
+                    margin-left: .5em;
+                }
+            }
+        }
+        h3 {
+            display: inline-block;
+            width: auto;
+            margin-right: .5em;
+            &:after {
+                content: ":";
+                display: inline-block;
+                margin-left: .3em;
+            }
+        }
+        select {
+            min-width: 10em;
+            margin-left: .3em;
         }
     }
 }

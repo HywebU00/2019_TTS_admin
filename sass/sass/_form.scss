@@ -396,6 +396,9 @@ textarea {
     -moz-appearance: none;
     appearance: none;
 }
+select{
+    transition:none !important;
+}
 //---------------------------------------------文字輸入表單--------//
 input[type="text"],
 input[type="password"],
@@ -503,7 +506,7 @@ input[type="checkbox"]:checked {
     @include border-radius(2px);
 }
 input[type="radio"]:checked {
-    box-shadow: #fff 0 0 0 3px inset, $form-btn 0 0 0 1px;
+    box-shadow: #fff 0 0 0 2px inset, $form-btn 0 0 0 1px;
 }
 //---------------------------------------------readonly disable -------//
 input[readonly],
