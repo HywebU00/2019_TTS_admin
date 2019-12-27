@@ -193,6 +193,9 @@
          min-height: 500px;
          width: calc(100% - 300px);
          max-width:1400px;
+         &.has_tree{
+            width: calc(100% - 320px) !important;
+         }
      }
      .ss {
          .hy_block {

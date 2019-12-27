@@ -15,7 +15,7 @@ $(function() {
     if ($('.fix_block').length < 1 || $('.fix_btngrp').length < 1) {
         $('.content').addClass('full');
         if(('.menu_setting').length>1){
-            $('.content').removeClass('full');
+            $('.content').removeClass('full').addClass('has_tree');
         }
     }
     // scrollbar
