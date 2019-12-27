@@ -412,10 +412,10 @@
     }
     .menu_tree {
         @include li-reset;
-        margin-bottom: 2em;
+        margin-bottom: .3em;
         &>li:first-child {
             &>span {
-                background: #D1D1D1;
+                background: #E1E1E1;
                 border-bottom: 2px solid #BBB;
             }
         }
@@ -431,11 +431,12 @@
                 background: #F1F1F1;
                 border-bottom: 2px solid #DDD;
                 padding: .4em .4em .4em 1em;
-                padding-right: 60px;
+                padding-right: 90px;
                 position: relative;
                 overflow: hidden;
                 a {
-                    opacity: .5;
+                    // opacity: .5;
+                    color:#222;
                     &:hover, &:focus {
                         opacity: 1;
                     }
@@ -451,13 +452,13 @@
                 }
                 .i_edit {
                     position: absolute;
-                    right: 2em;
-                    top: .3em;
+                    right: 4em;
+                    top: .4em;
                 }
                 .i_trash {
                     position: absolute;
-                    right: .4em;
-                    top: .3em;
+                    right: 2.4em;
+                    top: .4em;
                 }
             }
             li {

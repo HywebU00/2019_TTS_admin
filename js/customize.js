@@ -14,6 +14,9 @@ $(function() {
     }
     if ($('.fix_block').length < 1 || $('.fix_btngrp').length < 1) {
         $('.content').addClass('full');
+        if(('.menu_setting').length>1){
+            $('.content').removeClass('full');
+        }
     }
     // scrollbar
     // if ($('.gra_text').length > 0) {
