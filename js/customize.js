@@ -3,7 +3,7 @@ $(function() {
     if($('.template_choose').length>0){
         $('.modal_overlay').hide();
         $('.template_content').css('right', -1*($('.template_content').width()) ).hide();
-        $('.dropdown-btn').off().click(function(e) {
+        $('.template_choose .dropdown-btn').off().click(function(e) {
             $('.template_content').show().animate({ 'right': 0}, 400, 'easeOutQuint');
             e.preventDefault();
         });
