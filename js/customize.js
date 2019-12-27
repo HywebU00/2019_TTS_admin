@@ -1,22 +1,22 @@
 // 自行加入的JS請寫在這裡
 $(function() {
-    if($('.template_choose').length>0){
+    if ($('.template_choose').length > 0) {
         $('.modal_overlay').hide();
-        $('.template_content').css('right', -1*($('.template_content').width()) ).hide();
+        $('.template_content').css('right', -1 * ($('.template_content').width())).hide();
         $('.template_choose .dropdown-btn').off().click(function(e) {
-            $('.template_content').show().animate({ 'right': 0}, 400, 'easeOutQuint');
+            $('.template_content').show().animate({ 'right': 0 }, 400, 'easeOutQuint');
             e.preventDefault();
         });
         $('.template_content a.close').off().click(function(e) {
-             $('.template_content').animate({ 'right': -400}, 400, 'easeOutQuint');
-             e.preventDefault();
+            $('.template_content').animate({ 'right': -400 }, 400, 'easeOutQuint');
+            e.preventDefault();
         });
     }
-    if ($('.fix_block').length < 1 || $('.fix_btngrp').length < 1) {
-        $('.content').addClass('full');
-        if(('.menu_setting').length>1){
-            $('.content').removeClass('full').addClass('has_tree');
-        }
+    if ($('.fix_block').length > 0 || $('.fix_btngrp').length > 0) {
+        $('.content').addClass('has_fixblock');
+    }
+    if ($('.menu_setting').length > 0) {
+        $('.content').removeClass('full').addClass('has_tree');
     }
     // scrollbar
     // if ($('.gra_text').length > 0) {
@@ -144,8 +144,7 @@ $(function() {
             libraryLeft = $('.library').offset().left;
         $(window).on("load resize scroll", function(event) {
             var libraryLeft = $('.library').offset().left,
-            finalLeft= $('aside').outerWidth()+$('.content').outerWidth()-$('.library').outerWidth()+15;
-
+                finalLeft = $('aside').outerWidth() + $('.content').outerWidth() - $('.library').outerWidth() + 15;
             console.log(libraryLeft);
             var currentScroll = $(window).scrollTop();
             if (currentScroll >= libraryTop - 100) {
@@ -158,7 +157,7 @@ $(function() {
             } else {
                 $('.library').css({
                     position: 'static',
-                    right:'1em'
+                    right: '1em'
                 });
             }
         });

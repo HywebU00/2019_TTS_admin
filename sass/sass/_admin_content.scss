@@ -142,7 +142,7 @@
  .hy_block {
      background: #FFF;
      margin-bottom: 1em;
-     overflow: hidden;
+     // overflow: hidden;
      font-size: .938em;
      border-radius: .5em;
      padding: 1em;
@@ -185,16 +185,16 @@
          padding: 3em 1em 1em;
      }
      .content {
-         &.full {
-             width: 100%;
+         &.has_fixblock {
+             width: calc(100% - 250px);
          }
          display: block;
          overflow: hidden;
          min-height: 500px;
-         width: calc(100% - 300px);
+         width: 100%;
          max-width:1400px;
-         &.has_tree{
-            width: calc(100% - 320px) !important;
+         &.has_tree {
+             width: calc(100% - 320px) !important;
          }
      }
      .ss {
@@ -644,10 +644,10 @@
                  padding: .5em 0 .3em;
                  color: #666;
                  &:hover, &:focus {
-                    background: lighten($color-blue,35);
+                     background: lighten($color-blue, 35);
                      border: 2px solid $color-blue;
-                     border-right: 2px solid darken($color-blue,5);
-                     border-bottom: 2px solid darken($color-blue,10);
+                     border-right: 2px solid darken($color-blue, 5);
+                     border-bottom: 2px solid darken($color-blue, 10);
                  }
                  img {
                      object-fit: contain;
@@ -1046,4 +1046,57 @@
  }
  .ui-jqgrid .ui-icon-asc {
      margin-left: -1px !important;
+ }
+ .table_list .dropdown-btn{
+    i{
+        display:none;
+    }
+    width:2.5em;
+    height:2.5em;
+    border-radius:50%;
+    min-width:2em;
+    background:#FFF;
+    border:1px solid #DDD;
+    &:hover{
+        border:1px solid $aHover !important;
+    }
+    &:before{
+        width:6px;
+        height: 6px;
+        right: .9em;
+    }
+ }
+ .table_list .dropdown-content{
+    width:200px;
+    top:3.2em;
+    &:before{
+        right:15%;
+        left:auto;
+    }
+    .btn{
+        width:100%;
+        text-align: left;
+        padding:.5em !important;
+        background:#FFF;
+        &:hover,&:focus {
+            border:1px solid $aHover !important;
+        }
+        i{
+                margin-right: .5em;
+
+        }
+        &.btn-red{
+            border:1px solid $color-red !important;
+            color:$color-red;
+            &:hover{
+                color:#FFF;
+                background:$color-red;
+                border:1px solid $color-red !important;
+                i{
+                filter:invert(100%);
+            }
+            }
+
+        }
+    }
  }
