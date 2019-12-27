@@ -50,11 +50,9 @@
                                 <button class="btn btn-primary">切換</button>
                             </form>
                         </div>
-                        <a href="#" class="btn dropdown-btn">
-                            設定版型與色系
-                        </a>
+                        <a href="#" class="btn dropdown-btn">設定版型與色系 </a>
                         <div class="template_content">
-                            <a  href="#" class="close">關閉</a>
+                            <a href="#" class="close">關閉</a>
                             <div>
                                 <div class="col">
                                     <div class="style_choose">
@@ -504,30 +502,95 @@
             <div class="library">
                 <div class="hy_block">
                     <ul>
-                        <li><a href="#">格線設定</a>
-                            <ul>
-                                <div><a href="#"><img src="images/layout/col-12-full.svg" alt=""></a></div>
-                                <div><a href="#"><img src="images/layout/col-12.svg" alt=""></a></div>
-                                <div><a href="#"><img src="images/layout/col-6-6.svg" alt=""></a></div>
-                                <div><a href="#"><img src="images/layout/col-8-4.svg" alt=""></a></div>
-                                <div><a href="#"><img src="images/layout/col-4-8.svg" alt=""></a></div>
-                                <div><a href="#"><img src="images/layout/col-4-4-4.svg" alt=""></a></div>
-                                <div><a href="#"><img src="images/layout/col-3-3-3-3.svg" alt=""></a></div>
+                        <li><a href="#" class="open">格線設定</a>
+                            <ul style="" id="right-events-module">
+                                <div div-count="1" data="col-12-full"><img src="/images/layout/col-12-full.svg" alt=""></div>
+                                <div div-count="1" data="col-12"><img src="/images/layout/col-12.svg" alt=""></div>
+                                <div div-count="2" data="col-6-6"><img src="/images/layout/col-6-6.svg" alt=""></div>
+                                <div div-count="2" data="col-8-4"><img src="/images/layout/col-8-4.svg" alt=""></div>
+                                <div div-count="2" data="col-4-8"><img src="/images/layout/col-4-8.svg" alt=""></div>
+                                <div div-count="3  data=" col-4-4-4"=""><img src="/images/layout/col-4-4-4.svg" alt=""></div>
+                                <div div-count="4" data="col-3-3-3-3"><img src="/images/layout/col-3-3-3-3.svg" alt=""></div>
                             </ul>
                         </li>
-                        <li><a href="#">模組元件</a>
-                            <ul>
-                                <div><i class="i_layout"></i><span>KV區塊</span></div>
-                                <div><i class="i_layout"></i><span>展覽時間</span></div>
-                                <div><i class="i_layout"></i><span>分眾連結</span></div>
-                                <div><i class="i_layout"></i><span>最新消息</span></div>
-                                <div><i class="i_layout"></i><span>產業消息</span></div>
-                                <div><i class="i_layout"></i><span>精選活動</span></div>
-                                <div><i class="i_layout"></i><span>論壇研討會</span></div>
-                                <div><i class="i_layout"></i><span>精選產品</span></div>
-                                <div><i class="i_layout"></i><span>產品型錄</span></div>
-                                <div><i class="i_layout"></i><span>廣告banner</span></div>
-                                <div><i class="i_layout"></i><span>交通指引</span></div>
+                        <li><a href="#" class="">模組元件</a>
+                            <ul style="display: none;" id="right-events-data" class="dragula-container">
+                                <div mid="award-list" data="award" data-name="創新設計獎" title="創新設計獎">
+                                    <i class="i_layout"></i>
+                                    <span>創新設計獎</span>
+                                </div>
+                                <div mid="banner-list" data="banner" data-name="Banner" title="廣告banner">
+                                    <i class="i_layout"></i>
+                                    <span>廣告banner</span>
+                                </div>
+                                <div mid="event-list" data="event" data-name="活動" title="精選活動(W)">
+                                    <i class="i_layout"></i>
+                                    <span>精選活動(W)</span>
+                                </div>
+                                <div mid="exhibition-info" data="sqlparameter" data-name="展區規劃" title="展覽數據(W)">
+                                    <i class="i_layout"></i>
+                                    <span>展覽數據(W)</span>
+                                </div>
+                                <div mid="html-template" data="html" data-name="HTML模板" title="HTML自訂">
+                                    <i class="i_layout"></i>
+                                    <span>HTML自訂</span>
+                                </div>
+                                <div mid="instagram" data="instagram" data-name="Instagram介接" title="Instagram區塊(W)">
+                                    <i class="i_layout"></i>
+                                    <span>Instagram區塊(W)</span>
+                                </div>
+                                <div mid="kv" data="kv" data-name="kv形象圖" title="KV區塊">
+                                    <i class="i_layout"></i>
+                                    <span>KV區塊</span>
+                                </div>
+                                <div mid="main-prod" data="prod" data-name="產品型錄" title="精選產品(W)">
+                                    <i class="i_layout"></i>
+                                    <span>精選產品(W)</span>
+                                </div>
+                                <div mid="marquee" data="marquee" data-name="跑馬燈" title="跑馬燈">
+                                    <i class="i_layout"></i>
+                                    <span>跑馬燈</span>
+                                </div>
+                                <div mid="media-list" data="media" data-name="影音專區" title="影音專區">
+                                    <i class="i_layout"></i>
+                                    <span>影音專區</span>
+                                </div>
+                                <div mid="menu-info" data="menu" data-name="選單" title="頁面連結">
+                                    <i class="i_layout"></i>
+                                    <span>頁面連結</span>
+                                </div>
+                                <div mid="news-photo-list" data="news" data-name="新聞" title="最新消息(圖文)">
+                                    <i class="i_layout"></i>
+                                    <span>最新消息(圖文)</span>
+                                </div>
+                                <div mid="photo-list" data="photo" data-name="相簿" title="活動照片">
+                                    <i class="i_layout"></i>
+                                    <span>活動照片</span>
+                                </div>
+                                <div mid="industry-photo-list" data="news" data-name="新聞" title="產業消息(圖文)">
+                                    <i class="i_layout"></i>
+                                    <span>產業消息(圖文)</span>
+                                </div>
+                                <div mid="prod-list" data="prod" data-name="產品型錄" title="產品型錄">
+                                    <i class="i_layout"></i>
+                                    <span>產品型錄</span>
+                                </div>
+                                <div mid="show-time" data="show-info" data-name="" title="展覽時間">
+                                    <i class="i_layout"></i>
+                                    <span>展覽時間</span>
+                                </div>
+                                <div mid="news-text-list" data="news" data-name="新聞" title="最新消息(列表)">
+                                    <i class="i_layout"></i>
+                                    <span>最新消息(列表)</span>
+                                </div>
+                                <div mid="industry-text-list" data="news" data-name="新聞" title="產業消息(列表)">
+                                    <i class="i_layout"></i>
+                                    <span>產業消息(列表)</span>
+                                </div>
+                                <div mid="trafic-info" data="show-info" data-name="" title="交通指引">
+                                    <i class="i_layout"></i>
+                                    <span>交通指引</span>
+                                </div>
                             </ul>
                         </li>
                     </ul>
@@ -545,7 +608,7 @@
                         <h4>01.視覺潮流<img src="images/style_fashion.jpg" alt=""></h4>
                         <div class="btn_grp">
                             <button class="btn">預覽</button>
-                            <button class="btn">套用</button>
+                            <button class="btn btn-primary">套用</button>
                         </div>
                     </div>
                 </div>
@@ -554,7 +617,7 @@
                         <h4>02.經典設計<img src="images/style_classic.jpg" alt=""></h4>
                         <div class="btn_grp">
                             <button class="btn">預覽</button>
-                            <button class="btn">套用</button>
+                            <button class="btn btn-primary">套用</button>
                         </div>
                     </div>
                 </div>
@@ -563,7 +626,7 @@
                         <h4>03.極簡風格<img src="images/style_simple.jpg" alt=""></h4>
                         <div class="btn_grp">
                             <button class="btn">預覽</button>
-                            <button class="btn">套用</button>
+                            <button class="btn btn-primary">套用</button>
                         </div>
                     </div>
                 </div>
@@ -572,7 +635,7 @@
                         <h4>04.視覺潮流<img src="images/style_fashion.jpg" alt=""></h4>
                         <div class="btn_grp">
                             <button class="btn">預覽</button>
-                            <button class="btn">套用</button>
+                            <button class="btn btn-primary">套用</button>
                         </div>
                     </div>
                 </div>
@@ -581,7 +644,7 @@
                         <h4>05.經典設計<img src="images/style_classic.jpg" alt=""></h4>
                         <div class="btn_grp">
                             <button class="btn">預覽</button>
-                            <button class="btn">套用</button>
+                            <button class="btn btn-primary">套用</button>
                         </div>
                     </div>
                 </div>
@@ -590,7 +653,7 @@
                         <h4>06.極簡風格<img src="images/style_simple.jpg" alt=""></h4>
                         <div class="btn_grp">
                             <button class="btn">預覽</button>
-                            <button class="btn">套用</button>
+                            <button class="btn btn-primary">套用</button>
                         </div>
                     </div>
                 </div>

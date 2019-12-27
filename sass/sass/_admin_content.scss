@@ -501,7 +501,6 @@
                      background: lighten($color-blue, 30);
                      position: relative;
                      padding: .5em 1em 1em;
-
                      .module_info {
                          color: darken($color-blue, 20);
                          p {
@@ -630,6 +629,31 @@
          position: fixed;
          top: 3em;
          width: 23%;
+     }
+     .hy_block {
+         #right-events-module {
+             &>div {
+                 border: 2px solid $color-gray;
+                 border-right: 2px solid #999;
+                 border-bottom: 2px solid #777;
+                 text-align: center;
+                 background: #FFF;
+                 padding: .5em 0 .3em;
+                 color: #666;
+                 &:hover, &:focus {
+                    background: lighten($color-blue,35);
+                     border: 2px solid $color-blue;
+                     border-right: 2px solid darken($color-blue,5);
+                     border-bottom: 2px solid darken($color-blue,10);
+                 }
+                 img {
+                     object-fit: contain;
+                     width: 65%;
+                     margin: 0px auto;
+                     opacity: .8;
+                 }
+             }
+         }
      }
      .hy_block {
          &>ul {

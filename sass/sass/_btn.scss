@@ -1,12 +1,12 @@
 // 按鈕設定
 $btn-font-color:$color-word;
 $btn-border:darken($color-word, 5);
-$btn-padding:.5em 1.5em;
+$btn-padding:.4em 1.5em;
 $btn-radius:6px;
 // 按鈕外框
 .btn_grp {
     text-align: center;
-    padding: 1em 0;
+    padding: .3em 0;
 }
 // 按鈕的共用設定
 @mixin btn_setting($btn-bg:#EEE, $btn-font-color:$btn-font-color) {
@@ -95,7 +95,8 @@ $btn-radius:6px;
     @include btn_setting($color-purple, #FFF);
 }
 .btn-primary {
-    @extend .btn-blue;
+    @extend %btn;
+    @include btn_setting(darken($color-blue,10), #FFF);
 }
 // 按鈕大小
 .btn-xl {

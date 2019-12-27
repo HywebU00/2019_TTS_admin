@@ -917,6 +917,9 @@
                 button, a, input[type="button"] {
                     right: .3em;
                 }
+                .btn{
+                    top:-.2em;
+                }
             }
             &+.datepick {
                 padding-right: 0;
@@ -1058,7 +1061,7 @@
     .dropdown-btn {
         position: absolute;
         top: -.25em;
-        right: .5em;
+        right: 0em;
         padding-left: 1.5em;
         border: 1px solid #CCC;
         &:hover, &:focus {
@@ -1078,6 +1081,8 @@
         button {
             margin: 0 .2em;
             top: -.1em;
+            padding-left:.5em;
+            padding-right: .5em;
         }
         h3 {
             margin-right: .5em;
@@ -1088,7 +1093,7 @@
             }
         }
         select {
-            min-width: 10em;
+            min-width: 8em;
         }
     }
     .radio_grp {
@@ -1102,6 +1107,7 @@
                 }
                 select {
                     margin-left: .5em;
+                    margin-right: .5em;
                 }
             }
         }
