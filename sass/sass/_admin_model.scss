@@ -860,31 +860,31 @@
     // }
 }
 .radio_grp {
-    &.btn_style {
-        label {
-            input {
-                &:checked {
-                    background: transparent;
-                    border: none;
-                    box-shadow: none;
-                }
-            }
-        }
-    }
+    // &.btn_style {
+    //     label {
+    //         input {
+    //             &:checked {
+    //                 background: transparent;
+    //                 border: none;
+    //                 box-shadow: none;
+    //             }
+    //         }
+    //     }
+    // }
 }
 .check_grp {
-    &.btn_style {
-        label {
-            input {
-                &:checked {
-                    background: url(../images/icon_checked.png) no-repeat center center;
-                    background-size: contain;
-                    border: none;
-                    box-shadow: none;
-                }
-            }
-        }
-    }
+    // &.btn_style {
+    //     label {
+    //         input {
+    //             &:checked {
+    //                 background: url(../images/icon_checked.png) no-repeat center center;
+    //                 background-size: contain;
+    //                 border: none;
+    //                 box-shadow: none;
+    //             }
+    //         }
+    //     }
+    // }
 }
 .col-12 {
     .form_grid {
