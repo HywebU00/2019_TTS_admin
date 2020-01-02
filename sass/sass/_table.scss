@@ -68,7 +68,7 @@ table {
         }
     }
     th {
-        background-color: #DEDEDE;
+        background-color: #F5F5F5;
         color: #333;
         border: #DEDEDE 1px solid;
         border-width: 1px 0;
@@ -79,15 +79,18 @@ table {
             margin-left: .2em;
             opacity: .45;
         }
+        a{
+            color:#222;
+        }
     }
     &.table_hover {
         tr:hover {
-            background: #EDEEF3;
+            background: #F7F7F7;
         }
     }
     &.table_sprite {
         tr:nth-child(even) {
-            background: #EDEEF3;
+            background: #F7F7F7;
         }
     }
     tbody {
@@ -102,6 +105,9 @@ table {
     }
 }
 .table_list {
+    th:last-child{
+        min-width:8em;
+    }
     @include screen('xs_mobile') {
         background-color: transparent !important; //Force table to not be like tables anymore
         thead,

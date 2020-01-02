@@ -3,7 +3,7 @@
     font-size: 1em;
     border: 1px solid transparent;
     padding: .5em;
-    background: #F4F4F4;
+    background: #F8F8F8;
     vertical-align: middle;
     margin-bottom: .2em;
     @include box-sizing();
@@ -123,6 +123,12 @@ select::-ms-expand {
                     width: 7.5em;
                     position: absolute;
                     @include text-overflow;
+                    @include gradient(#FFF, #EEE, vertical);
+                    border: 1px solid #CCC;
+                    &:hover, &:focus {
+                        background: #FFF;
+                        border: 1px solid $aHover !important;
+                    }
                 }
                 >input[type="text"] {
                     width: calc(100% - 8em);
@@ -138,6 +144,12 @@ select::-ms-expand {
                 padding: .5em !important;
                 min-width: 1em;
                 width: auto;
+                @include gradient(#FFF, #EEE, vertical);
+                border: 1px solid #CCC;
+                &:hover, &:focus {
+                    background: #FFF;
+                    border: 1px solid $aHover !important;
+                }
             }
             a {
                 color: $aHover;
@@ -158,6 +170,12 @@ select::-ms-expand {
                 width: 7.5em;
                 position: absolute;
                 @include text-overflow;
+                @include gradient(#FFF, #EEE, vertical);
+                border: 1px solid #CCC;
+                &:hover, &:focus {
+                    background: #FFF;
+                    border: 1px solid $aHover !important;
+                }
             }
             >input[type="text"] {
                 width: calc(100% - 8em);
@@ -176,6 +194,12 @@ select::-ms-expand {
                 min-width: 3em;
                 position: absolute;
                 @include text-overflow;
+                @include gradient(#FFF, #EEE, vertical);
+                border: 1px solid #CCC;
+                &:hover, &:focus {
+                    background: #FFF;
+                    border: 1px solid $aHover !important;
+                }
             }
             >input[type="text"] {
                 width: calc(100% - 3.5em);
@@ -224,7 +248,7 @@ select::-ms-expand {
                 position: absolute;
                 padding: .37em .1em !important;
                 right: .5em;
-                top: .2em;
+                top: -.1em;
                 min-width: 1em;
                 background: none;
                 border: none;
@@ -258,7 +282,7 @@ form, div {
     .upload_grp {
         //margin-bottom: .2em;
         // max-width: 70em;
-        margin: 0px auto .2em;
+        margin: .2em auto .2em;
     }
     .check_grp,
     .radio_grp {
@@ -396,8 +420,8 @@ textarea {
     -moz-appearance: none;
     appearance: none;
 }
-select{
-    transition:none !important;
+select {
+    transition: none !important;
 }
 //---------------------------------------------文字輸入表單--------//
 input[type="text"],
@@ -427,7 +451,7 @@ input[type="button"],
     {
     @extend %btn;
     @include btn_setting($form-btn, #FFF);
-    text-shadow:none !important;
+    text-shadow: none !important;
 }
 input[type="submit"] {
     @extend %btn;
@@ -451,7 +475,11 @@ select:focus {
     border: 1px solid transparent !important;
     @include box-shadow(0px 0px 0px 1px transparent);
     outline: none;
-    background: #F8F8F8;
+    background: #f1f1f1;
+}
+select:focus {
+    background: #F4F4F4 url(../images/basic/icon_select_arrow.svg) no-repeat right center;
+    background-size: 20px;
 }
 //
 input[type="file"] {}
@@ -511,10 +539,10 @@ input[type="radio"]:checked {
 //---------------------------------------------readonly disable -------//
 input[readonly],
 input[disabled] {
-    background: #DDD !important;
-    color: darken($color-gray, 30);
+    background: #EAEAEA !important;
+    color: #888;
     &~label {
-        color: darken($color-gray, 10);
+        color: #888;
     }
     &:hover,
     &:focus {

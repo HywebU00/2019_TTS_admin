@@ -27,20 +27,20 @@
                 white-space: nowrap;
                 font-size: 1em;
                 color: $color-word;
-                @include gradient (#F7F7F7, #EAEAEA, vertical);
+                @include gradient (#FFF, #E1E1E1, vertical);
                 border: #ccc solid 1px;
                 &:hover,
                 &:focus {
-                    background: $primaryColor;
+                    background: $aHover;
                     color: #fff !important;
-                    border: $primaryColor solid 1px;
+                    border: $aHover solid 1px;
                 }
             }
             &.active {
                 a {
                     color: #fff !important;
-                    background: $form-focus;
-                    border: darken($form-focus, 5) solid 1px;
+                    background: $aHover;
+                    border: darken($aHover, 5) solid 1px;
                 }
             }
             %arrow {
@@ -115,6 +115,8 @@
         padding: .5em;
         select {
             margin: 0px .5em;
+            background: #FFF url(../images/basic/icon_select_arrow.svg) no-repeat right center;
+            background-size: 20px;
             @include screen('mobile') {
                 margin: 0px;
             }
