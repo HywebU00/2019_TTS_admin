@@ -615,12 +615,13 @@
                  width: 100%;
                  text-align: left;
                  background: #FFF !important;
+                 border:1px solid #DDD;
                  &:active {
                      transform: translateY(0px);
                  }
                  &:hover, &:focus {
                      color: $aHover;
-                     border: 1px solid $aHover !important;
+                     // border: 1px solid $aHover !important;
                  }
                  &.btn-red {
                      border: 1px solid $color-red !important;
