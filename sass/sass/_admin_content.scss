@@ -212,13 +212,18 @@
          .btn-show-list {
              background: #FFF;
              border: 1px solid #CCC;
+             border-bottom:2px solid #CCC;
              color:#555;
+             font-size:.938rem;
+             display:inline-block;
+             vertical-align:middle;
              &:active {
                  transform: translateY(0px);
              }
              &:hover, &:focus {
                  color: $aHover;
                  border: 1px solid $aHover !important;
+                 border-bottom: 2px solid $aHover !important;
              }
          }
          &:before {
