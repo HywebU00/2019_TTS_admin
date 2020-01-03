@@ -58,6 +58,13 @@ table {
                 min-width: 5em;
                 background: $color-blue;
             }
+            &.orange {
+                color: #FFF;
+                margin: 0 .2em .2em;
+                padding: .3em .5em;
+                min-width: 5em;
+                background: $color-orange;
+            }
         }
         a {
             word-break: break-all;
