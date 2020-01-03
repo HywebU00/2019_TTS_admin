@@ -910,6 +910,9 @@
                 width: 100%;
                 display: block;
             }
+            &.has_chosen{
+                overflow:visible !important;
+            }
         }
         .form_title {
             text-align: left;
@@ -1161,4 +1164,10 @@
 }
 .chosen-container .chosen-results li.highlighted {
     @include gradient($primaryColor, lighten($primaryColor, 5), vertical);
+}
+.chosen-container-multi .chosen-choices .chosen-results{
+    position:absolute;
+    width:100%;
+    background:#FFF;
+
 }

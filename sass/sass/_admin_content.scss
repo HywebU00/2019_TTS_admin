@@ -193,6 +193,7 @@
          min-height: 500px;
          width: 100%;
          max-width:1400px;
+         padding-bottom: 12em;
          &.has_tree {
              width: calc(100% - 320px) !important;
          }
@@ -621,6 +622,7 @@
                  }
                  &:hover, &:focus {
                      color: $aHover;
+                     border:1px solid #DDD;
                      // border: 1px solid $aHover !important;
                  }
                  &.btn-red {
