@@ -209,6 +209,10 @@
          line-height: 1.25em;
          margin: .1em 0 .5em;
          font-size: 1.25em;
+         .float_right{
+            float: right;
+            font-size:.875rem;
+         }
          .btn-show-list {
              background: #FFF;
              border: 1px solid #CCC;
@@ -217,13 +221,15 @@
              font-size:.938rem;
              display:inline-block;
              vertical-align:middle;
+             margin-left: .5em;
              &:active {
-                 transform: translateY(0px);
+                 transform: translateY(2px);
              }
              &:hover, &:focus {
-                 color: $aHover;
-                 border: 1px solid $aHover !important;
-                 border-bottom: 2px solid $aHover !important;
+                 background: darken($aHover,5) !important;
+                 color:#FFF !important;
+                 border: 1px solid darken($aHover,5) !important;
+                 border-bottom: 2px solid darken($aHover,5) !important;
              }
          }
          &:before {
