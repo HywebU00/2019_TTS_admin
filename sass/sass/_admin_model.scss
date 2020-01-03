@@ -13,7 +13,7 @@
                 a {
                     color: #FFF;
                     background: $primaryColor;
-                     border:1px solid $primaryColor !important;
+                    border: 1px solid $primaryColor !important;
                 }
             }
             a {
@@ -25,11 +25,11 @@
                 padding: .5em .8em;
                 font-size: .938em;
                 position: relative;
-                border:1px solid #AAA;
+                border: 1px solid #AAA;
                 &.active, &:hover, &:focus {
                     color: #FFF;
                     background: $primaryColor;
-                     border:1px solid $primaryColor !important;
+                    border: 1px solid $primaryColor !important;
                 }
                 i {
                     position: absolute;
@@ -654,7 +654,7 @@
     .gra_img {
         position: relative;
         height: auto;
-        border-radius:6px 6px 0 0;
+        border-radius: 6px 6px 0 0;
         @include aspect-ratio(4, 3);
         &:hover {
             &:after {
@@ -1085,12 +1085,18 @@
         right: 0em;
         padding-left: 1.5em;
         border: 1px solid #CCC;
+        border-bottom: 2px solid #CCC;
         &:hover, &:focus {
             border: 1px solid #AAA !important;
+            border-bottom: 2px solid #AAA !important;
         }
         &:before {
             left: .5em;
             transform: rotate(-45deg);
+            content: "";
+        }
+        &:active {
+            transform: translateY(0px);
         }
     }
     .form_grp {

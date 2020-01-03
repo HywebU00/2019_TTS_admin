@@ -11,20 +11,25 @@ $btn-radius:6px;
 // 按鈕的共用設定
 @mixin btn_setting($btn-bg:#EEE, $btn-font-color:$btn-font-color) {
     background-color: $btn-bg;
-    @include filter-gradient(lighten($btn-bg,0), darken($btn-bg,0), vertical);
+    @include filter-gradient(lighten($btn-bg, 0), darken($btn-bg, 0), vertical);
     @include background-image(linear-gradient(top, lighten($btn-bg, 0) 0%, darken($btn-bg, 0) 100%));
     border: 1px solid darken($btn-bg, 0);
+    border-bottom: 2px solid darken($btn-bg, 15);
     color: $btn-font-color;
     @include border-radius($btn-radius);
     text-shadow: 1px 1px 2px RGBA(0, 0, 0, .6);
-    &:hover,&:focus {
+    &:hover, &:focus {
         background-color: darken($btn-bg, 5); // Old browsers
         @include filter-gradient(darken($btn-bg, 5), darken($btn-bg, 5), vertical); // IE6-9
         @include background-image(linear-gradient(top, darken($btn-bg, 5) 0%, darken($btn-bg, 5) 100%));
-        border:1px solid darken($btn-bg, 5) !important;
+        border: 1px solid darken($btn-bg, 10) !important;
+        border-bottom: 2px solid darken($btn-bg, 10) !important;
         // box-shadow: 0px 0px 0px 1px $form-focus;
         cursor: pointer;
         color: #FFF;
+    }
+    &:active {
+        transform: translateY(3px);
     }
     &.active {
         background: darken($btn-bg, 5);
@@ -52,7 +57,7 @@ $btn-radius:6px;
     @include box-sizing(border-box);
     @include btn_setting();
     @include text-shadow(RGBA(0, 0, 0, .3) 0px 0px 0px);
-    i{
+    i {
         margin-right: .3em;
         margin-left: .3em;
     }
@@ -63,8 +68,6 @@ $btn-radius:6px;
         @include filter-gradient(#eaeaea, #eaeaea, vertical); // IE6-9
         @include background-image(linear-gradient(top, #eaeaea 0%, #eaeaea 100%));
         outline: none;
-
-
     }
 }
 //按鈕顏色
@@ -84,7 +87,7 @@ $btn-radius:6px;
 }
 .btn-orange {
     @extend %btn;
-    @include btn_setting(lighten($color-orange,5), #FFF);
+    @include btn_setting(lighten($color-orange, 5), #FFF);
 }
 .btn-red {
     @extend %btn;
@@ -96,7 +99,7 @@ $btn-radius:6px;
 }
 .btn-primary {
     @extend %btn;
-    @include btn_setting(darken($color-blue,10), #FFF);
+    @include btn_setting(darken($color-blue, 10), #FFF);
 }
 // 按鈕大小
 .btn-xl {

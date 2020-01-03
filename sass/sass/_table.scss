@@ -106,7 +106,7 @@ table {
 }
 .table_list {
     th:last-child{
-        min-width:8em;
+        min-width:10em;
     }
     @include screen('xs_mobile') {
         background-color: transparent !important; //Force table to not be like tables anymore
