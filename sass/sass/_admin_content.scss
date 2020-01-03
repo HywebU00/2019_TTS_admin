@@ -209,6 +209,18 @@
          line-height: 1.25em;
          margin: .1em 0 .5em;
          font-size: 1.25em;
+         .btn-show-list {
+             background: #FFF;
+             border: 1px solid #CCC;
+             color:#555;
+             &:active {
+                 transform: translateY(0px);
+             }
+             &:hover, &:focus {
+                 color: $aHover;
+                 border: 1px solid $aHover !important;
+             }
+         }
          &:before {
              position: absolute;
              width: 5px;
@@ -616,13 +628,13 @@
                  width: 100%;
                  text-align: left;
                  background: #FFF !important;
-                 border:1px solid #DDD;
+                 border: 1px solid #DDD;
                  &:active {
                      transform: translateY(0px);
                  }
                  &:hover, &:focus {
                      color: $aHover;
-                     border:1px solid #DDD;
+                     border: 1px solid #DDD;
                      // border: 1px solid $aHover !important;
                  }
                  &.btn-red {
