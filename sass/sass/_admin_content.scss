@@ -209,9 +209,11 @@
          line-height: 1.25em;
          margin: .1em 0 .5em;
          font-size: 1.25em;
-         .float_right{
+         a.float_right{
             float: right;
+            display:inline-block;
             font-size:.875rem;
+            margin: 0 0 0 .5em;
          }
          .btn-show-list {
              background: #FFF;
