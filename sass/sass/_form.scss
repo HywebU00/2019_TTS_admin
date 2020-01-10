@@ -237,7 +237,7 @@ select::-ms-expand {
                     right: 0;
                 }
             }
-            padding-right: .5em;
+            padding-right: 24px;
             position:relative;
             display:inline-block;
             @include screen('tablet') {
