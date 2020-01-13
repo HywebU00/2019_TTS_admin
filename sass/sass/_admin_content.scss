@@ -209,29 +209,29 @@
          line-height: 1.25em;
          margin: .1em 0 .5em;
          font-size: 1.25em;
-         a.float_right{
-            float: right;
-            display:inline-block;
-            font-size:.875rem;
-            margin: 1.25em 0 0 .5em;
+         a.float_right {
+             float: right;
+             display: inline-block;
+             font-size: .875rem;
+             margin: 1.25em 0 0 .5em;
          }
          .btn-show-list {
              background: #FFF;
              border: 1px solid #CCC;
-             border-bottom:2px solid #CCC;
-             color:#555;
-             font-size:.938rem;
-             display:inline-block;
-             vertical-align:middle;
+             border-bottom: 2px solid #CCC;
+             color: #555;
+             font-size: .938rem;
+             display: inline-block;
+             vertical-align: middle;
              margin-left: .5em;
              &:active {
                  transform: translateY(2px);
              }
              &:hover, &:focus {
-                 background: darken($aHover,5) !important;
-                 color:#FFF !important;
-                 border: 1px solid darken($aHover,5) !important;
-                 border-bottom: 2px solid darken($aHover,5) !important;
+                 background: darken($aHover, 5) !important;
+                 color: #FFF !important;
+                 border: 1px solid darken($aHover, 5) !important;
+                 border-bottom: 2px solid darken($aHover, 5) !important;
              }
          }
          &:before {
@@ -1059,10 +1059,59 @@
  .bar_style {
      background: transparent;
      padding: .2em;
-     margin: 2px 2px 20px 2px;
-     border-top: 5px solid $color-red;
+     margin: 2px 2px 2px 2px;
+     border-top: 8px solid $color-red;
      border-radius: 0 !important;
      // border-radius:4px;
+ }
+ table {
+     td {
+         &:nth-child(9n+1) {
+             .bar_style {
+                 border-top: 8px solid #2F7597;
+             }
+         }
+         &:nth-child(9n+2){
+             .bar_style {
+                 border-top: 8px solid #E4FF1A;
+             }
+         }
+         &:nth-child(9n+3){
+             .bar_style {
+                 border-top: 8px solid $color-blue;
+             }
+         }
+         &:nth-child(9n+4){
+             .bar_style {
+                 border-top: 8px solid $color-green;
+             }
+         }
+          &:nth-child(9n+5){
+             .bar_style {
+                 border-top: 8px solid $color-orange;
+             }
+         }
+          &:nth-child(9n+6){
+             .bar_style {
+                 border-top: 8px solid $color-yellow;
+             }
+         }
+          &:nth-child(9n+7){
+             .bar_style {
+                 border-top: 8px solid $color-purple;
+             }
+         }
+          &:nth-child(9n+8){
+             .bar_style {
+                 border-top: 8px solid #2E2F50;
+             }
+         }
+          &:nth-child(9n+9){
+             .bar_style {
+                 border-top: 8px solid #E45774;
+             }
+         }
+     }
  }
  .pointer {
      text-decoration: none !important;
