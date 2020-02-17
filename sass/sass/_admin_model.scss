@@ -17,7 +17,7 @@
                 }
             }
             a {
-                border-radius: .2em;
+                border-radius: .5em;
                 text-align: center;
                 background: #FFF;
                 color: #555;
@@ -609,6 +609,20 @@
                     bottom: .5em;
                     z-index: 10;
                 }
+                .btn {
+                    border: 1px solid #DDD;
+                    border-radius: 50%;
+                    i {
+                        margin-left: .25em
+                    }
+                    &:hover, &:focus {
+                        background: $aHover;
+                        border: 1px solid $aHover !important;
+                        i {
+                            filter: invert(100%);
+                        }
+                    }
+                }
             }
         }
     }
@@ -697,8 +711,8 @@
                 font-size: .8em;
                 padding: .2em 1em;
                 border-radius: 30px;
-                background: rgba(#fff, .6);
-                color: $secondaryColor;
+                background: rgba(#fff, .8);
+                color: $aHover;
                 display: inline-block;
             }
         }
@@ -706,6 +720,21 @@
     .btn_grp {
         padding: 0;
         margin-bottom: .6em;
+        .btn {
+            border: 1px solid #DDD;
+            border-radius: 50%;
+            height:2em;
+            i {
+                margin-left: .25em
+            }
+            &:hover, &:focus {
+                background: $aHover;
+                border: 1px solid $aHover !important;
+                i {
+                    filter: invert(100%);
+                }
+            }
+        }
     }
     .main_title {
         font-size: 1.25em;
@@ -767,7 +796,7 @@
         -webkit-box-shadow: 0px 1px 6px 1px RGBA(0, 0, 0, 0.25);
         box-shadow: 0px 1px 6px 1px RGBA(0, 0, 0, 0.25);
         .main_title {
-            color: $secondaryColor;
+            color: $aHover;
         }
         .order_num {
             background: $color-orange;
@@ -910,8 +939,8 @@
                 width: 100%;
                 display: block;
             }
-            &.has_chosen{
-                overflow:visible !important;
+            &.has_chosen {
+                overflow: visible !important;
             }
         }
         .form_title {
@@ -939,13 +968,16 @@
                     padding-right: 2em;
                 }
                 button, a, input[type="button"] {
-                    right: .3em;
+                    right: 1.5em;
                 }
                 .btn {
                     top: -.2em;
                 }
             }
             &+.datepick {
+                 button, a, input[type="button"] {
+                    right: .2em;
+                }
                 padding-right: 0;
                 margin-left: -4px;
                 &:before {
@@ -1165,14 +1197,13 @@
 .chosen-container .chosen-results li.highlighted {
     @include gradient($primaryColor, lighten($primaryColor, 5), vertical);
 }
-.chosen-container-multi .chosen-choices .chosen-results{
-    position:absolute;
-    width:100%;
-    background:#FFF;
-
+.chosen-container-multi .chosen-choices .chosen-results {
+    position: absolute;
+    width: 100%;
+    background: #FFF;
 }
-.chosen-container .chosen-results{
-    position:absolute !important;
-    width:100% !important;
-    background:#FFF !important;
+.chosen-container .chosen-results {
+    position: absolute !important;
+    width: 100% !important;
+    background: #FFF !important;
 }

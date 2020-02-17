@@ -93,9 +93,30 @@ aside {
         width: 100%;
         // background: url(../images/bubble_yellow.svg) no-repeat  20px -100px #f4b145;
         // background-size: 120%;
-        background: rgba(255, 255, 255, .35);
+        background: rgba(0,0,0,.2);
         z-index: 9;
+        &:after{
+            position:absolute;
+            content:"台灣國際專業展";
+            left:2.6em;
+            top:.8em;
+            color:#FFF;
+            text-shadow:1px 1px 2px rgba(0,0,0,.85) !important;
+        }
+        &:before{
+            position:absolute;
+            content:"";
+            width:1.5em;
+            height: 1.5em;
+            top:.8em;
+            left:.8em;
+            background:url(../images/logo.svg) no-repeat center center;
+            background-size:contain;
+        }
         &.closed {
+            &:before,&:after{
+                display:none;
+            }
             a {
                 &:before {
                     transform: rotate(45deg);
@@ -109,6 +130,7 @@ aside {
             height: 3em;
             top: 0;
             right: 0;
+
             &:hover, &:focus {
                 background: $color-yellow;
                 &:before {

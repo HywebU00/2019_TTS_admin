@@ -162,20 +162,8 @@ select::-ms-expand {
             padding-right: 1em;
             position: relative;
             button, a, input[type="button"] {
-                padding: .5em 1em !important;
-                right: 1.1em;
-                top: 0em;
-                font-size: 1em;
-                margin: 0;
-                width: 7.5em;
-                position: absolute;
-                @include text-overflow;
-                @include gradient(#FFF, #EEE, vertical);
-                border: 1px solid #CCC;
-                &:hover, &:focus {
-                    background: #FFF;
-                    border: 1px solid $aHover !important;
-                }
+                @extend %btn;
+                @include btn_setting($color-blue, #FFF);
             }
             >input[type="text"] {
                 width: calc(100% - 8em);
