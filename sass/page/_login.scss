@@ -182,17 +182,29 @@
             input {
                 transition: .3s ease-out;
                 &.id {
-                    background: url(../images/icon/icon_man.svg) no-repeat .8em .8em #FDFDFD;
-                    background-size: 20px;
-                    &:-webkit-autofill {
-                        -webkit-box-shadow: 0 0 0px 100px #EEE inset;
+                    // background: url(../images/icon/icon_man.svg) no-repeat .8em .8em #FDFDFD;
+                    // background-size: 20px;
+                    // &:-webkit-autofill {
+                    //     -webkit-box-shadow: 0 0 0px 100px #EEE inset;
+                    // }
+                    ~img{
+                        position:absolute;
+                        top:.9em;
+                        left: 1em;
+                        width:20px;
                     }
                 }
                 &.pw {
-                    background: url(../images/icon/icon_lock.svg) no-repeat 1em 1em #FDFDFD;
-                    background-size: 16px;
-                    &:-webkit-autofill {
-                        -webkit-box-shadow: 0 0 0px 100px #EEE inset;
+                    // background: url(../images/icon/icon_lock.svg) no-repeat 1em 1em #FDFDFD;
+                    // background-size: 16px;
+                    // &:-webkit-autofill {
+                    //     -webkit-box-shadow: 0 0 0px 100px #EEE inset;
+                    // }
+                    ~img{
+                        position:absolute;
+                        top:.9em;
+                        left: 1.2em;
+                        width:16px;
                     }
                 }
             }
