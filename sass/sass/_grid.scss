@@ -92,7 +92,7 @@
         @include make-md-column(8);
         @include make-lg-column(8);
     }
-    .col:nth-child(2n) {
+    .col:nth-child(odd) {
         @include make-xs-column(12);
         @include make-sm-column(4);
         @include make-md-column(4);
@@ -107,7 +107,7 @@
         @include make-md-column(4);
         @include make-lg-column(4);
     }
-    .col:nth-child(2n) {
+    .col:nth-child(odd) {
         @include make-xs-column(12);
         @include make-sm-column(8);
         @include make-md-column(8);

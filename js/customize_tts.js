@@ -86,7 +86,7 @@ $(function() {
     var _Menu_Btn = $('aside').find('.toggle_btn a');
     _Menu_Btn.off().click(function(e) {
         if (!Menu_Status) {
-            $('aside').addClass('closed');
+            $('aside').removeClass('opened').addClass('closed');
             $('header').addClass('closed');
             $('.main_zone').addClass('closed');
             $(this).parent().addClass('closed');

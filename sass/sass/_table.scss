@@ -6,25 +6,31 @@ table {
         width: 100%;
         position: relative;
     }
+    tr {
+        border-left: 3px solid transparent;
+        &:hover {
+            border-left: 3px solid $primaryColor;
+        }
+    }
     th,
     td {
         padding: .25em .5em;
         text-align: left;
-        font-size:.938em;
+        font-size: .938em;
         .btn, input[type="button"], input[type="submit"] {
             padding: .2em !important;
-            i{
-                margin:0
+            i {
+                margin: 0
             }
-            &:hover,&:focus {
-                border:1px solid $aHover;
-                background:#FFF;
+            &:hover, &:focus {
+                border: 1px solid $aHover;
+                background: #FFF;
             }
         }
-        img{
+        img {
             width: 80px;
             // max-height:50px;
-            display:block;
+            display: block;
         }
     }
     td {
@@ -82,13 +88,13 @@ table {
         border-width: 1px 0;
         text-align: left;
         white-space: nowrap;
-        .i_sort{
+        .i_sort {
             font-size: .75em;
             margin-left: .2em;
             opacity: .45;
         }
-        a{
-            color:#222;
+        a {
+            color: #222;
         }
     }
     &.table_hover {
@@ -113,8 +119,8 @@ table {
     }
 }
 .table_list {
-    th:last-child{
-        min-width:10em;
+    th:last-child {
+        min-width: 10em;
     }
     @include screen('xs_mobile') {
         background-color: transparent !important; //Force table to not be like tables anymore
@@ -134,9 +140,9 @@ table {
             border: 1px solid #ccc;
             margin-bottom: 10px; // background-color: #333;
         }
-        th{
-            display:block;
-            border:none;
+        th {
+            display: block;
+            border: none;
             width: 100%;
         }
         td {
@@ -147,7 +153,7 @@ table {
             // padding-left: 35% !important;
             white-space: normal;
             text-align: left;
-            display:block;
+            display: block;
             @include screen('mobile') {
                 text-align: left !important;
             }
@@ -162,7 +168,7 @@ table {
                 text-align: left;
                 font-weight: bold;
                 color: #000;
-                display:none;
+                display: none;
             }
         }
     }
