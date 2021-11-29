@@ -993,14 +993,20 @@
 }
 .photo_library {
     overflow: hidden;
-    margin-right: 260px;
-    .pills{
-        font-size: .8em;
-        margin-left: 15px;
-        ul{
-            li{
-                a{
-                    padding:.3em 1em;
+    margin-right: 250px;
+    .pills {
+        overflow: hidden;
+        overflow-y: auto;
+        height: 7em;
+        background: rgba(0, 0, 0, .1);
+        padding: .6em .5em;
+        ul {
+            li {
+                margin-bottom: .5em;
+                a {
+                    padding: 0.05em 1em;
+                    font-size: .813em;
+                    border-radius: .25em;
                 }
             }
         }
@@ -1010,17 +1016,17 @@
         display: flex;
         position: absolute;
         flex-flow: row wrap;
-        right: 260px;
-        left: 15px;
-        height: 80%;
-        bottom:15px;
-        padding:1em;
+        right: 258px;
+        left: 8px;
+        height: calc(100% - 9em);
+        bottom: 8px;
+        padding: 1em;
         top: auto;
         overflow: hidden;
         overflow-y: scroll;
         -webkit-overflow-scrolling: touch;
         -webkit-transform: translate3d(0, 0, 0);
-        background: rgba(0,0,0,.2);
+        background: rgba(0, 0, 0, .1);
         h3 {
             display: flex;
             flex: 1 1 100%;

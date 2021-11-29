@@ -117,7 +117,7 @@ img.img-responsive {
     @include img-responsive();
 }
 
-.necessary_lang,.necessary {
+.necessary_lang, .necessary, [class^="necessary"] {
     color: red;
     margin: 0px .2em;
 }
@@ -146,7 +146,7 @@ img.img-responsive {
         font-size: .75em;
     }
     hr {
-        margin: 10px 0!important;
+        margin: 10px 0 !important;
         ;
     }
 }
@@ -193,7 +193,7 @@ img.img-responsive {
             float: right;
             margin-top: 5px;
             @media screen and (max-width: 767px) {
-                display:inline-block;
+                display: inline-block;
                 float: none;
                 width: auto;
                 margin-top: 0;
@@ -284,7 +284,8 @@ img.img-responsive {
             }
         }
     }
-} // 外部連結
+}
+// 外部連結
 .web_link {
     width: 100%;
     margin: 0 auto;
